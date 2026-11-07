@@ -1,0 +1,350 @@
+{
+  "summary": [
+    {
+      "scenario": "lakeside_oakhollow",
+      "risky": 15,
+      "prof_any": 4,
+      "ver_any": 13,
+      "both_any": 13,
+      "ver_type": 6,
+      "loaded": 5,
+      "loaded_caught": 3,
+      "computed": 10,
+      "computed_caught": 10,
+      "clean": 22,
+      "false_fail": 0,
+      "conflicts": 15
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "CUST.DECEASED_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "1.7% of records flip (source marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.0165,
+      "edge_cases": [
+        "1500037",
+        "1500115",
+        "1500172",
+        "1500408",
+        "1500459"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "CUST.CR_SCORE",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "CUST.BKRPT_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "population",
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "4.2% of records flip (source marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.042,
+      "edge_cases": [
+        "1500003",
+        "1500073",
+        "1500077",
+        "1500096",
+        "1500110"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "DDA_ACCT.OD_LMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "20% of loaded values fall outside the target's range",
+      "mismatch_rate": 0.2042,
+      "edge_cases": [
+        "3000001",
+        "3000002",
+        "3000003",
+        "3000010",
+        "3000014"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "DDA_ACCT.MAIL_ADDR",
+      "truth": [
+        "role"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "format"
+      ],
+      "diagnosis": "Loaded values use a format the target never uses (target looks like 9999 AAAAAA AA)",
+      "mismatch_rate": 0.2854,
+      "edge_cases": [
+        "3000001",
+        "3000002",
+        "3000004",
+        "3000005",
+        "3000006"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "CHK_ITEM.CHK_NBR",
+      "truth": [
+        "identity"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target counts are always smaller: counted over a different scope",
+      "mismatch_rate": 0.3978,
+      "edge_cases": [
+        "4500001",
+        "4500002",
+        "4500006",
+        "4500007",
+        "4500008"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "STOP_PMT.EXPR_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 364 days (median, range 182 to 546): a different business event",
+      "mismatch_rate": 0.2875,
+      "edge_cases": [
+        "6000000",
+        "6000005",
+        "6000008",
+        "6000009",
+        "6000024"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.ACCR_INT",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "Target = source x 1.014",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "7500000",
+        "7500001",
+        "7500002",
+        "7500003",
+        "7500004"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.MIN_PMT_DUE",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.1494,
+      "edge_cases": [
+        "7500003",
+        "7500006",
+        "7500007",
+        "7500014",
+        "7500015"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.PPMT_PNLTY_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.NON_ACCR_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "3.1% of records flip (target marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.0312,
+      "edge_cases": [
+        "7500013",
+        "7500135",
+        "7500147",
+        "7500162",
+        "7500170"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.ESCR_CUSH_AMT",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 0.9975,
+      "edge_cases": [
+        "7500000",
+        "7500001",
+        "7500002",
+        "7500003",
+        "7500004"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "LN_MSTR.AUTOPAY_AMT",
+      "truth": [
+        "null_semantics"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "34% of loaded values fall outside the target's range",
+      "mismatch_rate": 0.3369,
+      "edge_cases": [
+        "7500006",
+        "7500008",
+        "7500010",
+        "7500015",
+        "7500025"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "SDB.BOX_STAT",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "code_set"
+      ],
+      "diagnosis": "Consistent crosswalk found: AVAILABLE->AVAILABLE, DELINQ_ESCHEAT->RENTED, RENTED->RENTED",
+      "mismatch_rate": 0.105,
+      "edge_cases": [
+        "9000001",
+        "9000002",
+        "9000006",
+        "9000009",
+        "9000012"
+      ]
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "source": "WIRE_TXN.CUTOFF_TS",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "temporal"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 1 days (median, range -1 to 1): a different business event",
+      "mismatch_rate": 0.0872,
+      "edge_cases": [
+        "10500012",
+        "10500022",
+        "10500024",
+        "10500053",
+        "10500059"
+      ]
+    }
+  ]
+}

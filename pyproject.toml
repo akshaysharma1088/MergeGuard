@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mergeguard"
+version = "0.0.7"
+description = "Catch false-friend attributes before a post-acquisition data migration, then migrate and prove it."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Akshay Sharma" }]
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=1.5",
+  "duckdb>=0.9",
+  "sqlglot>=20",
+  "openpyxl>=3.1",
+  "scipy>=1.9",
+  "pipeverify>=0.1",
+]
+
+[project.scripts]
+mergeguard = "mergeguard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mergeguard*"]
+
+[tool.setuptools.package-data]
+mergeguard = ["templates/*.xlsx"]

@@ -1,0 +1,61 @@
+Trap list received 2026-11-06 22:17 America/Chicago, after the MergeGuard v0.0.5 freeze. Verbatim.
+
+Group G: payments, mortgage, regulatory, consent, trusts
+* ACH settlement date is the date on the clearinghouse file header at one bank, and the date funds are actually made available to the customer at the other.
+* Wire counterparty name is the ultimate beneficiary at one bank, and the intermediary routing bank at the other.
+* Escrow balance is a positive number when the customer has a surplus at one bank, and a positive number when the bank has advanced funds to cover a shortage at the other.
+* Loan-to-value (LTV) ratio uses only the first-lien mortgage balance at one bank, and combines the first mortgage plus any home equity credit line limit at the other.
+* FX transaction amount is stored in the local currency of the transacted account at one bank, and converted to US dollars using the end-of-day spot rate at the other.
+* HMDA action taken date is the day the underwriter approves the mortgage at one bank, and the day the loan actually closes and funds at the other.
+* CECL loss reserve covers only the funded loan balance at one bank, and includes the expected drawdowns on unfunded credit lines at the other.
+* Marketing opt-out flag means the customer blocked all promotional messages at one bank, and only that they unsubscribed from email while still allowing texts and calls at the other.
+* Trust account tax ID is the revocable living trust's own EIN at one bank, and the living grantor's personal Social Security number at the other.
+* Beneficiary share is stored as a percentage of the total account at one bank, and as a priority tier (primary versus contingent) with equal splits assumed at the other.
+
+Group H: wealth management, trade finance, fraud, core ledger accounting
+* Assets under management (AUM) includes only discretionary managed portfolios at one bank, and adds self-directed brokerage and swept cash balances at the other.
+* Trade position date records holdings as of the trade execution date at one bank, and as of the T+1 or T+2 settlement date at the other.
+* Portfolio cost basis is tracked using first-in, first-out (FIFO) tax lots at one bank, and weighted average share cost at the other.
+* Letter of credit balance shows the original face value of the guarantee at one bank, and the remaining undrawn commitment after partial shipments at the other.
+* Trade finance expiry date is the last valid day to load goods onto a ship at one bank, and the final deadline to submit shipping documents for payment at the other.
+* Fraud loss amount reflects the initial unauthorized transaction total at one bank, and the net write-off after chargeback recoveries and insurance claims at the other.
+* Confirmed fraud status triggers the moment a customer disputes a charge at one bank, and only after a back-office investigator verifies the claim at the other.
+* Fraud alert timestamp logs when the real-time scoring engine flagged the swipe at one bank, and when the case actually landed in an analyst's review queue at the other.
+* General ledger post date is the calendar day the nightly batch finishes running at one bank, and the backdated effective business date of the transaction at the other.
+* Suspense account balance nets unapplied debits and credits into a single offset number at one bank, and reports only gross aged debit items awaiting clearance at the other.
+
+Group I: auto loans, student lending, equipment leasing, syndicated loans
+* Auto vehicle value is the clean retail sticker price including dealer add-ons at one bank, and the wholesale black-book trade-in value at the other.
+* Repossession status flips the day the tow truck is dispatched at one bank, and only after the statutory right-to-cure redemption window expires at the other.
+* Dealer reserve fee is booked as an upfront lump-sum origination expense at one bank, and amortized monthly against interest income over the life of the auto loan at the other.
+* Student loan repayment start date is the borrower's projected graduation date at one bank, and the day the six-month post-school grace period actually ends at the other.
+* Student loan disbursement amount shows the total academic-year loan approved at one bank, and only the single semester's tranche paid out to the university so far at the other.
+* Co-signer release flag means the borrower meets the credit and payment criteria to apply for release at one bank, and that the co-signer has already been legally removed from the note at the other.
+* Equipment residual value is the unguaranteed open-market estimate at lease end at one bank, and the vendor-guaranteed buyback floor at the other.
+* Lease buyout price is the discounted present value of remaining rent plus residual at one bank, and the simple sum of all remaining billed payments plus purchase option fee at the other.
+* Syndicated loan commitment records the full $500 million multi-bank facility size at the lead arranger bank, and only the bank's own $25 million pro-rata participation share at the other.
+* Syndicated borrower ID links to the ultimate corporate parent holding company at one bank, and to the special-purpose project entity that signed the credit agreement at the other.
+
+Group J: AML compliance, ATM cash management, mobile and digital banking
+* CTR cash aggregation sums cash deposits by the individual conductor at the teller window at one bank, and by the legal owner of the benefited account at the other.
+* PEP (Politically Exposed Person) flag covers only active foreign government officials at one bank, and includes domestic officials, close associates, and immediate family members at the other.
+* SAR filing count tracks the number of distinct suspicious transactions flagged at one bank, and the number of regulatory reports submitted (which may bundle dozens of transactions) at the other.
+* ATM cash balance shows the physical bills remaining inside the dispensing cassettes at one bank, and includes unverified cash sitting in the deposit and reject bins at the other.
+* ATM uptime percentage measures whether the machine is powered on and connected to the network at one bank, and whether it actually has cash available to dispense to customers at the other.
+* ATM transaction count increments once per customer card insertion at one bank, and once for every balance inquiry, withdrawal, and transfer performed during that visit at the other.
+* Digital active user means a customer who logged into the mobile app within the last 30 days at one bank, and someone who merely has an active background push-notification token at the other.
+* Session duration measures the time from login until the user taps log out at one bank, and includes the 15-minute idle timeout window after they close the app at the other.
+* Device ID is a hardware-bound identifier tied to the physical phone at one bank, and a browser or app-install token that resets whenever the user reinstalls the app at the other.
+* Failed login count tracks consecutive wrong passwords before a lockout at one bank, and cumulative failed attempts across the lifetime of the user profile at the other.
+
+Group K: capital markets, derivatives, repo, Basel RWA
+* Derivative notional amount shows the gross sum of both the pay and receive legs of a swap at one bank, and only the single-sided contract principal at the other.
+* Mark-to-market value is the clean price excluding accrued interest since the last coupon at one bank, and the dirty price including accrued interest at the other.
+* Counterparty exposure reports gross positive replacement cost across all open trades at one bank, and the net exposure after applying ISDA master netting agreements and posted cash collateral at the other.
+* Variation margin balance reflects only settled cash collateral sitting in the margin account at one bank, and includes in-transit margin calls agreed to that morning at the other.
+* Repo transaction amount records the cash lent on day one at one bank, and the market value of the underlying Treasury bonds including the collateral haircut at the other.
+* Repo maturity date is fixed as the next business day for rolling overnight trades at one bank, and left blank or set to a dummy century date like 2099-12-31 for open-ended repos at the other.
+* Risk-weighted assets (RWA) are calculated using standard regulatory lookup tables at one bank, and using internal ratings-based (IRB) probability-of-default models at the other.
+* Credit conversion factor (CCF) applies a flat percentage to all undrawn credit lines at one bank, and sets the factor to zero for lines that are unconditionally cancellable without notice at the other.
+* Probability of default (PD) is a point-in-time estimate that swings with the current economic cycle at one bank, and a through-the-cycle long-run average at the other.
+* Bond settlement status flips to settled when the trade is matched at the clearinghouse at one bank, and only after actual delivery-versus-payment (DvP) cash and securities exchange hands at the other.

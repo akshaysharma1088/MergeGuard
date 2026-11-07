@@ -1,0 +1,1583 @@
+{
+  "table": [
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "name_only",
+      "target_accuracy": 0.75,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 13,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "valentine_coma",
+      "target_accuracy": 0.9583333333333334,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 11,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 3.3
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.16666666666666666,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 2,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 3.1
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.16666666666666666,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 23,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 1.1
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.4166666666666667,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 13,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 2.8
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "method": "mergeguard",
+      "target_accuracy": 0.9583333333333334,
+      "conflict_recall": 0.18181818181818182,
+      "harmful_auto_accepts": 3,
+      "recall_by_type": {
+        "code_set": 0.5,
+        "currency": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "sign": 0.0,
+        "temporal": 0.5
+      },
+      "seconds": 21.1
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "name_only",
+      "target_accuracy": 0.84,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 13,
+      "recall_by_type": {
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "valentine_coma",
+      "target_accuracy": 0.96,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 10,
+      "recall_by_type": {
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 3.0
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.28,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 4,
+      "recall_by_type": {
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.9
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.64,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 17,
+      "recall_by_type": {
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 1.7
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.56,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 11,
+      "recall_by_type": {
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 3.8
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.3,
+      "harmful_auto_accepts": 2,
+      "recall_by_type": {
+        "inclusion": 0.25,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.5
+      },
+      "seconds": 54.6
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "name_only",
+      "target_accuracy": 0.7368421052631579,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 7,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "valentine_coma",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 10,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 1.2
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.15789473684210525,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 1,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.4
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.7894736842105263,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 12,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.7
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.47368421052631576,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 9,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 1.5
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.1,
+      "harmful_auto_accepts": 0,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "population": 0.0,
+        "temporal": 1.0
+      },
+      "seconds": 22.9
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "name_only",
+      "target_accuracy": 0.7777777777777778,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 12,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "valentine_coma",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 10,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0
+      },
+      "seconds": 1.1
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.3888888888888889,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 5,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0
+      },
+      "seconds": 0.5
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.2222222222222222,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 17,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0
+      },
+      "seconds": 0.6
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.5,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 8,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0
+      },
+      "seconds": 1.3
+    },
+    {
+      "scenario": "cascade_redwood",
+      "method": "mergeguard",
+      "target_accuracy": 0.9444444444444444,
+      "conflict_recall": 0.2,
+      "harmful_auto_accepts": 1,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.5,
+        "population": 0.3333333333333333
+      },
+      "seconds": 27.9
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "name_only",
+      "target_accuracy": 0.7391304347826086,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 14,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "valentine_coma",
+      "target_accuracy": 0.9565217391304348,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 9,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0
+      },
+      "seconds": 2.1
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.5217391304347826,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 2,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0
+      },
+      "seconds": 0.5
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.17391304347826086,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 21,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0
+      },
+      "seconds": 1.1
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.34782608695652173,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 14,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0
+      },
+      "seconds": 2.0
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.3,
+      "harmful_auto_accepts": 2,
+      "recall_by_type": {
+        "aggregation": 0.0,
+        "inclusion": 0.5,
+        "methodology": 0.0,
+        "null_semantics": 1.0,
+        "population": 0.0
+      },
+      "seconds": 55.2
+    }
+  ],
+  "mergeguard_rows": {
+    "harborpoint_bluestem": [
+      {
+        "source": "CUSTOMER.CUST_NO",
+        "predicted": "customer.customer_id",
+        "truth": "customer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUSTOMER.CUST_NAME",
+        "predicted": "customer.full_name",
+        "truth": "customer.full_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUSTOMER.MKTG_OPT_OUT",
+        "predicted": "customer.marketing_opt_out",
+        "truth": "customer.marketing_opt_out",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.PMT_ID",
+        "predicted": "payment.payment_id",
+        "truth": "payment.payment_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.CUST_NO",
+        "predicted": "payment.customer_id",
+        "truth": "payment.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.PMT_TYP_CD",
+        "predicted": "payment.payment_type",
+        "truth": "payment.payment_type",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.SETTLE_DT",
+        "predicted": "payment.ach_settlement_date",
+        "truth": "payment.ach_settlement_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.CPTY_NM",
+        "predicted": "payment.counterparty_name",
+        "truth": "payment.counterparty_name",
+        "correct": true,
+        "conflicts": [
+          "role"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "PMT.CCY_CD",
+        "predicted": "payment.currency_code",
+        "truth": "payment.currency_code",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PMT.AMT_USD",
+        "predicted": "payment.fx_amount",
+        "truth": "payment.fx_amount",
+        "correct": true,
+        "conflicts": [
+          "currency"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MTG_LN.LN_NO",
+        "predicted": "mortgage_loan.loan_id",
+        "truth": "mortgage_loan.loan_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MTG_LN.CUST_NO",
+        "predicted": "mortgage_loan.customer_id",
+        "truth": "mortgage_loan.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MTG_LN.PRIN_BAL",
+        "predicted": "mortgage_loan.first_lien_balance",
+        "truth": "mortgage_loan.first_lien_balance",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MTG_LN.LTV_RTO",
+        "predicted": "mortgage_loan.ltv_ratio",
+        "truth": "mortgage_loan.ltv_ratio",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MTG_LN.ESCROW_BAL",
+        "predicted": "mortgage_loan.escrow_balance",
+        "truth": "mortgage_loan.escrow_balance",
+        "correct": true,
+        "conflicts": [
+          "sign"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "MTG_LN.HMDA_ACTN_DT",
+        "predicted": "mortgage_loan.hmda_action_date",
+        "truth": "mortgage_loan.hmda_action_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "MTG_LN.CECL_RSRV",
+        "predicted": "mortgage_loan.cecl_reserve",
+        "truth": "mortgage_loan.cecl_reserve",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRUST_ACCT.TRUST_NO",
+        "predicted": "trust_account.trust_id",
+        "truth": "trust_account.trust_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRUST_ACCT.TAX_ID",
+        "predicted": "trust_account.tax_id",
+        "truth": "trust_account.tax_id",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRUST_ACCT.OPEN_DT",
+        "predicted": "trust_account.open_date",
+        "truth": "trust_account.open_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BENE.BENE_NO",
+        "predicted": "beneficiary.beneficiary_id",
+        "truth": "beneficiary.beneficiary_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BENE.TRUST_NO",
+        "predicted": "beneficiary.trust_id",
+        "truth": "beneficiary.trust_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BENE.BENE_NM",
+        "predicted": "beneficiary.beneficiary_name",
+        "truth": "beneficiary.beneficiary_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BENE.BENE_SHR",
+        "predicted": null,
+        "truth": "beneficiary.share_pct",
+        "correct": false,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ],
+    "ridgeview_copperleaf": [
+      {
+        "source": "CLNT.CLNT_ID",
+        "predicted": "client.client_id",
+        "truth": "client.client_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CLNT.CLNT_NM",
+        "predicted": "client.client_name",
+        "truth": "client.client_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PORTF.PORTF_ID",
+        "predicted": "portfolio.portfolio_id",
+        "truth": "portfolio.portfolio_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PORTF.CLNT_ID",
+        "predicted": "portfolio.client_id",
+        "truth": "portfolio.client_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "PORTF.AUM_AMT",
+        "predicted": "portfolio.aum",
+        "truth": "portfolio.aum",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "PORTF.COST_BASIS",
+        "predicted": "portfolio.cost_basis",
+        "truth": "portfolio.cost_basis",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "PORTF.SHR_QTY",
+        "predicted": "portfolio.share_qty",
+        "truth": "portfolio.share_qty",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRD.TRD_ID",
+        "predicted": "trade_position.trade_id",
+        "truth": "trade_position.trade_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRD.PORTF_ID",
+        "predicted": "trade_position.portfolio_id",
+        "truth": "trade_position.portfolio_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRD.POSN_DT",
+        "predicted": "trade_position.position_date",
+        "truth": "trade_position.position_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRD.QTY",
+        "predicted": "trade_position.quantity",
+        "truth": "trade_position.quantity",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LC.LC_NO",
+        "predicted": "letter_of_credit.lc_id",
+        "truth": "letter_of_credit.lc_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LC.ISSUE_DT",
+        "predicted": "letter_of_credit.issue_date",
+        "truth": "letter_of_credit.issue_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LC.LC_BAL",
+        "predicted": "letter_of_credit.lc_balance",
+        "truth": "letter_of_credit.lc_balance",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LC.EXPRY_DT",
+        "predicted": "letter_of_credit.expiry_date",
+        "truth": "letter_of_credit.expiry_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "FRD_CASE.CASE_NO",
+        "predicted": "fraud_case.case_id",
+        "truth": "fraud_case.case_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "FRD_CASE.CLNT_ID",
+        "predicted": "fraud_case.client_id",
+        "truth": "fraud_case.client_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "FRD_CASE.FRD_LOSS_AMT",
+        "predicted": "fraud_case.fraud_loss_amount",
+        "truth": "fraud_case.fraud_loss_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "FRD_CASE.CONF_FRD_IND",
+        "predicted": "fraud_case.is_confirmed_fraud",
+        "truth": "fraud_case.is_confirmed_fraud",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "FRD_CASE.ALRT_TS",
+        "predicted": "fraud_case.alert_ts",
+        "truth": "fraud_case.alert_ts",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "GL_TXN.ENTRY_NO",
+        "predicted": "gl_entry.entry_id",
+        "truth": "gl_entry.entry_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "GL_TXN.POST_DT",
+        "predicted": "gl_entry.post_date",
+        "truth": "gl_entry.post_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "GL_TXN.AMT",
+        "predicted": "gl_entry.amount",
+        "truth": "gl_entry.amount",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SUSP.SUSP_ACCT_NO",
+        "predicted": "suspense_account.suspense_id",
+        "truth": "suspense_account.suspense_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SUSP.SUSP_BAL",
+        "predicted": "suspense_account.suspense_balance",
+        "truth": "suspense_account.suspense_balance",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ],
+    "prairiegate_elmhurst": [
+      {
+        "source": "AUTO_LN.LN_NO",
+        "predicted": "auto_loan.loan_id",
+        "truth": "auto_loan.loan_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "AUTO_LN.ORIG_DT",
+        "predicted": "auto_loan.origination_date",
+        "truth": "auto_loan.origination_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "AUTO_LN.TERM_MO",
+        "predicted": "auto_loan.term_months",
+        "truth": "auto_loan.term_months",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "AUTO_LN.VEH_VAL",
+        "predicted": "auto_loan.vehicle_value",
+        "truth": "auto_loan.vehicle_value",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "AUTO_LN.REPO_IND",
+        "predicted": "auto_loan.is_repossessed",
+        "truth": "auto_loan.is_repossessed",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "AUTO_LN.DLR_RSV_AMT",
+        "predicted": "auto_loan.dealer_reserve_fee",
+        "truth": "auto_loan.dealer_reserve_fee",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STU_LN.LN_NO",
+        "predicted": "student_loan.loan_id",
+        "truth": "student_loan.loan_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STU_LN.BRWR_NM",
+        "predicted": "student_loan.borrower_name",
+        "truth": "student_loan.borrower_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STU_LN.RPMT_START_DT",
+        "predicted": "student_loan.repayment_start_date",
+        "truth": "student_loan.repayment_start_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "STU_LN.DISB_AMT",
+        "predicted": "student_loan.disbursement_amount",
+        "truth": "student_loan.disbursement_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STU_LN.COSGN_REL_IND",
+        "predicted": "student_loan.cosigner_release_flag",
+        "truth": "student_loan.cosigner_release_flag",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LEASE.LEASE_NO",
+        "predicted": "equipment_lease.lease_id",
+        "truth": "equipment_lease.lease_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LEASE.START_DT",
+        "predicted": "equipment_lease.start_date",
+        "truth": "equipment_lease.start_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LEASE.RESID_VAL",
+        "predicted": "equipment_lease.residual_value",
+        "truth": "equipment_lease.residual_value",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LEASE.BUYOUT_AMT",
+        "predicted": "equipment_lease.buyout_price",
+        "truth": "equipment_lease.buyout_price",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SYND_LN.DEAL_NO",
+        "predicted": "syndicated_loan.deal_id",
+        "truth": "syndicated_loan.deal_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SYND_LN.AGENT_BANK",
+        "predicted": "syndicated_loan.agent_bank",
+        "truth": "syndicated_loan.agent_bank",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SYND_LN.CMT_AMT",
+        "predicted": "syndicated_loan.commitment_amount",
+        "truth": "syndicated_loan.commitment_amount",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SYND_LN.BRWR_ID",
+        "predicted": "syndicated_loan.borrower_id",
+        "truth": "syndicated_loan.borrower_id",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ],
+    "cascade_redwood": [
+      {
+        "source": "CUST.CUST_ID",
+        "predicted": "customer.customer_id",
+        "truth": "customer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.CUST_NM",
+        "predicted": "customer.full_name",
+        "truth": "customer.full_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.PEP_IND",
+        "predicted": "customer.pep_flag",
+        "truth": "customer.pep_flag",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.SAR_CNT",
+        "predicted": "customer.sar_count",
+        "truth": "customer.sar_count",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.DIG_ACTV_IND",
+        "predicted": null,
+        "truth": "customer.is_digital_active",
+        "correct": false,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [
+          "population"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.FAIL_LOGIN_CNT",
+        "predicted": "customer.failed_login_count",
+        "truth": "customer.failed_login_count",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CTR_AGG.CTR_ID",
+        "predicted": "ctr_aggregate.ctr_id",
+        "truth": "ctr_aggregate.ctr_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CTR_AGG.CUST_ID",
+        "predicted": "ctr_aggregate.customer_id",
+        "truth": "ctr_aggregate.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CTR_AGG.BUS_DT",
+        "predicted": "ctr_aggregate.business_date",
+        "truth": "ctr_aggregate.business_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CTR_AGG.CASH_TOT_AMT",
+        "predicted": "ctr_aggregate.cash_total",
+        "truth": "ctr_aggregate.cash_total",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "ATM.ATM_ID",
+        "predicted": "atm.atm_id",
+        "truth": "atm.atm_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "ATM.CASH_BAL",
+        "predicted": "atm.cash_balance",
+        "truth": "atm.cash_balance",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "ATM.UPTIME_PCT",
+        "predicted": "atm.uptime_pct",
+        "truth": "atm.uptime_pct",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "ATM.TXN_CNT",
+        "predicted": "atm.txn_count",
+        "truth": "atm.txn_count",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SESSION_LOG.SESS_ID",
+        "predicted": "app_session.session_id",
+        "truth": "app_session.session_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SESSION_LOG.CUST_ID",
+        "predicted": "app_session.customer_id",
+        "truth": "app_session.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SESSION_LOG.SESS_DUR_SEC",
+        "predicted": "app_session.session_duration_sec",
+        "truth": "app_session.session_duration_sec",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SESSION_LOG.DEVICE_ID",
+        "predicted": "app_session.device_id",
+        "truth": "app_session.device_id",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      }
+    ],
+    "beaconstreet_granitepeak": [
+      {
+        "source": "CPTY.CPTY_ID",
+        "predicted": "counterparty.cpty_id",
+        "truth": "counterparty.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CPTY.CPTY_NM",
+        "predicted": "counterparty.cpty_name",
+        "truth": "counterparty.cpty_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CPTY.EXPOSURE_AMT",
+        "predicted": "counterparty.exposure_amount",
+        "truth": "counterparty.exposure_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CPTY.PD",
+        "predicted": "counterparty.pd",
+        "truth": "counterparty.pd",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "SWAP.SWAP_ID",
+        "predicted": "swap_trade.swap_id",
+        "truth": "swap_trade.swap_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SWAP.CPTY_ID",
+        "predicted": "swap_trade.cpty_id",
+        "truth": "swap_trade.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SWAP.TRD_DT",
+        "predicted": "swap_trade.trade_date",
+        "truth": "swap_trade.trade_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SWAP.NTNL_AMT",
+        "predicted": "swap_trade.notional_amount",
+        "truth": "swap_trade.notional_amount",
+        "correct": true,
+        "conflicts": [
+          "aggregation"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BOND_POSN.POSN_ID",
+        "predicted": "bond_position.position_id",
+        "truth": "bond_position.position_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BOND_POSN.CPTY_ID",
+        "predicted": "bond_position.cpty_id",
+        "truth": "bond_position.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "BOND_POSN.MKT_VAL",
+        "predicted": "bond_position.market_value",
+        "truth": "bond_position.market_value",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "BOND_POSN.STL_STAT",
+        "predicted": "bond_position.settlement_status",
+        "truth": "bond_position.settlement_status",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MRGN.MRGN_ID",
+        "predicted": "margin_account.margin_id",
+        "truth": "margin_account.margin_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MRGN.CPTY_ID",
+        "predicted": "margin_account.cpty_id",
+        "truth": "margin_account.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "MRGN.VM_BAL",
+        "predicted": "margin_account.variation_margin",
+        "truth": "margin_account.variation_margin",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "REPO.REPO_ID",
+        "predicted": "repo_trade.repo_id",
+        "truth": "repo_trade.repo_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "REPO.CPTY_ID",
+        "predicted": "repo_trade.cpty_id",
+        "truth": "repo_trade.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "REPO.REPO_AMT",
+        "predicted": "repo_trade.repo_amount",
+        "truth": "repo_trade.repo_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "REPO.MAT_DT",
+        "predicted": "repo_trade.maturity_date",
+        "truth": "repo_trade.maturity_date",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "CR_LINE.LINE_ID",
+        "predicted": "credit_line.line_id",
+        "truth": "credit_line.line_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CR_LINE.CPTY_ID",
+        "predicted": "credit_line.cpty_id",
+        "truth": "credit_line.cpty_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CR_LINE.CCF",
+        "predicted": "credit_line.ccf",
+        "truth": "credit_line.ccf",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CR_LINE.RWA_AMT",
+        "predicted": "credit_line.rwa_amount",
+        "truth": "credit_line.rwa_amount",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1143 @@
+{
+  "table": [
+    {
+      "scenario": "keystone (dev)",
+      "method": "name_only",
+      "target_accuracy": 0.5217391304347826,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 12,
+      "attributes": 23,
+      "seconds": 0.0,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "keystone (dev)",
+      "method": "valentine_coma",
+      "target_accuracy": 0.6956521739130435,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 12,
+      "attributes": 23,
+      "seconds": 2.5,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "keystone (dev)",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.2608695652173913,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 5,
+      "attributes": 23,
+      "seconds": 3.9,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "keystone (dev)",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.391304347826087,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 20,
+      "attributes": 23,
+      "seconds": 1.1,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "keystone (dev)",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.2608695652173913,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 7,
+      "attributes": 23,
+      "seconds": 2.4,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "keystone (dev)",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 1.0,
+      "harmful_auto_accepts": "0",
+      "attributes": 23,
+      "seconds": 23.4,
+      "recall_by_type": {
+        "code_set": 1.0,
+        "grain": 1.0,
+        "inclusion": 1.0,
+        "null_semantics": 1.0,
+        "population": 1.0,
+        "scale": 1.0,
+        "sign": 1.0,
+        "temporal": 1.0,
+        "unit": 1.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "name_only",
+      "target_accuracy": 0.34615384615384615,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 15,
+      "attributes": 26,
+      "seconds": 0.0,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "valentine_coma",
+      "target_accuracy": 0.5,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 13,
+      "attributes": 26,
+      "seconds": 1.9,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.2692307692307692,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 6,
+      "attributes": 26,
+      "seconds": 1.4,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.38461538461538464,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 20,
+      "attributes": 26,
+      "seconds": 1.0,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.2692307692307692,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 6,
+      "attributes": 26,
+      "seconds": 2.4,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0
+      }
+    },
+    {
+      "scenario": "lending (held-out)",
+      "method": "mergeguard",
+      "target_accuracy": 0.5384615384615384,
+      "conflict_recall": 0.6363636363636364,
+      "harmful_auto_accepts": 0,
+      "attributes": 26,
+      "seconds": 24.8,
+      "recall_by_type": {
+        "code_set": 1.0,
+        "format": 0.0,
+        "grain": 1.0,
+        "inclusion": 0.0,
+        "null_semantics": 1.0,
+        "population": 0.0,
+        "scale": 1.0,
+        "temporal": 1.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "name_only",
+      "target_accuracy": 0.48,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 7,
+      "attributes": 25,
+      "seconds": 0.0,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "valentine_coma",
+      "target_accuracy": 0.72,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 9,
+      "attributes": 25,
+      "seconds": 2.2,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.2,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 1,
+      "attributes": 25,
+      "seconds": 0.7,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.28,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 18,
+      "attributes": 25,
+      "seconds": 1.0,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.4,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 8,
+      "attributes": 25,
+      "seconds": 2.1,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "scenario": "cards (held-out)",
+      "method": "mergeguard",
+      "target_accuracy": 0.4,
+      "conflict_recall": 0.18181818181818182,
+      "harmful_auto_accepts": 0,
+      "attributes": 25,
+      "seconds": 0.0,
+      "recall_by_type": {
+        "code_set": 0.5,
+        "grain": 1.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "sign": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    }
+  ],
+  "mergeguard_rows": {
+    "keystone (dev)": [
+      {
+        "source": "cust.cust_no",
+        "predicted": "customer.customer_id",
+        "truth": "customer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.full_nm",
+        "predicted": "customer.first_name+customer.last_name",
+        "truth": "customer.first_name+customer.last_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.email_addr",
+        "predicted": "customer.email",
+        "truth": "customer.email",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.dob",
+        "predicted": "customer.birth_date",
+        "truth": "customer.birth_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.seg_cd",
+        "predicted": "customer.customer_segment",
+        "truth": "customer.customer_segment",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.open_dt",
+        "predicted": "customer.opened_date",
+        "truth": "customer.opened_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.branch_code",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.active_flag",
+        "predicted": "customer.is_active",
+        "truth": "customer.is_active",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [
+          "population"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust.monthly_txn_count",
+        "predicted": "account.monthly_txn_count",
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "grain"
+        ],
+        "detected": [
+          "grain"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "acct.acct_no",
+        "predicted": "account.account_id",
+        "truth": "account.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "acct.cust_no",
+        "predicted": "account.customer_id",
+        "truth": "account.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "acct.acct_stat",
+        "predicted": "account.account_status",
+        "truth": "account.account_status",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "acct.balance",
+        "predicted": "account.current_balance",
+        "truth": "account.current_balance",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": "False"
+      },
+      {
+        "source": "acct.apr_pct",
+        "predicted": "account.apr",
+        "truth": "account.apr",
+        "correct": true,
+        "conflicts": [
+          "scale"
+        ],
+        "detected": [
+          "scale"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "acct.overdraft_limit",
+        "predicted": "account.overdraft_limit",
+        "truth": "account.overdraft_limit",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.xfer_id",
+        "predicted": "transfer.transfer_id",
+        "truth": "transfer.transfer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.acct_no",
+        "predicted": "transfer.account_id",
+        "truth": "transfer.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.transfer_amount",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "unit",
+          "inclusion",
+          "sign"
+        ],
+        "detected": [
+          "inclusion",
+          "sign",
+          "unit"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.xfer_amt_net",
+        "predicted": "transfer.transfer_amount",
+        "truth": "transfer.transfer_amount",
+        "correct": true,
+        "conflicts": [
+          "unit",
+          "sign"
+        ],
+        "detected": [
+          "sign",
+          "unit"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.fee_amt",
+        "predicted": "transfer.fee_amount",
+        "truth": "transfer.fee_amount",
+        "correct": true,
+        "conflicts": [
+          "unit"
+        ],
+        "detected": [
+          "unit"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.posted_date",
+        "predicted": "transfer.initiated_ts",
+        "truth": "transfer.initiated_ts",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.settle_dt",
+        "predicted": "transfer.posted_date",
+        "truth": "transfer.posted_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "xfer.channel_cd",
+        "predicted": "transfer.channel",
+        "truth": "transfer.channel",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      }
+    ],
+    "lending (held-out)": [
+      {
+        "source": "Borrower.BorrowerKey",
+        "predicted": null,
+        "truth": "member.member_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.BorrowerName",
+        "predicted": null,
+        "truth": "member.given_name+member.surname",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.PhoneNbr",
+        "predicted": null,
+        "truth": "member.phone_number",
+        "correct": false,
+        "conflicts": [
+          "format"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.CustSinceDt",
+        "predicted": "member.member_since",
+        "truth": "member.member_since",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.StateNm",
+        "predicted": "member.state_code",
+        "truth": "member.state_code",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.FicoScore",
+        "predicted": "member.credit_score",
+        "truth": "member.credit_score",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.LoanOfficerId",
+        "predicted": "payment.loan_id",
+        "truth": null,
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.DelinqInd",
+        "predicted": null,
+        "truth": "member.is_delinquent",
+        "correct": false,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Borrower.DaysPastDue",
+        "predicted": "loan.days_past_due",
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "grain"
+        ],
+        "detected": [
+          "grain"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.LoanKey",
+        "predicted": "loan.loan_id",
+        "truth": "loan.loan_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.BorrowerKey",
+        "predicted": null,
+        "truth": "loan.member_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.LoanTypCd",
+        "predicted": "loan.loan_type",
+        "truth": "loan.loan_type",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.CurrBal",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.PrinBal",
+        "predicted": null,
+        "truth": "loan.principal_balance",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.IntRate",
+        "predicted": "loan.interest_rate",
+        "truth": "loan.interest_rate",
+        "correct": true,
+        "conflicts": [
+          "scale"
+        ],
+        "detected": [
+          "scale"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.OrigDt",
+        "predicted": "loan.origination_date",
+        "truth": "loan.origination_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.MatDt",
+        "predicted": "loan.maturity_date",
+        "truth": "loan.maturity_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.DaysDelinquent",
+        "predicted": null,
+        "truth": "loan.days_past_due",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Loan.EscrowBal",
+        "predicted": null,
+        "truth": "loan.escrow_balance",
+        "correct": false,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.PmtKey",
+        "predicted": null,
+        "truth": "payment.payment_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.LoanKey",
+        "predicted": null,
+        "truth": "payment.loan_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.PaymentAmount",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.PmtPI",
+        "predicted": null,
+        "truth": "payment.payment_amount",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.PaymentDate",
+        "predicted": "payment.received_ts",
+        "truth": "payment.received_ts",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.EffDt",
+        "predicted": "payment.payment_date",
+        "truth": "payment.payment_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "Pmt.PmtMethCd",
+        "predicted": "payment.payment_method",
+        "truth": "payment.payment_method",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      }
+    ],
+    "cards (held-out)": [
+      {
+        "source": "CRD_ACCT.CRD_ACCT_REF",
+        "predicted": null,
+        "truth": "card_account.account_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.CARDHOLDER_NAME",
+        "predicted": "card_account.holder_name",
+        "truth": "card_account.holder_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.CR_LMT",
+        "predicted": null,
+        "truth": "card_account.credit_limit",
+        "correct": false,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.UTIL_PCT",
+        "predicted": null,
+        "truth": "card_account.utilization_ratio",
+        "correct": false,
+        "conflicts": [
+          "scale"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.ACCT_OPN_DT",
+        "predicted": "card_account.open_date",
+        "truth": "card_account.open_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.PROD_CD",
+        "predicted": "card_account.product_tier",
+        "truth": "card_account.product_tier",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.AUTOPAY_IND",
+        "predicted": "card_account.autopay_enabled",
+        "truth": "card_account.autopay_enabled",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.REVOLVER_FLG",
+        "predicted": "card_account.is_revolver",
+        "truth": "card_account.is_revolver",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CRD_ACCT.CASHBACK_EARNED",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [
+          "grain",
+          "unit"
+        ],
+        "detected": [
+          "grain"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.STMT_REF",
+        "predicted": null,
+        "truth": "statement.statement_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.CRD_ACCT_REF",
+        "predicted": null,
+        "truth": "statement.account_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.STMT_DT",
+        "predicted": "statement.statement_date",
+        "truth": "statement.statement_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.NEW_BAL",
+        "predicted": null,
+        "truth": "statement.new_balance",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.MIN_PMT_DUE",
+        "predicted": null,
+        "truth": "statement.minimum_due",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.INT_CHG",
+        "predicted": null,
+        "truth": "statement.interest_charged",
+        "correct": false,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.FEE_CHG",
+        "predicted": null,
+        "truth": "statement.fees_charged",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STMT.CYCLE_SPEND",
+        "predicted": null,
+        "truth": "statement.cycle_spend",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.TRAN_REF",
+        "predicted": null,
+        "truth": "card_transaction.transaction_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.CRD_ACCT_REF",
+        "predicted": null,
+        "truth": "card_transaction.account_id",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.AMOUNT",
+        "predicted": null,
+        "truth": "card_transaction.amount",
+        "correct": false,
+        "conflicts": [
+          "sign"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.DR_CR_IND",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.TRAN_DT",
+        "predicted": "card_transaction.post_date",
+        "truth": "card_transaction.post_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.PURCH_DT",
+        "predicted": "card_transaction.transaction_date",
+        "truth": "card_transaction.transaction_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.MCC_CD",
+        "predicted": null,
+        "truth": "card_transaction.merchant_category",
+        "correct": false,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "TRAN.CASHBACK_AMT",
+        "predicted": null,
+        "truth": "card_transaction.cashback_earned",
+        "correct": false,
+        "conflicts": [
+          "unit"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ]
+  }
+}

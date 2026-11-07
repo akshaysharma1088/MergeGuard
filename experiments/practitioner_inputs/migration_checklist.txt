@@ -1,0 +1,55 @@
+Catching semantic data traps during a bank merger or core conversion requires verifying how fields behave in production—not just matching column names and data types in a schema dictionary.
+
+1. Amounts, Balances & Signs
+
+Verify sign conventions: Check whether debits, loan balances, charge-offs, and escrow shortages are stored as negative numbers or positive numbers paired with a debit/credit indicator.
+
+Separate gross from net: Confirm if balances and fees reflect gross amounts or net figures after holds, pending items, fee waivers, chargeback recoveries, and participations sold.
+
+Align currency and valuation basis: Check whether foreign currency, trade, and collateral amounts are stored in local/original currency or converted to USD, and whether securities use clean or dirty prices.
+
+Check scale and precision: Audit interest rates, basis points, and percentage splits to ensure decimals (0.0525) are never mapped directly into whole-number percentage fields (5.25).
+
+Define commitment vs. funded exposure: For credit lines, letters of credit, and syndicated loans, verify whether balance fields capture total facility limits, bank pro-rata shares, or drawn principal only.
+
+2. Dates, Timestamps & Lifecycles
+
+Pinpoint event triggers: Document the exact business moment a date records—such as application approval vs. loan funding, trade execution vs. settlement, or batch run date vs. effective backdated post date.
+
+Distinguish static from rolling dates: Verify whether origination, maturity, and KYC review dates lock in at account opening or overwrite upon renewal, modification, or periodic review.
+
+Audit dummy and sentinel dates: Scan date columns for high-value placeholders (such as 2099-12-31 or 1900-01-01) used to represent open-ended repos, evergreen credit lines, or missing data.
+
+Standardize time zones and cutoffs: Confirm whether timestamps log in UTC, local branch time, or mainframes' local time, and align end-of-day ledger cutoff times across both institutions.
+
+3. Identifiers, Keys & Persistence
+
+Test ID persistence across lifecycle events: Verify whether Account IDs, Card IDs, and Loan IDs remain permanent or regenerate when a card is reissued, a loan is modified, or a CD rolls over.
+
+Map entity granularity: Confirm whether Customer IDs and Tax IDs represent an individual person, a household, a revocable trust grantor, or a corporate parent vs. a special-purpose subsidiary.
+
+Cross-check external vs. internal codes: Determine if fields like Merchant Category Codes (MCC), branch codes, and industry classifications use standard external codes or custom internal remappings.
+
+4. Statuses, Flags & Thresholds
+
+Compare state-machine transitions: Map the exact rule that flips an account to Active, Dormant, Delinquent, In Collections, or Repossessed (e.g., first missed due date vs. end of grace period).
+
+Unpack boolean flags: Verify whether a single flag (like Marketing Opt-Out, Co-Signer Release, or Confirmed Fraud) means eligibility/initiation or final legal/investigative completion.
+
+Check channel and scope boundaries: Confirm if digital activity, opt-outs, and failed login counters apply globally across the customer profile or reset per channel, device, or session.
+
+5. Regulatory, Risk & Accounting Logic
+
+Reconcile aggregation rules: Verify whether CTR cash totals, SAR counts, and small-business exposure flags aggregate by conductor, account, or legal beneficiary.
+
+Align risk model methodologies: Check whether Probability of Default (PD), LTV, CECL reserves, and Risk-Weighted Assets (RWA) include unfunded commitments, junior liens, or through-the-cycle adjustments.
+
+Audit suspense and netting rules: Confirm whether general ledger suspense accounts, counterparty exposures, and margin balances report gross open items or net offset positions.
+
+6. Hands-On Data Profiling & Sign-Off
+
+Profile edge-case cohorts: Pull 50 real accounts per product covering modifications, partial charge-offs, multi-currency wires, revocable trusts, and syndicated participations, and compare both systems side by side.
+
+Run distribution and boundary queries: Compare min/max values, null rates, negative-value counts, and date-diff distributions (such as maturity date minus origination date) across source and target tables.
+
+Require dual SME sign-off: Have both a back-office operations specialist and a finance/risk owner—not just IT developers—sign off on the business definition of every mapped field before parallel run.

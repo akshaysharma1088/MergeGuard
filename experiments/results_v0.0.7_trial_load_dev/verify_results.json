@@ -1,0 +1,1141 @@
+{
+  "summary": [
+    {
+      "scenario": "harborpoint_bluestem",
+      "risky": 11,
+      "prof_any": 3,
+      "ver_any": 7,
+      "both_any": 8,
+      "ver_type": 6,
+      "loaded": 5,
+      "loaded_caught": 2,
+      "computed": 6,
+      "computed_caught": 6,
+      "clean": 13,
+      "false_fail": 0,
+      "conflicts": 11
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "risky": 10,
+      "prof_any": 4,
+      "ver_any": 8,
+      "both_any": 8,
+      "ver_type": 8,
+      "loaded": 2,
+      "loaded_caught": 0,
+      "computed": 8,
+      "computed_caught": 8,
+      "clean": 15,
+      "false_fail": 0,
+      "conflicts": 10
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "risky": 10,
+      "prof_any": 5,
+      "ver_any": 6,
+      "both_any": 6,
+      "ver_type": 2,
+      "loaded": 4,
+      "loaded_caught": 1,
+      "computed": 6,
+      "computed_caught": 5,
+      "clean": 9,
+      "false_fail": 0,
+      "conflicts": 10
+    },
+    {
+      "scenario": "cascade_redwood",
+      "risky": 10,
+      "prof_any": 6,
+      "ver_any": 8,
+      "both_any": 9,
+      "ver_type": 5,
+      "loaded": 1,
+      "loaded_caught": 0,
+      "computed": 9,
+      "computed_caught": 9,
+      "clean": 8,
+      "false_fail": 0,
+      "conflicts": 10
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "risky": 10,
+      "prof_any": 4,
+      "ver_any": 7,
+      "both_any": 8,
+      "ver_type": 2,
+      "loaded": 3,
+      "loaded_caught": 1,
+      "computed": 7,
+      "computed_caught": 7,
+      "clean": 13,
+      "false_fail": 0,
+      "conflicts": 10
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "CUSTOMER.MKTG_OPT_OUT",
+      "truth": [
+        "population"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "population",
+        "cast"
+      ],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "PMT.PMT_TYP_CD",
+      "truth": [
+        "code_set"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "code_set"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "code_set"
+      ],
+      "diagnosis": "100% of loaded values are not in the target code set (ACH, WIRE)",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "3000000",
+        "3000001",
+        "3000002",
+        "3000003",
+        "3000004"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "PMT.SETTLE_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "temporal"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 2 days (median, range -1 to 5): a different business event",
+      "mismatch_rate": 0.6697,
+      "edge_cases": [
+        "3000000",
+        "3000001",
+        "3000003",
+        "3000005",
+        "3000006"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "PMT.CPTY_NM",
+      "truth": [
+        "role"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "PMT.AMT_USD",
+      "truth": [
+        "currency"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "definition"
+      ],
+      "diagnosis": "Values differ in both directions: different method or basis",
+      "mismatch_rate": 0.1885,
+      "edge_cases": [
+        "3000000",
+        "3000002",
+        "3000006",
+        "3000013",
+        "3000019"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "MTG_LN.LTV_RTO",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.384,
+      "edge_cases": [
+        "4500002",
+        "4500006",
+        "4500007",
+        "4500010",
+        "4500011"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "MTG_LN.ESCROW_BAL",
+      "truth": [
+        "sign"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "sign"
+      ],
+      "diagnosis": "Target is the source with the sign flipped",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "MTG_LN.HMDA_ACTN_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 29 days (median, range 15 to 45): a different business event",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "MTG_LN.CECL_RSRV",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.383,
+      "edge_cases": [
+        "4500002",
+        "4500006",
+        "4500007",
+        "4500010",
+        "4500011"
+      ]
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "TRUST_ACCT.TAX_ID",
+      "truth": [
+        "identity"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "harborpoint_bluestem",
+      "source": "BENE.BENE_SHR",
+      "truth": [
+        "code_set"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "SKIPPED",
+      "verify_flags": [],
+      "diagnosis": "No trial-load data for this target",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "PORTF.AUM_AMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.9995,
+      "edge_cases": [
+        "3000000",
+        "3000001",
+        "3000002",
+        "3000003",
+        "3000004"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "PORTF.COST_BASIS",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "TRD.POSN_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "temporal"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 1 days (median, range 1 to 5): a different business event",
+      "mismatch_rate": 0.9989,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "LC.LC_BAL",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "6000000",
+        "6000001",
+        "6000002",
+        "6000003",
+        "6000004"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "LC.EXPRY_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "FRD_CASE.FRD_LOSS_AMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 0.9983,
+      "edge_cases": [
+        "7500000",
+        "7500001",
+        "7500002",
+        "7500003",
+        "7500004"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "FRD_CASE.CONF_FRD_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "32.2% of records flip (target marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.3217,
+      "edge_cases": [
+        "7500004",
+        "7500013",
+        "7500014",
+        "7500015",
+        "7500018"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "FRD_CASE.ALRT_TS",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 1 days (median, range -1 to 1): a different business event",
+      "mismatch_rate": 0.2233,
+      "edge_cases": [
+        "7500008",
+        "7500009",
+        "7500012",
+        "7500013",
+        "7500019"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "GL_TXN.POST_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "temporal"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is earlier than target by 2 days (median, range -4 to 1): a different business event",
+      "mismatch_rate": 0.7478,
+      "edge_cases": [
+        "9000004",
+        "9000005",
+        "9000006",
+        "9000007",
+        "9000008"
+      ]
+    },
+    {
+      "scenario": "ridgeview_copperleaf",
+      "source": "SUSP.SUSP_BAL",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "sign"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "10500000",
+        "10500001",
+        "10500002",
+        "10500003",
+        "10500004"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "AUTO_LN.VEH_VAL",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "AUTO_LN.REPO_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "cast"
+      ],
+      "verify": "REVIEW",
+      "verify_flags": [],
+      "diagnosis": "A few records differ",
+      "mismatch_rate": 0.002,
+      "edge_cases": [
+        "1500062",
+        "1500591",
+        "1500871",
+        "1501435"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "AUTO_LN.DLR_RSV_AMT",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "unit"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "1500000",
+        "1500001",
+        "1500002",
+        "1500003",
+        "1500004"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "STU_LN.RPMT_START_DT",
+      "truth": [
+        "temporal"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "temporal",
+        "temporal"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "temporal"
+      ],
+      "diagnosis": "Source date is later than target by 183 days (median, range 182 to 184): a different business event",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "3000000",
+        "3000001",
+        "3000002",
+        "3000003",
+        "3000004"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "STU_LN.DISB_AMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target = source x 2 (aggregation)",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "3000000",
+        "3000001",
+        "3000002",
+        "3000003",
+        "3000004"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "STU_LN.COSGN_REL_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "population",
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "14.9% of records flip (target marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.1492,
+      "edge_cases": [
+        "3000019",
+        "3000020",
+        "3000031",
+        "3000048",
+        "3000050"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "LEASE.RESID_VAL",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "LEASE.BUYOUT_AMT",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "definition"
+      ],
+      "diagnosis": "Values differ in both directions: different method or basis",
+      "mismatch_rate": 0.9975,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "SYND_LN.CMT_AMT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "unit"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "85% of loaded values fall outside the target's range",
+      "mismatch_rate": 0.85,
+      "edge_cases": [
+        "6000000",
+        "6000001",
+        "6000002",
+        "6000003",
+        "6000005"
+      ]
+    },
+    {
+      "scenario": "prairiegate_elmhurst",
+      "source": "SYND_LN.BRWR_ID",
+      "truth": [
+        "identity"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "CUST.PEP_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "population",
+        "cast"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "population"
+      ],
+      "diagnosis": "3.2% of records flip (source marks more records): a different rule decides the flag",
+      "mismatch_rate": 0.032,
+      "edge_cases": [
+        "1500035",
+        "1500048",
+        "1500069",
+        "1500106",
+        "1500176"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "CUST.SAR_CNT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target counts are always larger: counted over a different scope",
+      "mismatch_rate": 0.104,
+      "edge_cases": [
+        "1500014",
+        "1500020",
+        "1500038",
+        "1500052",
+        "1500054"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "CUST.DIG_ACTV_IND",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "SKIPPED",
+      "verify_flags": [],
+      "diagnosis": "No trial-load data for this target",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "CUST.FAIL_LOGIN_CNT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "unit",
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target counts are always smaller: counted over a different scope",
+      "mismatch_rate": 0.9785,
+      "edge_cases": [
+        "1500001",
+        "1500002",
+        "1500003",
+        "1500004",
+        "1500005"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "CTR_AGG.CASH_TOT_AMT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "grain"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.2955,
+      "edge_cases": [
+        "3000000",
+        "3000006",
+        "3000009",
+        "3000010",
+        "3000018"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "ATM.CASH_BAL",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "ATM.UPTIME_PCT",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "Target = source x 1.03",
+      "mismatch_rate": 0.985,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "ATM.TXN_CNT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target counts are always smaller: counted over a different scope",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "SESSION_LOG.SESS_DUR_SEC",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "aggregation"
+      ],
+      "diagnosis": "Target counts are always smaller: counted over a different scope",
+      "mismatch_rate": 0.5962,
+      "edge_cases": [
+        "6000000",
+        "6000001",
+        "6000004",
+        "6000005",
+        "6000006"
+      ]
+    },
+    {
+      "scenario": "cascade_redwood",
+      "source": "SESSION_LOG.DEVICE_ID",
+      "truth": [
+        "identity"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "CPTY.EXPOSURE_AMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "1500000",
+        "1500001",
+        "1500002",
+        "1500003",
+        "1500004"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "CPTY.PD",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "definition"
+      ],
+      "diagnosis": "Values differ in both directions: different method or basis",
+      "mismatch_rate": 0.285,
+      "edge_cases": [
+        "1500003",
+        "1500011",
+        "1500019",
+        "1500023",
+        "1500024"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "SWAP.NTNL_AMT",
+      "truth": [
+        "aggregation"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "BOND_POSN.MKT_VAL",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "scale"
+      ],
+      "diagnosis": "Target = source x 0.9857",
+      "mismatch_rate": 0.9653,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "BOND_POSN.STL_STAT",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "code_set"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "definition"
+      ],
+      "diagnosis": "Values differ with no consistent mapping: a different meaning",
+      "mismatch_rate": 1.0,
+      "edge_cases": [
+        "4500000",
+        "4500001",
+        "4500002",
+        "4500003",
+        "4500004"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "MRGN.VM_BAL",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": false,
+      "profile_flags": [
+        "inclusion"
+      ],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always smaller than source: one side includes or nets components",
+      "mismatch_rate": 0.475,
+      "edge_cases": [
+        "6000000",
+        "6000001",
+        "6000002",
+        "6000005",
+        "6000007"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "REPO.REPO_AMT",
+      "truth": [
+        "inclusion"
+      ],
+      "loaded": true,
+      "profile_flags": [],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "REPO.MAT_DT",
+      "truth": [
+        "null_semantics"
+      ],
+      "loaded": true,
+      "profile_flags": [
+        "null_semantics"
+      ],
+      "verify": "PASS",
+      "verify_flags": [],
+      "diagnosis": "",
+      "mismatch_rate": 0.0,
+      "edge_cases": []
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "CR_LINE.CCF",
+      "truth": [
+        "population"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "inclusion"
+      ],
+      "diagnosis": "Target is always larger than source: one side includes or nets components",
+      "mismatch_rate": 0.342,
+      "edge_cases": [
+        "9000003",
+        "9000004",
+        "9000007",
+        "9000010",
+        "9000012"
+      ]
+    },
+    {
+      "scenario": "beaconstreet_granitepeak",
+      "source": "CR_LINE.RWA_AMT",
+      "truth": [
+        "methodology"
+      ],
+      "loaded": false,
+      "profile_flags": [],
+      "verify": "FAIL",
+      "verify_flags": [
+        "definition"
+      ],
+      "diagnosis": "Values differ in both directions: different method or basis",
+      "mismatch_rate": 0.9995,
+      "edge_cases": [
+        "9000000",
+        "9000001",
+        "9000002",
+        "9000003",
+        "9000004"
+      ]
+    }
+  ]
+}

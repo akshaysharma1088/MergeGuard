@@ -1,0 +1,406 @@
+{
+  "table": [
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "name_only",
+      "target_accuracy": 0.6206896551724138,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 15,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "valentine_coma",
+      "target_accuracy": 0.9655172413793104,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 12,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      },
+      "seconds": 3.2
+    },
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.1724137931034483,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 4,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      },
+      "seconds": 3.9
+    },
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.7586206896551724,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 18,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      },
+      "seconds": 1.4
+    },
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.3793103448275862,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 8,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "population": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      },
+      "seconds": 3.7
+    },
+    {
+      "scenario": "northfield_willowcreek",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.5,
+      "harmful_auto_accepts": 1,
+      "recall_by_type": {
+        "code_set": 1.0,
+        "identity": 0.0,
+        "inclusion": 0.3333333333333333,
+        "population": 1.0,
+        "temporal": 0.0,
+        "unit": 1.0
+      },
+      "seconds": 47.1
+    }
+  ],
+  "mergeguard_rows": {
+    "northfield_willowcreek": [
+      {
+        "source": "cust_mstr.cust_id",
+        "predicted": "customer.customer_id",
+        "truth": "customer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.cust_full_nm",
+        "predicted": "customer.full_name",
+        "truth": "customer.full_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.cust_typ_cd",
+        "predicted": "customer.customer_type",
+        "truth": "customer.customer_type",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.incm_amt",
+        "predicted": "customer.annual_income",
+        "truth": "customer.annual_income",
+        "correct": true,
+        "conflicts": [
+          "unit",
+          "inclusion"
+        ],
+        "detected": [
+          "unit"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.ann_rev_amt",
+        "predicted": "customer.annual_revenue",
+        "truth": "customer.annual_revenue",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.sb_flg",
+        "predicted": "customer.is_small_business",
+        "truth": "customer.is_small_business",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [
+          "population"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.kyc_rvw_dt",
+        "predicted": "customer.kyc_review_date",
+        "truth": "customer.kyc_review_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cust_mstr.email_addr",
+        "predicted": "customer.email",
+        "truth": "customer.email",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_mstr.card_id",
+        "predicted": "card.card_id",
+        "truth": "card.card_id",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_mstr.cust_id",
+        "predicted": "card.customer_id",
+        "truth": "card.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_mstr.card_stat_cd",
+        "predicted": "card.card_status",
+        "truth": "card.card_status",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_mstr.open_dt",
+        "predicted": "card.open_date",
+        "truth": "card.open_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_txn.txn_id",
+        "predicted": "card_transaction.transaction_id",
+        "truth": "card_transaction.transaction_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_txn.card_id",
+        "predicted": "card_transaction.card_id",
+        "truth": "card_transaction.card_id",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_txn.txn_amt",
+        "predicted": "card_transaction.amount",
+        "truth": "card_transaction.amount",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_txn.mcc_cat",
+        "predicted": "card_transaction.merchant_category_code",
+        "truth": "card_transaction.merchant_category_code",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "card_txn.fee_amt",
+        "predicted": "card_transaction.fee_amount",
+        "truth": "card_transaction.fee_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "dep_acct.dep_id",
+        "predicted": "deposit.deposit_id",
+        "truth": "deposit.deposit_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "dep_acct.cust_id",
+        "predicted": "deposit.customer_id",
+        "truth": "deposit.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "dep_acct.prin_amt",
+        "predicted": "deposit.principal_amount",
+        "truth": "deposit.principal_amount",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "dep_acct.open_dt",
+        "predicted": "deposit.open_date",
+        "truth": "deposit.open_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "dep_acct.mat_dt",
+        "predicted": "deposit.maturity_date",
+        "truth": "deposit.maturity_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.acct_id",
+        "predicted": "credit_account.account_id",
+        "truth": "credit_account.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.cust_id",
+        "predicted": "credit_account.customer_id",
+        "truth": "credit_account.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.cur_bal",
+        "predicted": "credit_account.current_balance",
+        "truth": "credit_account.current_balance",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.days_pd",
+        "predicted": "credit_account.days_past_due",
+        "truth": "credit_account.days_past_due",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.coll_stat_ind",
+        "predicted": "credit_account.in_collections",
+        "truth": "credit_account.in_collections",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [
+          "population"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.co_amt",
+        "predicted": "credit_account.charge_off_amount",
+        "truth": "credit_account.charge_off_amount",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "cr_acct.coll_val_amt",
+        "predicted": "credit_account.collateral_value",
+        "truth": "credit_account.collateral_value",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ]
+  }
+}

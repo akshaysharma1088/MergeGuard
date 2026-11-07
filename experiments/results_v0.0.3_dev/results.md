@@ -1,0 +1,26 @@
+| Scenario | Method | Target accuracy | Conflict recall | Harmful auto-accepts |
+| --- | --- | --- | --- | --- |
+| mb | name_only | 65% | 0% | 13 |
+| mb | valentine_coma | 70% | 0% | 12 |
+| mb | valentine_cupid | 26% | 0% | 5 |
+| mb | valentine_similarity_flooding | 39% | 0% | 20 |
+| mb | valentine_jaccard_distance | 26% | 0% | 7 |
+| mb | mergeguard | 100% | 100% | 0 |
+| harborline_summit | name_only | 42% | 0% | 14 |
+| harborline_summit | valentine_coma | 50% | 0% | 13 |
+| harborline_summit | valentine_cupid | 27% | 0% | 6 |
+| harborline_summit | valentine_similarity_flooding | 38% | 0% | 20 |
+| harborline_summit | valentine_jaccard_distance | 27% | 0% | 6 |
+| harborline_summit | mergeguard | 100% | 100% | 0 |
+| meridian_pinecrest | name_only | 64% | 0% | 9 |
+| meridian_pinecrest | valentine_coma | 72% | 0% | 9 |
+| meridian_pinecrest | valentine_cupid | 20% | 0% | 1 |
+| meridian_pinecrest | valentine_similarity_flooding | 28% | 0% | 18 |
+| meridian_pinecrest | valentine_jaccard_distance | 40% | 0% | 8 |
+| meridian_pinecrest | mergeguard | 100% | 91% | 0 |
+| lakeshore_prairie | name_only | 43% | 0% | 9 |
+| lakeshore_prairie | valentine_coma | 43% | 0% | 11 |
+| lakeshore_prairie | valentine_cupid | 26% | 0% | 4 |
+| lakeshore_prairie | valentine_similarity_flooding | 35% | 0% | 16 |
+| lakeshore_prairie | valentine_jaccard_distance | 35% | 0% | 9 |
+| lakeshore_prairie | mergeguard | 96% | 80% | 0 |

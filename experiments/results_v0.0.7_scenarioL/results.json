@@ -1,0 +1,481 @@
+{
+  "table": [
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "name_only",
+      "target_accuracy": 0.7567567567567568,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 18,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.0
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "valentine_coma",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 15,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 7.8
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.21621621621621623,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 4,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 4.6
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.16216216216216217,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 34,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 1.9
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.5405405405405406,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 15,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 0.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "role": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 6.3
+    },
+    {
+      "scenario": "lakeside_oakhollow",
+      "method": "mergeguard",
+      "target_accuracy": 1.0,
+      "conflict_recall": 0.26666666666666666,
+      "harmful_auto_accepts": 5,
+      "recall_by_type": {
+        "identity": 0.0,
+        "inclusion": 1.0,
+        "methodology": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.2,
+        "role": 0.0,
+        "temporal": 0.5
+      },
+      "seconds": 149.1
+    }
+  ],
+  "mergeguard_rows": {
+    "lakeside_oakhollow": [
+      {
+        "source": "CUST.CUST_NO",
+        "predicted": "customer.customer_id",
+        "truth": "customer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.CUST_NM",
+        "predicted": "customer.full_name",
+        "truth": "customer.full_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.BIRTH_DT",
+        "predicted": "customer.birth_date",
+        "truth": "customer.birth_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.DECEASED_IND",
+        "predicted": "customer.is_deceased",
+        "truth": "customer.is_deceased",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CUST.CR_SCORE",
+        "predicted": "customer.credit_score",
+        "truth": "customer.credit_score",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "CUST.BKRPT_IND",
+        "predicted": "customer.in_bankruptcy",
+        "truth": "customer.in_bankruptcy",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [
+          "population"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.ACCT_NO",
+        "predicted": "deposit_account.account_id",
+        "truth": "deposit_account.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.CUST_NO",
+        "predicted": "deposit_account.customer_id",
+        "truth": "deposit_account.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.OPEN_DT",
+        "predicted": "deposit_account.open_date",
+        "truth": "deposit_account.open_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.LEDGER_BAL",
+        "predicted": "deposit_account.ledger_balance",
+        "truth": "deposit_account.ledger_balance",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.OD_LMT",
+        "predicted": "deposit_account.overdraft_limit",
+        "truth": "deposit_account.overdraft_limit",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "DDA_ACCT.MAIL_ADDR",
+        "predicted": "deposit_account.mailing_address",
+        "truth": "deposit_account.mailing_address",
+        "correct": true,
+        "conflicts": [
+          "role"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "CHK_ITEM.ITEM_ID",
+        "predicted": "check_item.item_id",
+        "truth": "check_item.item_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CHK_ITEM.ACCT_NO",
+        "predicted": "check_item.account_id",
+        "truth": "check_item.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CHK_ITEM.CHK_AMT",
+        "predicted": "check_item.check_amount",
+        "truth": "check_item.check_amount",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "CHK_ITEM.CHK_NBR",
+        "predicted": "check_item.check_number",
+        "truth": "check_item.check_number",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STOP_PMT.STOP_ID",
+        "predicted": "stop_payment.stop_id",
+        "truth": "stop_payment.stop_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STOP_PMT.ACCT_NO",
+        "predicted": "stop_payment.account_id",
+        "truth": "stop_payment.account_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STOP_PMT.REQ_DT",
+        "predicted": "stop_payment.request_date",
+        "truth": "stop_payment.request_date",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "STOP_PMT.EXPR_DT",
+        "predicted": "stop_payment.expiry_date",
+        "truth": "stop_payment.expiry_date",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "LN_MSTR.LN_NO",
+        "predicted": "loan.loan_id",
+        "truth": "loan.loan_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.CUST_NO",
+        "predicted": "loan.customer_id",
+        "truth": "loan.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.PRIN_BAL",
+        "predicted": "loan.principal_balance",
+        "truth": "loan.principal_balance",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.INT_RT",
+        "predicted": "loan.interest_rate",
+        "truth": "loan.interest_rate",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.ACCR_INT",
+        "predicted": "loan.accrued_interest",
+        "truth": "loan.accrued_interest",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "LN_MSTR.MIN_PMT_DUE",
+        "predicted": "loan.minimum_payment_due",
+        "truth": "loan.minimum_payment_due",
+        "correct": true,
+        "conflicts": [
+          "inclusion"
+        ],
+        "detected": [
+          "inclusion"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.PPMT_PNLTY_IND",
+        "predicted": "loan.prepayment_penalty_flag",
+        "truth": "loan.prepayment_penalty_flag",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.NON_ACCR_IND",
+        "predicted": "loan.is_non_accrual",
+        "truth": "loan.is_non_accrual",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.ESCR_CUSH_AMT",
+        "predicted": "loan.escrow_cushion",
+        "truth": "loan.escrow_cushion",
+        "correct": true,
+        "conflicts": [
+          "methodology"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "LN_MSTR.AUTOPAY_AMT",
+        "predicted": "loan.autopay_amount",
+        "truth": "loan.autopay_amount",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SDB.BOX_NO",
+        "predicted": "safe_deposit_box.box_id",
+        "truth": "safe_deposit_box.box_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SDB.BOX_SZ",
+        "predicted": "safe_deposit_box.box_size",
+        "truth": "safe_deposit_box.box_size",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "SDB.BOX_STAT",
+        "predicted": "safe_deposit_box.box_status",
+        "truth": "safe_deposit_box.box_status",
+        "correct": true,
+        "conflicts": [
+          "population"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "WIRE_TXN.WIRE_ID",
+        "predicted": "wire_transfer.wire_id",
+        "truth": "wire_transfer.wire_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "WIRE_TXN.CUST_NO",
+        "predicted": "wire_transfer.customer_id",
+        "truth": "wire_transfer.customer_id",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "WIRE_TXN.WIRE_AMT",
+        "predicted": "wire_transfer.wire_amount",
+        "truth": "wire_transfer.wire_amount",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "WIRE_TXN.CUTOFF_TS",
+        "predicted": "wire_transfer.cutoff_ts",
+        "truth": "wire_transfer.cutoff_ts",
+        "correct": true,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+Trap list received 2026-11-07 00:23 America/Chicago, after the MergeGuard v0.0.7 freeze. Verbatim.
+
+* Accrued interest calculates on a 360-day commercial year at one bank, and on a 365-day actual year at the other.
+* Minimum payment due is just the current month's billed installment at one bank, and includes all past-due missed payments plus late fees at the other.
+* Overdraft limit combines linked savings sweep balances with the checking bounce-protection line at one bank, and shows only the standalone checking overdraft cap at the other.
+* Check number stores the serial number from the paper check at one bank, and gets overwritten with an internal batch sequence number during remote deposit capture at the other.
+* Stop payment expiry date is strictly six months from the customer's request at one bank, and rolls forward indefinitely when the customer is enrolled in auto-renewal at the other.
+* Prepayment penalty flag means the loan note originally included a penalty clause at one bank, and that the loan is still inside the active penalty window today at the other.
+* Non-accrual status triggers automatically at 90 days past due at one bank, and requires a manual credit committee risk-rating downgrade at the other.
+* Escrow cushion amount is the two-month federal maximum reserve allowed by RESPA at one bank, and the actual dollar buffer currently sitting in the borrower's account at the other.
+* Credit score is an origination-day FICO 8 snapshot that never updates at one bank, and a monthly soft-pull VantageScore 4.0 refresh at the other.
+* Joint account mailing address pulls from the primary tax-reporting owner's profile at one bank, and is stored as a standalone account-level override address at the other.
+* Deceased customer flag flips when a family member notifies a branch teller at one bank, and only after an official death certificate is verified by legal operations at the other.
+* Autopay amount stores the fixed dollar figure set up by the borrower at one bank, and stores `0.00` when the borrower selects "pay full statement balance" at the other.
+* Safe deposit box status shows "rented" as long as the keys haven't been returned at one bank, and flips to "delinquent-escheatment" once the annual rent is 60 days past due at the other.
+* Wire cutoff timestamp logs when the customer clicked submit in the treasury portal at one bank, and when the wire cleared OFAC sanctions screening for Fedwire release at the other.
+* Bankruptcy status reflects any borrower who ever filed Chapter 7 or 13 during the life of the account at one bank, and only borrowers currently under an active court stay at the other.

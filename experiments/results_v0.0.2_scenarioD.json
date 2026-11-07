@@ -1,0 +1,340 @@
+{
+  "scenario": "insurance (held-out, seed 202)",
+  "table": [
+    {
+      "method": "name_only",
+      "target_accuracy": 0.391304347826087,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 7,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "method": "valentine_coma",
+      "target_accuracy": 0.43478260869565216,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 11,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "method": "valentine_cupid",
+      "target_accuracy": 0.2608695652173913,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 4,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.34782608695652173,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 16,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.34782608695652173,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 9,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "grain": 0.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    },
+    {
+      "method": "mergeguard v0.0.2",
+      "target_accuracy": 0.6086956521739131,
+      "conflict_recall": 0.2,
+      "harmful_auto_accepts": 0,
+      "recall_by_type": {
+        "code_set": 0.5,
+        "format": 0.0,
+        "grain": 1.0,
+        "inclusion": 0.0,
+        "null_semantics": 0.0,
+        "population": 0.0,
+        "scale": 0.0,
+        "temporal": 0.0,
+        "unit": 0.0
+      }
+    }
+  ],
+  "mergeguard_rows": [
+    {
+      "source": "tblInsured.nInsuredNo",
+      "predicted": "policyholder.policyholder_id",
+      "truth": "policyholder.policyholder_id",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.sName",
+      "predicted": null,
+      "truth": "policyholder.first_name+policyholder.last_name",
+      "correct": false,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.dtBirth",
+      "predicted": "policyholder.date_of_birth",
+      "truth": "policyholder.date_of_birth",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.nZip",
+      "predicted": null,
+      "truth": "policyholder.postal_code",
+      "correct": false,
+      "conflicts": [
+        "format"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.dtFirstPolicy",
+      "predicted": "policyholder.customer_since",
+      "truth": "policyholder.customer_since",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.sAgentCode",
+      "predicted": "policyholder.postal_code",
+      "truth": null,
+      "correct": false,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblInsured.curTotalPremium",
+      "predicted": null,
+      "truth": null,
+      "correct": true,
+      "conflicts": [
+        "grain"
+      ],
+      "detected": [
+        "grain"
+      ],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.nPolicyNo",
+      "predicted": "policy.policy_id",
+      "truth": "policy.policy_id",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.nInsuredNo",
+      "predicted": "policy.policyholder_id",
+      "truth": "policy.policyholder_id",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.sLineCd",
+      "predicted": "policy.line_of_business",
+      "truth": "policy.line_of_business",
+      "correct": true,
+      "conflicts": [
+        "code_set"
+      ],
+      "detected": [
+        "code_set"
+      ],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.curPremium",
+      "predicted": null,
+      "truth": "policy.annual_premium",
+      "correct": false,
+      "conflicts": [
+        "unit"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.sDeductibleK",
+      "predicted": null,
+      "truth": "policy.deductible",
+      "correct": false,
+      "conflicts": [
+        "scale"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.dtEffective",
+      "predicted": "policy.effective_date",
+      "truth": "policy.effective_date",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.dtCancel",
+      "predicted": null,
+      "truth": "policy.expiration_date",
+      "correct": false,
+      "conflicts": [
+        "null_semantics"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblPolicy.sStatus",
+      "predicted": "claim.claim_status",
+      "truth": "policy.is_in_force",
+      "correct": false,
+      "conflicts": [
+        "population"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.nClaimNo",
+      "predicted": "claim.claim_id",
+      "truth": "claim.claim_id",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.nPolicyNo",
+      "predicted": "claim.policy_id",
+      "truth": "claim.policy_id",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.dtClaim",
+      "predicted": "claim.reported_date",
+      "truth": "claim.reported_date",
+      "correct": true,
+      "conflicts": [
+        "temporal"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.dtOccurred",
+      "predicted": "claim.loss_date",
+      "truth": "claim.loss_date",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.curClaimAmt",
+      "predicted": null,
+      "truth": null,
+      "correct": true,
+      "conflicts": [
+        "inclusion"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.curIndemnity",
+      "predicted": "claim.indemnity_amount",
+      "truth": "claim.indemnity_amount",
+      "correct": true,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.curLAE",
+      "predicted": null,
+      "truth": "claim.expense_amount",
+      "correct": false,
+      "conflicts": [],
+      "detected": [],
+      "harmful_accept": false
+    },
+    {
+      "source": "tblClaim.nStatus",
+      "predicted": null,
+      "truth": "claim.claim_status",
+      "correct": false,
+      "conflicts": [
+        "code_set"
+      ],
+      "detected": [],
+      "harmful_accept": false
+    }
+  ]
+}
