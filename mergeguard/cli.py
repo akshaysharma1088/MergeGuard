@@ -4,6 +4,8 @@
     mergeguard match <source_dir> <target_dir> -o report.xlsx
     mergeguard eval  <scenario_dir>                 matcher vs name-only baseline
     mergeguard ingest <config.yml> -o <dir>         read a bank from Snowflake, SQL, Excel, CSV or Parquet
+    mergeguard apply <workbook.xlsx> <source> <target> -o <dir>
+                                                    gate, rehearse, reconcile, emit SQL and audit; optionally load
 
 Any <dir> argument may also be a YAML source config; it is ingested on the fly.
 """
@@ -53,6 +55,20 @@ def main(argv=None) -> int:
     g = sub.add_parser("ingest", help="read a bank from Snowflake, a SQL database, Excel, CSV or Parquet")
     g.add_argument("config", help="YAML source config")
     g.add_argument("-o", "--output", required=True, help="folder to write")
+    p = sub.add_parser("apply", help="upload the reviewed workbook: gate, rehearse, reconcile, emit SQL, audit")
+    p.add_argument("workbook")
+    p.add_argument("source_dir")
+    p.add_argument("target_dir")
+    p.add_argument("-o", "--output", default="migration_run")
+    p.add_argument("--dialect", default="snowflake", help="dialect for migration.sql")
+    p.add_argument("--source-prefix", default="", help="e.g. ACQ_DB.LENDING.")
+    p.add_argument("--target-prefix", default="", help="e.g. CORE_DB.BANKING.")
+    p.add_argument("--allow-partial", action="store_true", help="skip rows with no decision instead of blocking")
+    p.add_argument("--load-into", help="target connector config (sql or snowflake); loads only if checks pass")
+    p.add_argument("--parallel", help="mock-conversion output (acquirer schema) to compare every migrated column against")
+    p.add_argument("--force", action="store_true", help="load even when reconciliation FAILs (recorded in audit)")
+    p.add_argument("--source-dialect", default="oracle")
+    p.add_argument("--target-dialect", default="duckdb")
     e = sub.add_parser("eval")
     e.add_argument("scenario_dir")
     a = ap.parse_args(argv)
@@ -96,6 +112,19 @@ def main(argv=None) -> int:
         print(f"Trial load: {n['FAIL']} FAIL, {n['REVIEW']} REVIEW, {n['PASS']} PASS, {n['SKIPPED']} skipped. "
               f"Workbook: {a.sme_workbook}  Scorecard SQL: {a.scorecard_sql}")
         return 0
+    if a.cmd == "apply":
+        from .migrate import apply
+        src = load_side(a.source_dir, "source", a.source_dialect)
+        tgt = load_side(a.target_dir, "target", a.target_dialect)
+        o = apply(a.workbook, src, tgt, a.output, a.dialect, a.source_prefix, a.target_prefix,
+                  a.allow_partial, a.load_into, a.force, a.parallel)
+        print(o.summary())
+        for i in [i for i in o.issues if i.severity == "BLOCK"][:15]:
+            print(f"  BLOCK row {i.row_no or '-'} {i.source}: {i.message}")
+        for r in [r for r in o.results if r.status == "FAIL"][:15]:
+            print(f"  FAIL {r.table}.{r.column} {r.check}: {r.detail}")
+        print(f"Outputs in {o.out_dir}: migration.sql, reconciliation.xlsx, audit.json, migrated/")
+        return 0 if o.status in ("PASSED", "REVIEW") else 2
     if a.cmd == "eval":
         d = Path(a.scenario_dir)
         src = load_side(d / "acquired", "acquired", "oracle")

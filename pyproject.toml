@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mergeguard"
-version = "0.0.8"
+version = "0.0.9"
 description = "Catch false-friend attributes before a post-acquisition data migration, then migrate and prove it."
 readme = "README.md"
 license = { text = "Apache-2.0" }

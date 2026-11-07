@@ -236,7 +236,8 @@ def write_mapping(results: list[Match], src: Side, tgt: Side, path: str | Path) 
         ("2. Fill the teal columns: decision, target, business rules, the six stress-test answers, transform, sign-offs.", None),
         ("   Stress-test cells MergeGuard already found different are pre-set to Differs. Blank cells are open questions.", None),
         ("   trap_identified turns YES when any stress-test answer is Differs, OPEN while any is blank.", None),
-        ("3. Save the file. Upload and migration (mergeguard apply) come in the next build.", None),
+        ("3. Save the file and run: mergeguard apply review.xlsx <source> <target> --parallel <mock conversion>", None),
+        ("   The gate blocks undecided rows, unsigned risky rows and broken transforms before anything moves.", None),
         ("Conflicts and false friends need a named approver before migration.", None),
     ]
     for r, (k, v) in enumerate(lines, 1):

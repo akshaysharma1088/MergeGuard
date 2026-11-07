@@ -47,6 +47,26 @@ mergeguard match acquired.yml acquirer.yml --sme-workbook review.xlsx      # con
 
 Examples are in `examples/connectors/`. The Snowflake connector is tested against a mocked driver; run it on a non-production account first.
 
+## Migrating: upload the reviewed workbook
+
+```bash
+mergeguard apply review.xlsx acquired.yml acquirer.yml -o run/ \
+    --parallel mock_conversion/ --source-prefix ACQ_DB.LENDING. --target-prefix CORE_DB.BANKING. \
+    --load-into acquirer_target.yml        # optional; loads only if every check passes
+```
+
+| Step | What it does |
+|---|---|
+| Gate | Blocks undecided rows, risky rows (conflict, false friend, trap identified) without all four sign-offs or with open stress-test answers, detected unit/scale/sign/code differences with a blank transform, transforms that do not parse or use unknown columns, duplicate targets, unmapped keys |
+| Rehearse | Runs the approved plan locally in DuckDB; writes `run/migrated/` |
+| Reconcile | Row counts, key integrity, key collisions with the acquirer's live data, orphaned foreign keys, cast failures, unmapped crosswalk codes, NULLs introduced, values outside the acquirer's code set or range, flag-rate shifts, and, with `--parallel`, a column-by-column comparison against the mock conversion with a plain-language diagnosis |
+| Emit | `migration.sql` in the warehouse dialect (Snowflake default); every column carries a comment naming its workbook row and approvers |
+| Audit | `audit.json` plus `audit.sha256`: SHA-256 of the workbook, inputs, SQL and outputs; gate results; reconciliation; lineage with sign-offs |
+
+Transform cells take one SQL expression over source columns (`bal_cents / 100`), `as is`, or `column = expression` per target column when one source feeds several (`first_name = SPLIT_PART(full_nm, ' ', 1); last_name = SPLIT_PART(full_nm, ' ', 2)`). Code crosswalks go in `value_crosswalk` as `A->ACTIVE, C->CLOSED`.
+
+Development check (scenarios G–L, already used in development, so not held-out): with every row signed off without reading, the mock-conversion comparison failed 45 of 46 computed-field traps and 0 of 80 clean columns. Loaded-only fields are weaker: 7 of 20 surfaced, because a mock conversion only echoes what was loaded.
+
 ## MergeBench
 
 A generator for paired synthetic enterprises. v0 ships one scenario: Keystone Bank (acquirer) buys

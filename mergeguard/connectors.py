@@ -373,4 +373,47 @@ def ingest(config: str | Path | dict, out_dir: str | Path) -> Path:
         _apply_dictionary(cfg, tables, meta, derivations)
     if not tables:
         raise ValueError("No tables were read; check the path, schema or tables list")
-    return write_folder(out_dir, tables, meta, derivations)
+    out = write_folder(out_dir, tables, meta, derivations)
+    n = int(cfg.get("sample_rows", 20000))
+    sampled = kind in ("sql", "snowflake") and any(len(df) >= n for df in tables.values())
+    (out / "_ingest.json").write_text(json.dumps({"connector": kind, "sample_rows": n, "sampled": sampled}))
+    return out
+
+
+def load_tables(config: str | Path | dict, files: dict) -> None:
+    """Append rehearsed, reconciled tables into the target system (sql or snowflake connector).
+
+    Each table loads in one transaction; a failure rolls that table back.
+    """
+    cfg = load_config(config) if not isinstance(config, dict) else {"_base": Path("."), **_expand(config)}
+    frames = {t: duckdb.sql(f"SELECT * FROM '{Path(f).as_posix()}'").df() for t, f in files.items()}
+    prefix = cfg.get("table_prefix", "")
+    if cfg.get("connector") == "sql":
+        import sqlalchemy as sa
+        engine = sa.create_engine(cfg["url"])
+        for t, df in frames.items():
+            with engine.begin() as c:
+                df.to_sql(prefix + t, c, schema=cfg.get("schema"), if_exists="append", index=False)
+        return
+    if cfg.get("connector") == "snowflake":
+        import snowflake.connector
+        params = {k: cfg[k] for k in ("account", "user", "password", "authenticator", "role", "warehouse",
+                                       "database", "schema", "private_key_file", "token") if cfg.get(k)}
+        con = snowflake.connector.connect(**params)
+        try:
+            cur = con.cursor()
+            for t, df in frames.items():
+                cols = ", ".join(f'"{c}"' for c in df.columns)
+                marks = ", ".join(["%s"] * len(df.columns))
+                rows = [tuple(None if pd.isna(v) else v for v in r) for r in df.itertuples(index=False)]
+                cur.execute("BEGIN")
+                try:
+                    cur.executemany(f'INSERT INTO {prefix}{t} ({cols}) VALUES ({marks})', rows)
+                    cur.execute("COMMIT")
+                except Exception:
+                    cur.execute("ROLLBACK")
+                    raise
+        finally:
+            con.close()
+        return
+    raise ValueError("load_into needs a 'sql' or 'snowflake' connector config")

@@ -398,3 +398,14 @@ flag (loaded). Four of the five profiling-stage wrong approvals (address, stop p
 safe deposit box status) are then blocked by the trial load.
 Notable diagnoses: accrued interest "target = source x 1.014" (365/360), stop payment expiry "source later by
 364 days (182 to 546)", check number "target always smaller" (a changed identifier read as a count; label wrong).
+
+## v0.0.9 migrate step: development check (not pre-registered)
+
+`mergeguard apply` (gate, rehearse, reconcile, emit SQL, audit) was built after all held-out runs. Scenarios G–L were
+already development data, so this is a development result only. Protocol: generate each scenario (seed 21, 1500/1000),
+fill the review workbook with the ground-truth target for every attribute, "Same" for every blank stress answer and a
+sign-off name in all four columns (an analyst signing without reading), then apply with `--parallel`.
+Result: computed-field traps FAIL 45/46 (miss: auto_loan.is_repossessed, 0.3% of records, reported as REVIEW);
+loaded-only traps surfaced 7/20 (FAIL or REVIEW); clean columns FAIL 0/80. During development two false FAILs were fixed:
+the orphan check treating a key name shared by two tables as a foreign key, and a 1-record mismatch in an 80-record
+table (FAIL now also needs at least 3 records).
