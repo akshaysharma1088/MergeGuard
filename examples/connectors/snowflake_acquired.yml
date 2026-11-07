@@ -1,0 +1,14 @@
+# Acquired bank, read straight from Snowflake. Secrets come from environment variables.
+name: acquired
+connector: snowflake
+account: ${SNOWFLAKE_ACCOUNT}
+user: ${SNOWFLAKE_USER}
+password: ${SNOWFLAKE_PASSWORD}      # or: authenticator: externalbrowser (SSO)
+role: ANALYST
+warehouse: ANALYTICS_WH
+database: CORE
+schema: LENDING
+tables: [ACCT, LN_MSTR]              # omit to read every table and view in the schema
+sample_rows: 20000                   # profiling sample per table
+dictionary: acquired_dictionary.xlsx # optional; overrides column comments
+keys: {LN_MSTR: LN_NO}               # optional; when primary keys are not declared

@@ -1,0 +1,6 @@
+# Acquirer bank, any SQLAlchemy database (Postgres, Oracle, SQL Server, MySQL, SQLite...).
+name: acquirer
+connector: sql
+url: postgresql+psycopg2://${PGUSER}:${PGPASSWORD}@dbhost:5432/core
+schema: banking
+sample_rows: 20000

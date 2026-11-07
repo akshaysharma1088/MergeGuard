@@ -1,0 +1,4 @@
+# One workbook: a sheet per table, plus a sheet named like "Data Dictionary".
+name: acquired
+connector: excel
+path: acquired_extract.xlsx

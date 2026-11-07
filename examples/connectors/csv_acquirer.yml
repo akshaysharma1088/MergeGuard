@@ -1,0 +1,5 @@
+# A folder of CSV extracts plus a separate data dictionary.
+name: acquirer
+connector: csv
+path: extracts/
+dictionary: acquirer_dictionary.csv

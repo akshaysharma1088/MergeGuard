@@ -27,6 +27,26 @@ mergeguard match mb/acquired mb/acquirer -o mapping.xlsx
 mergeguard eval mb                                  # compare with a name-only baseline
 ```
 
+## Connecting to real systems
+
+MergeGuard reads each bank through a small YAML config, so nothing has to be exported by hand.
+
+| Connector | Reads | Install |
+|---|---|---|
+| `snowflake` | Tables and views, column comments, declared primary keys, view logic, a row sample | `pip install mergeguard[snowflake]` |
+| `sql` | Any SQLAlchemy database: Postgres, Oracle, SQL Server, MySQL, SQLite | `pip install mergeguard[sql]` + driver |
+| `excel` | One sheet per table, plus an optional "Data Dictionary" sheet | built in |
+| `csv` / `parquet` | A folder of extracts | built in |
+
+A data dictionary (Excel or CSV) is optional. Its headers are matched loosely ("Field", "Column Name", "Business Definition", "PK" all work), and it overrides catalog comments. Computed columns in views are captured as derivation logic. Credentials are written as `${ENV_VAR}` and never stored in the config.
+
+```bash
+mergeguard ingest examples/connectors/snowflake_acquired.yml -o out/acquired  # optional snapshot
+mergeguard match acquired.yml acquirer.yml --sme-workbook review.xlsx      # configs work anywhere a folder does
+```
+
+Examples are in `examples/connectors/`. The Snowflake connector is tested against a mocked driver; run it on a non-production account first.
+
 ## MergeBench
 
 A generator for paired synthetic enterprises. v0 ships one scenario: Keystone Bank (acquirer) buys

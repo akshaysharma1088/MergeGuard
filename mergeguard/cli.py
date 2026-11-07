@@ -3,6 +3,9 @@
     mergeguard bench <out_dir> [--seed N]          generate a MergeBench scenario
     mergeguard match <source_dir> <target_dir> -o report.xlsx
     mergeguard eval  <scenario_dir>                 matcher vs name-only baseline
+    mergeguard ingest <config.yml> -o <dir>         read a bank from Snowflake, SQL, Excel, CSV or Parquet
+
+Any <dir> argument may also be a YAML source config; it is ingested on the fly.
 """
 from __future__ import annotations
 
@@ -47,10 +50,24 @@ def main(argv=None) -> int:
     v.add_argument("--scorecard-sql", default="trial_load_scorecard.sql")
     v.add_argument("--source-dialect", default="oracle")
     v.add_argument("--target-dialect", default="duckdb")
+    g = sub.add_parser("ingest", help="read a bank from Snowflake, a SQL database, Excel, CSV or Parquet")
+    g.add_argument("config", help="YAML source config")
+    g.add_argument("-o", "--output", required=True, help="folder to write")
     e = sub.add_parser("eval")
     e.add_argument("scenario_dir")
     a = ap.parse_args(argv)
 
+    if a.cmd == "ingest":
+        from .connectors import ingest
+        out = ingest(a.config, a.output)
+        print(f"Ingested into {out}: " + ", ".join(sorted(p.stem for p in Path(out).glob("*.parquet"))))
+        return 0
+    for attr in ("source_dir", "target_dir", "parallel"):      # a YAML config is ingested on the fly
+        v = getattr(a, attr, None)
+        if v and str(v).endswith((".yml", ".yaml")):
+            import tempfile
+            from .connectors import ingest
+            setattr(a, attr, str(ingest(v, Path(tempfile.mkdtemp(prefix="mergeguard_")) / attr)))
     if a.cmd == "bench":
         print(f"MergeBench scenario written to {generate(a.out_dir, seed=a.seed)}")
         return 0

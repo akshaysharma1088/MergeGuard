@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mergeguard"
-version = "0.0.7"
+version = "0.0.8"
 description = "Catch false-friend attributes before a post-acquisition data migration, then migrate and prove it."
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -18,6 +18,11 @@ dependencies = [
   "scipy>=1.9",
   "pipeverify>=0.1",
 ]
+
+[project.optional-dependencies]
+snowflake = ["snowflake-connector-python>=3.0", "pyyaml>=6"]
+sql = ["sqlalchemy>=2.0", "pyyaml>=6"]
+connectors = ["snowflake-connector-python>=3.0", "sqlalchemy>=2.0", "pyyaml>=6"]
 
 [project.scripts]
 mergeguard = "mergeguard.cli:main"
