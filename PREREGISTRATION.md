@@ -457,3 +457,26 @@ e1307157eb8626052f008117d19dbb21bb2cc91fe182321cea6cf1028cbcb60e  experiments/re
 dbbc93ae4127e32f8101b5fe75734ef1437bfd3fde9500efd478731b973e018d  mergeguard/cards.py
 23e79ec92f624858b7a0d2fc0be4287db5ecf2bb9587ba8a17c90b44ea9eca52  mergeguard/evaluate.py
 ```
+
+## Scenario R results (single run, v0.0.9 matcher, hashes as frozen above)
+
+| Method | Target accuracy | Type-correct recall | Surfaced | Wrong approvals / approved | False alarms |
+| --- | --- | --- | --- | --- | --- |
+| MergeGuard | 81% (38/47) | 24% | 8 of 24 | 4 / 10 | 1 of 14 |
+| COMA | 85% | 0% | 0 of 24 | 28 / 40 | 0 of 14 |
+| Name only | 72% | 0% | 0 of 24 | 24 / 36 | 0 of 14 |
+| Cupid | 66% | 0% | 0 of 24 | 14 / 27 | 0 of 14 |
+| Similarity Flooding | 72% | 0% | 0 of 24 | 34 / 47 | 0 of 14 |
+| Jaccard distance | 49% | 0% | 0 of 24 | 25 / 31 | 0 of 14 |
+
+Post-hoc, same pair: COMA with identifiers sent to review and limited to its 10 top-scoring mappings approved 5 wrong
+(MergeGuard 4 of 10). COMA is as safe as MergeGuard at 6 approved mappings.
+
+Reading. On real data MergeGuard is no more accurate than COMA and only slightly safer at equal coverage.
+Caught with the right type: MSA and mortgage-insurance placeholders, special-eligibility placeholder, property
+valuation codes, delinquency codes, loan age. Missed and auto-approved: loan purpose (code R means "refinance, not
+specified" at Freddie Mac and "no cash-out refinance" at Fannie Mae), channel, property type, zero balance code.
+Missed entirely: all four date-format differences (YYYYMM against MMYYYY) and the 9, 99, 999 placeholders on
+low-cardinality fields. The monthly table was mapped badly: 6 of its 17 columns went to a wrong target (period to
+borrower assistance plan, current UPB to total principal current). One clean column was flagged (current UPB).
+These failures are development input for the next version; scenario R is now development data.

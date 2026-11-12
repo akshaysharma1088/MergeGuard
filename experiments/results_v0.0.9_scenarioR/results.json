@@ -1,0 +1,582 @@
+{
+  "table": [
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "name_only",
+      "target_accuracy": 0.723404255319149,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 24,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.1
+    },
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "valentine_coma",
+      "target_accuracy": 0.851063829787234,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 28,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 4.4
+    },
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "valentine_cupid",
+      "target_accuracy": 0.6595744680851063,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 14,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 8.3
+    },
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "valentine_similarity_flooding",
+      "target_accuracy": 0.723404255319149,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 34,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 3.9
+    },
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "valentine_jaccard_distance",
+      "target_accuracy": 0.48936170212765956,
+      "conflict_recall": 0.0,
+      "harmful_auto_accepts": 25,
+      "recall_by_type": {
+        "code_set": 0.0,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.0,
+        "temporal": 0.0
+      },
+      "seconds": 0.9
+    },
+    {
+      "scenario": "R real pair (Freddie Mac to Fannie Mae)",
+      "method": "mergeguard",
+      "target_accuracy": 0.8085106382978723,
+      "conflict_recall": 0.24,
+      "harmful_auto_accepts": 4,
+      "recall_by_type": {
+        "code_set": 0.2857142857142857,
+        "format": 0.0,
+        "identity": 0.0,
+        "null_semantics": 0.2727272727272727,
+        "temporal": 1.0
+      },
+      "seconds": 28.6
+    }
+  ],
+  "mergeguard_rows": {
+    "R real pair (Freddie Mac to Fannie Mae)": [
+      {
+        "source": "loan.classic_fico",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.first_payment_date",
+        "predicted": "loan.first_payment_date",
+        "truth": "loan.first_payment_date",
+        "correct": true,
+        "conflicts": [
+          "format"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.first_time_homebuyer_indicator",
+        "predicted": "loan.first_time_home_buyer_indicator",
+        "truth": "loan.first_time_home_buyer_indicator",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.maturity_date",
+        "predicted": "loan.maturity_date",
+        "truth": "loan.maturity_date",
+        "correct": true,
+        "conflicts": [
+          "format"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.msa",
+        "predicted": "loan.metropolitan_statistical_area",
+        "truth": "loan.metropolitan_statistical_area",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.mi_percentage",
+        "predicted": "loan.mortgage_insurance_percentage",
+        "truth": "loan.mortgage_insurance_percentage",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.number_of_units",
+        "predicted": "loan.number_of_units",
+        "truth": "loan.number_of_units",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.occupancy_status",
+        "predicted": "loan.occupancy_status",
+        "truth": "loan.occupancy_status",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.original_cltv",
+        "predicted": "loan.original_combined_loan_to_value_ratio",
+        "truth": "loan.original_combined_loan_to_value_ratio",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.original_dti",
+        "predicted": "loan.debt_to_income",
+        "truth": "loan.debt_to_income",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.original_upb",
+        "predicted": "loan.original_upb",
+        "truth": "loan.original_upb",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.original_ltv",
+        "predicted": "loan.original_loan_to_value_ratio",
+        "truth": "loan.original_loan_to_value_ratio",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.original_interest_rate",
+        "predicted": "loan.original_interest_rate",
+        "truth": "loan.original_interest_rate",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.channel",
+        "predicted": "loan.channel",
+        "truth": "loan.channel",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "loan.prepayment_penalty_indicator",
+        "predicted": "loan.prepayment_penalty_indicator",
+        "truth": "loan.prepayment_penalty_indicator",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.amortization_type",
+        "predicted": "loan.amortization_type",
+        "truth": "loan.amortization_type",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.property_state",
+        "predicted": "loan.property_state",
+        "truth": "loan.property_state",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.property_type",
+        "predicted": "loan.property_type",
+        "truth": "loan.property_type",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "loan.postal_code",
+        "predicted": "loan.zip_code_short",
+        "truth": "loan.zip_code_short",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.loan_identifier",
+        "predicted": "loan.loan_identifier",
+        "truth": "loan.loan_identifier",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.loan_purpose",
+        "predicted": "loan.loan_purpose",
+        "truth": "loan.loan_purpose",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "loan.original_loan_term",
+        "predicted": "loan.original_loan_term",
+        "truth": "loan.original_loan_term",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.number_of_borrowers",
+        "predicted": "loan.number_of_borrowers",
+        "truth": "loan.number_of_borrowers",
+        "correct": true,
+        "conflicts": [
+          "null_semantics"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.seller_name",
+        "predicted": "loan.seller_name",
+        "truth": "loan.seller_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.super_conforming_flag",
+        "predicted": "loan.high_balance_loan_indicator",
+        "truth": "loan.high_balance_loan_indicator",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.special_eligibility_program",
+        "predicted": "loan.special_eligibility_program",
+        "truth": "loan.special_eligibility_program",
+        "correct": true,
+        "conflicts": [
+          "code_set",
+          "null_semantics"
+        ],
+        "detected": [
+          "null_semantics"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.harp_indicator",
+        "predicted": "loan.high_ltv_refinance_option_indicator",
+        "truth": null,
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.property_valuation_method",
+        "predicted": "loan.property_valuation_method",
+        "truth": "loan.property_valuation_method",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.interest_only_indicator",
+        "predicted": "loan.interest_only_loan_indicator",
+        "truth": "loan.interest_only_loan_indicator",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan.vantagescore_4",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.loan_identifier",
+        "predicted": "loan_month.loan_identifier",
+        "truth": "loan_month.loan_identifier",
+        "correct": true,
+        "conflicts": [
+          "identity"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.period",
+        "predicted": "loan_month.borrower_assistance_plan",
+        "truth": "loan_month.monthly_reporting_period",
+        "correct": false,
+        "conflicts": [
+          "format"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.current_actual_upb",
+        "predicted": "loan_month.total_principal_current",
+        "truth": "loan_month.current_actual_upb",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.current_loan_delinquency_status",
+        "predicted": "loan_month.loan_payment_history",
+        "truth": "loan_month.current_loan_delinquency_status",
+        "correct": false,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [
+          "code_set"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.loan_age",
+        "predicted": "loan_month.remaining_months_to_legal_maturity",
+        "truth": "loan_month.loan_age",
+        "correct": false,
+        "conflicts": [
+          "temporal"
+        ],
+        "detected": [
+          "temporal"
+        ],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.remaining_months_to_legal_maturity",
+        "predicted": "loan_month.remaining_months_to_maturity",
+        "truth": "loan_month.remaining_months_to_legal_maturity",
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.zero_balance_code",
+        "predicted": "loan_month.zero_balance_code",
+        "truth": "loan_month.zero_balance_code",
+        "correct": true,
+        "conflicts": [
+          "code_set"
+        ],
+        "detected": [],
+        "harmful_accept": true
+      },
+      {
+        "source": "loan_month.zero_balance_effective_date",
+        "predicted": "loan_month.zero_balance_effective_date",
+        "truth": "loan_month.zero_balance_effective_date",
+        "correct": true,
+        "conflicts": [
+          "format"
+        ],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.current_interest_rate",
+        "predicted": "loan_month.current_interest_rate",
+        "truth": "loan_month.current_interest_rate",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.current_non_interest_bearing_upb",
+        "predicted": "loan_month.current_loan_delinquency_status",
+        "truth": null,
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.cumulative_modification_costs",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.estimated_ltv",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.zero_balance_removal_upb",
+        "predicted": "loan_month.upb_at_the_time_of_removal",
+        "truth": "loan_month.upb_at_the_time_of_removal",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.current_interest_bearing_upb",
+        "predicted": "loan_month.current_actual_upb",
+        "truth": null,
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.mi_cancellation_indicator",
+        "predicted": "loan_month.payment_deferral_modification_event_indicator",
+        "truth": null,
+        "correct": false,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.servicer_name",
+        "predicted": "loan_month.servicer_name",
+        "truth": "loan_month.servicer_name",
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      },
+      {
+        "source": "loan_month.bankruptcy_cramdown_costs",
+        "predicted": null,
+        "truth": null,
+        "correct": true,
+        "conflicts": [],
+        "detected": [],
+        "harmful_accept": false
+      }
+    ]
+  }
+}
