@@ -1,0 +1,66 @@
+name: LLM baseline (post-hoc)
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: Ollama model tag
+        default: qwen2.5:7b
+  push:
+    branches: [main]
+    paths:
+      - experiments/run_llm_baseline.py
+      - .github/workflows/llm-baseline.yml
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [E, F, G, H, I, J, K, L]
+    env:
+      MODEL: ${{ github.event.inputs.model || 'qwen2.5:7b' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install MergeGuard
+        run: pip install -e .
+      - name: Start Ollama and pull the model
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (ollama serve > ollama.log 2>&1 &)
+          sleep 5
+          ollama pull "$MODEL"
+          nproc; free -g
+      - name: Run the baseline
+        run: python experiments/run_llm_baseline.py llm_out ${{ matrix.scenario }} "$MODEL"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: llm-${{ matrix.scenario }}
+          path: llm_out/llm_*.json
+      - name: Save the result on the llm-results branch
+        run: |
+          cp llm_out/llm_${{ matrix.scenario }}.json /tmp/result.json
+          git config user.name "Akshay Sharma"
+          git config user.email "akshaysharma1088@users.noreply.github.com"
+          for i in 1 2 3 4 5 6; do
+            if git fetch origin llm-results 2>/dev/null; then
+              git checkout -f -B llm-results origin/llm-results
+            else
+              git checkout --orphan llm-results
+              git rm -rf --cached . > /dev/null 2>&1 || true
+            fi
+            mkdir -p results && cp /tmp/result.json "results/llm_${{ matrix.scenario }}_$(echo "$MODEL" | tr ':/' '__').json"
+            git add -f results
+            git commit -m "LLM baseline result: scenario ${{ matrix.scenario }} ($MODEL)" || true
+            git push origin llm-results && break
+            sleep $((RANDOM % 20 + 5))
+          done
