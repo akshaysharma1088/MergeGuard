@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "scenario": "F",
+    "model": "qwen2.5:7b",
+    "columns": 29,
+    "risky": 13,
+    "clean": 16,
+    "seconds": 3942,
+    "traps_flagged_different": 11,
+    "traps_proposed": 13,
+    "clean_flagged_different": 9,
+    "clean_proposed": 15,
+    "llm_trust_all": {
+      "approved": 28,
+      "wrong": 17
+    },
+    "target_accuracy": 0.7931034482758621,
+    "llm_judged": {
+      "approved": 8,
+      "wrong": 3
+    },
+    "llm_judged_ids": {
+      "approved": 8,
+      "wrong": 3
+    }
+  },
+  "rows": [
+    {
+      "source": "cust_mstr.cust_id",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different numeric ranges",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numeric ranges\"}"
+    },
+    {
+      "source": "cust_mstr.cust_full_nm",
+      "target": "customer.full_name",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.full_name\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "cust_mstr.cust_typ_cd",
+      "target": "customer.customer_type",
+      "same_meaning": false,
+      "difference": "Different granularity",
+      "raw_match": "{\"target\": \"customer.customer_type\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different granularity\"}"
+    },
+    {
+      "source": "cust_mstr.incm_amt",
+      "target": "customer.annual_income",
+      "same_meaning": false,
+      "difference": "Computation method and source data differ",
+      "raw_match": "{\"target\": \"customer.annual_income\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computation method and source data differ\"}"
+    },
+    {
+      "source": "cust_mstr.ann_rev_amt",
+      "target": "customer.annual_revenue",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.annual_revenue\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "cust_mstr.sb_flg",
+      "target": "customer.is_small_business",
+      "same_meaning": false,
+      "difference": "Thresholds differ",
+      "raw_match": "{\"target\": \"customer.is_small_business\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Thresholds differ\"}"
+    },
+    {
+      "source": "cust_mstr.kyc_rvw_dt",
+      "target": "customer.kyc_review_date",
+      "same_meaning": false,
+      "difference": "Source is for next review date, target is for completed review date.",
+      "raw_match": "{\"target\": \"customer.kyc_review_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Source is for next review date, target is for completed review date.\"}"
+    },
+    {
+      "source": "cust_mstr.email_addr",
+      "target": "customer.email",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.email\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "card_mstr.card_id",
+      "target": "card.card_id",
+      "same_meaning": false,
+      "difference": "Different values",
+      "raw_match": "{\"target\": \"card.card_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different values\"}"
+    },
+    {
+      "source": "card_mstr.cust_id",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and purposes",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and purposes\"}"
+    },
+    {
+      "source": "card_mstr.card_stat_cd",
+      "target": "card.card_status",
+      "same_meaning": false,
+      "difference": "Different cardinality and values",
+      "raw_match": "{\"target\": \"card.card_status\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different cardinality and values\"}"
+    },
+    {
+      "source": "card_mstr.open_dt",
+      "target": "card.open_date",
+      "same_meaning": false,
+      "difference": "Column descriptions and sample values differ",
+      "raw_match": "{\"target\": \"card.open_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Column descriptions and sample values differ\"}"
+    },
+    {
+      "source": "card_txn.txn_id",
+      "target": "card_transaction.transaction_id",
+      "same_meaning": false,
+      "difference": "Different numeric ranges",
+      "raw_match": "{\"target\": \"card_transaction.transaction_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numeric ranges\"}"
+    },
+    {
+      "source": "card_txn.card_id",
+      "target": "card.card_id",
+      "same_meaning": false,
+      "difference": "Different format and sample values",
+      "raw_match": "{\"target\": \"card.card_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different format and sample values\"}"
+    },
+    {
+      "source": "card_txn.txn_amt",
+      "target": "card_transaction.amount",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"card_transaction.amount\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "card_txn.mcc_cat",
+      "target": "card_transaction.merchant_category_code",
+      "same_meaning": false,
+      "difference": "Codes vs descriptions",
+      "raw_match": "{\"target\": \"card_transaction.merchant_category_code\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Codes vs descriptions\"}"
+    },
+    {
+      "source": "card_txn.fee_amt",
+      "target": "card_transaction.fee_amount",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"card_transaction.fee_amount\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "dep_acct.dep_id",
+      "target": "deposit.deposit_id",
+      "same_meaning": false,
+      "difference": "Different numbering ranges",
+      "raw_match": "{\"target\": \"deposit.deposit_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numbering ranges\"}"
+    },
+    {
+      "source": "dep_acct.cust_id",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and purposes",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and purposes\"}"
+    },
+    {
+      "source": "dep_acct.prin_amt",
+      "target": "deposit.principal_amount",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"deposit.principal_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "dep_acct.open_dt",
+      "target": "card.open_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"card.open_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "dep_acct.mat_dt",
+      "target": "deposit.maturity_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"deposit.maturity_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "cr_acct.acct_id",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": \"null\"}",
+      "raw_judge": ""
+    },
+    {
+      "source": "cr_acct.cust_id",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and purposes",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and purposes\"}"
+    },
+    {
+      "source": "cr_acct.cur_bal",
+      "target": "credit_account.current_balance",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"credit_account.current_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "cr_acct.days_pd",
+      "target": "credit_account.days_past_due",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"credit_account.days_past_due\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "cr_acct.coll_stat_ind",
+      "target": "credit_account.in_collections",
+      "same_meaning": false,
+      "difference": "Different logical conditions",
+      "raw_match": "{\"target\": \"credit_account.in_collections\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different logical conditions\"}"
+    },
+    {
+      "source": "cr_acct.co_amt",
+      "target": "credit_account.charge_off_amount",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"credit_account.charge_off_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "cr_acct.coll_val_amt",
+      "target": "credit_account.collateral_value",
+      "same_meaning": false,
+      "difference": "Source is collateral value, target is appraised collateral value at origination.",
+      "raw_match": "{\"target\": \"credit_account.collateral_value\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Source is collateral value, target is appraised collateral value at origination.\"}"
+    }
+  ]
+}
