@@ -432,3 +432,28 @@ Clean exact columns (47): 0 false failures for all three.
 Verifier diagnosis names the labeled trap type on 29 of its 49 failed trap columns.
 Reading: on recomputed fields a plain diff detects as much as the verifier. Detection there comes from the trial-load
 evidence, not from the verifier's logic. The verifier adds the diagnosis and the stored-field conformance checks.
+
+## Scenario R: real public pair, Freddie Mac to Fannie Mae (frozen before the run)
+
+First non-synthetic test. Source: Freddie Mac Single-Family Loan-Level Dataset, 2026 Q2 (origination and monthly
+performance). Target: Fannie Mae Single-Family Loan Performance Data, 2026 Q2. 20,000 loans sampled per side by hash
+of the loan identifier. The data cannot be redistributed; `experiments/real_pair/build_gse_pair.py` rebuilds the pair
+from files a registered user downloads.
+
+Scope: profiling stage only. The two files hold different loans, so there is no trial load and no stage three.
+Neither side has derivation SQL, so the rule-rewriting check has nothing to run.
+
+Ground truth: 47 source attributes, 24 with a stated difference, written by the builder from the two published
+glossaries before any matcher ran on the pair. A conflict is labeled only where the glossaries state different
+conventions (code list, placeholder for "not available", date format, counting start). Whether each stated difference
+occurs in this quarter's rows was not checked. Limits: the builder wrote the labels and built the tool; column
+names are the publishers' attribute names in snake case; descriptions are one-line paraphrases of the glossaries.
+
+Frozen files (SHA-256), run once after this commit with MergeGuard, name-only and Valentine baselines:
+
+```
+e1307157eb8626052f008117d19dbb21bb2cc91fe182321cea6cf1028cbcb60e  experiments/real_pair/build_gse_pair.py
+67d5266e97d8510072567a914018b7c5ca7f1263a7a97a7a267c36eacb9486f3  mergeguard/match.py
+dbbc93ae4127e32f8101b5fe75734ef1437bfd3fde9500efd478731b973e018d  mergeguard/cards.py
+23e79ec92f624858b7a0d2fc0be4287db5ecf2bb9587ba8a17c90b44ea9eca52  mergeguard/evaluate.py
+```
