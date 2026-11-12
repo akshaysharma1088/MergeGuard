@@ -1,0 +1,325 @@
+{
+  "summary": {
+    "scenario": "L",
+    "model": "qwen2.5:7b",
+    "columns": 37,
+    "risky": 15,
+    "clean": 22,
+    "seconds": 1871,
+    "traps_flagged_different": 12,
+    "traps_proposed": 15,
+    "clean_flagged_different": 14,
+    "clean_proposed": 22,
+    "llm_trust_all": {
+      "approved": 37,
+      "wrong": 19
+    },
+    "target_accuracy": 0.8648648648648649,
+    "llm_judged": {
+      "approved": 11,
+      "wrong": 3
+    },
+    "llm_judged_ids": {
+      "approved": 9,
+      "wrong": 3
+    }
+  },
+  "rows": [
+    {
+      "source": "CUST.CUST_NO",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different range",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different range\"}"
+    },
+    {
+      "source": "CUST.CUST_NM",
+      "target": "customer.full_name",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"customer.full_name\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "CUST.BIRTH_DT",
+      "target": "customer.birth_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.birth_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CUST.DECEASED_IND",
+      "target": "customer.is_deceased",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"customer.is_deceased\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "CUST.CR_SCORE",
+      "target": "customer.credit_score",
+      "same_meaning": false,
+      "difference": "Different FICO version",
+      "raw_match": "{\"target\": \"customer.credit_score\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different FICO version\"}"
+    },
+    {
+      "source": "CUST.BKRPT_IND",
+      "target": "customer.is_deceased",
+      "same_meaning": false,
+      "difference": "Different meanings",
+      "raw_match": "{\"target\": \"customer.is_deceased\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different meanings\"}"
+    },
+    {
+      "source": "DDA_ACCT.ACCT_NO",
+      "target": "deposit_account.account_id",
+      "same_meaning": false,
+      "difference": "Different starting digits",
+      "raw_match": "{\"target\": \"deposit_account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting digits\"}"
+    },
+    {
+      "source": "DDA_ACCT.CUST_NO",
+      "target": "deposit_account.account_id",
+      "same_meaning": false,
+      "difference": "Different ranges and purposes",
+      "raw_match": "{\"target\": \"deposit_account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and purposes\"}"
+    },
+    {
+      "source": "DDA_ACCT.OPEN_DT",
+      "target": "deposit_account.open_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"deposit_account.open_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "DDA_ACCT.LEDGER_BAL",
+      "target": "deposit_account.ledger_balance",
+      "same_meaning": false,
+      "difference": "Sample values differ",
+      "raw_match": "{\"target\": \"deposit_account.ledger_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values differ\"}"
+    },
+    {
+      "source": "DDA_ACCT.OD_LMT",
+      "target": "deposit_account.overdraft_limit",
+      "same_meaning": false,
+      "difference": "Calculation and sample values differ",
+      "raw_match": "{\"target\": \"deposit_account.overdraft_limit\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Calculation and sample values differ\"}"
+    },
+    {
+      "source": "DDA_ACCT.MAIL_ADDR",
+      "target": "deposit_account.mailing_address",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"deposit_account.mailing_address\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CHK_ITEM.ITEM_ID",
+      "target": "check_item.item_id",
+      "same_meaning": false,
+      "difference": "Different numeric ranges",
+      "raw_match": "{\"target\": \"check_item.item_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numeric ranges\"}"
+    },
+    {
+      "source": "CHK_ITEM.ACCT_NO",
+      "target": "deposit_account.account_id",
+      "same_meaning": false,
+      "difference": "Different ranges and lengths",
+      "raw_match": "{\"target\": \"deposit_account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and lengths\"}"
+    },
+    {
+      "source": "CHK_ITEM.CHK_AMT",
+      "target": "check_item.check_amount",
+      "same_meaning": false,
+      "difference": "Sample values differ",
+      "raw_match": "{\"target\": \"check_item.check_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values differ\"}"
+    },
+    {
+      "source": "CHK_ITEM.CHK_NBR",
+      "target": "check_item.check_number",
+      "same_meaning": false,
+      "difference": "Serial number format differs",
+      "raw_match": "{\"target\": \"check_item.check_number\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Serial number format differs\"}"
+    },
+    {
+      "source": "STOP_PMT.STOP_ID",
+      "target": "stop_payment.stop_id",
+      "same_meaning": false,
+      "difference": "Different base values",
+      "raw_match": "{\"target\": \"stop_payment.stop_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different base values\"}"
+    },
+    {
+      "source": "STOP_PMT.ACCT_NO",
+      "target": "deposit_account.account_id",
+      "same_meaning": false,
+      "difference": "Different ranges and lengths",
+      "raw_match": "{\"target\": \"deposit_account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and lengths\"}"
+    },
+    {
+      "source": "STOP_PMT.REQ_DT",
+      "target": "stop_payment.request_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"stop_payment.request_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "STOP_PMT.EXPR_DT",
+      "target": "stop_payment.expiry_date",
+      "same_meaning": false,
+      "difference": "Expiry date vs. Six months after the request",
+      "raw_match": "{\"target\": \"stop_payment.expiry_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Expiry date vs. Six months after the request\"}"
+    },
+    {
+      "source": "LN_MSTR.LN_NO",
+      "target": "loan.loan_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"loan.loan_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "LN_MSTR.CUST_NO",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and scales",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and scales\"}"
+    },
+    {
+      "source": "LN_MSTR.PRIN_BAL",
+      "target": "loan.principal_balance",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"loan.principal_balance\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "LN_MSTR.INT_RT",
+      "target": "loan.interest_rate",
+      "same_meaning": false,
+      "difference": "Names differ",
+      "raw_match": "{\"target\": \"loan.interest_rate\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Names differ\"}"
+    },
+    {
+      "source": "LN_MSTR.ACCR_INT",
+      "target": "loan.accrued_interest",
+      "same_meaning": false,
+      "difference": "Different day count convention (365 vs 360)",
+      "raw_match": "{\"target\": \"loan.accrued_interest\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different day count convention (365 vs 360)\"}"
+    },
+    {
+      "source": "LN_MSTR.MIN_PMT_DUE",
+      "target": "loan.minimum_payment_due",
+      "same_meaning": false,
+      "difference": "Calculated differently",
+      "raw_match": "{\"target\": \"loan.minimum_payment_due\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Calculated differently\"}"
+    },
+    {
+      "source": "LN_MSTR.PPMT_PNLTY_IND",
+      "target": "loan.prepayment_penalty_flag",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"loan.prepayment_penalty_flag\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "LN_MSTR.NON_ACCR_IND",
+      "target": "loan.is_non_accrual",
+      "same_meaning": false,
+      "difference": "Threshold for non-accrual differs",
+      "raw_match": "{\"target\": \"loan.is_non_accrual\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Threshold for non-accrual differs\"}"
+    },
+    {
+      "source": "LN_MSTR.ESCR_CUSH_AMT",
+      "target": "loan.escrow_cushion",
+      "same_meaning": false,
+      "difference": "Different description",
+      "raw_match": "{\"target\": \"loan.escrow_cushion\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different description\"}"
+    },
+    {
+      "source": "LN_MSTR.AUTOPAY_AMT",
+      "target": "loan.autopay_amount",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"loan.autopay_amount\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SDB.BOX_NO",
+      "target": "safe_deposit_box.box_id",
+      "same_meaning": false,
+      "difference": "Different starting digits",
+      "raw_match": "{\"target\": \"safe_deposit_box.box_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting digits\"}"
+    },
+    {
+      "source": "SDB.BOX_SZ",
+      "target": "safe_deposit_box.box_size",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"safe_deposit_box.box_size\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SDB.BOX_STAT",
+      "target": "safe_deposit_box.box_status",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"safe_deposit_box.box_status\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "WIRE_TXN.WIRE_ID",
+      "target": "wire_transfer.wire_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"wire_transfer.wire_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "WIRE_TXN.CUST_NO",
+      "target": "wire_transfer.customer_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"wire_transfer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "WIRE_TXN.WIRE_AMT",
+      "target": "wire_transfer.wire_amount",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"wire_transfer.wire_amount\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "WIRE_TXN.CUTOFF_TS",
+      "target": "wire_transfer.cutoff_ts",
+      "same_meaning": false,
+      "difference": "Timestamps refer to different events",
+      "raw_match": "{\"target\": \"wire_transfer.cutoff_ts\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Timestamps refer to different events\"}"
+    }
+  ]
+}

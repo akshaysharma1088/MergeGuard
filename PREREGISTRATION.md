@@ -480,3 +480,28 @@ Missed entirely: all four date-format differences (YYYYMM against MMYYYY) and th
 low-cardinality fields. The monthly table was mapped badly: 6 of its 17 columns went to a wrong target (period to
 borrower assistance plan, current UPB to total principal current). One clean column was flagged (current UPB).
 These failures are development input for the next version; scenario R is now development data.
+
+## v0.0.9 language-model baseline: post-hoc analysis (not pre-registered)
+
+`experiments/run_llm_baseline.py`, model qwen2.5:7b through Ollama on GitHub-hosted runners (workflow
+`.github/workflows/llm-baseline.yml`), temperature 0, scenarios E to L regenerated with their original seeds.
+Two prompts per source column: pick a target from all target columns (name, type, description); then judge whether
+the pair has the same business meaning given both full cards (name, type, description, six sample values,
+derivation SQL). No retries or prompt changes after seeing results. Raw answers in
+`experiments/results_v0.0.9_llm_baseline`. 203 columns, 91 trap columns, 110 clean columns, no request errors.
+
+| | Language model (qwen2.5:7b) | MergeGuard profiling (current version, development data) |
+| --- | --- | --- |
+| Correct target | 174 of 203 (86%) | 201 of 203 (99%) |
+| Trap columns flagged | 78 of 91 (86%) | 45 of 91 (49%) |
+| Clean columns flagged | 67 of 103 proposed (65%) | 0 of 110 |
+| Approved without review / wrong | 49 / 14 (judge says same meaning) | 55 / 12 |
+| Same, identifiers to review | 37 / 13 | 55 / 12 |
+| Every proposal trusted | 194 / 110 | n/a |
+
+Reading: the model says "different" for 145 of its 194 proposals. It finds far more traps than profiling, and where
+derivation SQL is present its stated reason is often the true one (365 against 360 day count, non-accrual threshold).
+It also flags two thirds of clean columns, often for reasons that are not differences in meaning ("different
+ranges", "sample values differ"), and the mappings it does pass are no safer than MergeGuard's. One small model,
+one prompt; a larger model may do better. Descriptions and derivation SQL in MergeBench were written by the builder
+and may state differences more plainly than real data dictionaries do.

@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "scenario": "J",
+    "model": "qwen2.5:7b",
+    "columns": 18,
+    "risky": 10,
+    "clean": 8,
+    "seconds": 1300,
+    "traps_flagged_different": 8,
+    "traps_proposed": 10,
+    "clean_flagged_different": 5,
+    "clean_proposed": 8,
+    "llm_trust_all": {
+      "approved": 18,
+      "wrong": 12
+    },
+    "target_accuracy": 0.8888888888888888,
+    "llm_judged": {
+      "approved": 5,
+      "wrong": 2
+    },
+    "llm_judged_ids": {
+      "approved": 4,
+      "wrong": 2
+    }
+  },
+  "rows": [
+    {
+      "source": "CUST.CUST_ID",
+      "target": "customer.customer_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CUST.CUST_NM",
+      "target": "customer.full_name",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"customer.full_name\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CUST.PEP_IND",
+      "target": "customer.pep_flag",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"customer.pep_flag\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "CUST.SAR_CNT",
+      "target": "customer.sar_count",
+      "same_meaning": false,
+      "difference": "Different counts",
+      "raw_match": "{\"target\": \"customer.sar_count\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different counts\"}"
+    },
+    {
+      "source": "CUST.DIG_ACTV_IND",
+      "target": "customer.is_digital_active",
+      "same_meaning": false,
+      "difference": "Business definitions differ",
+      "raw_match": "{\"target\": \"customer.is_digital_active\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Business definitions differ\"}"
+    },
+    {
+      "source": "CUST.FAIL_LOGIN_CNT",
+      "target": "customer.failed_login_count",
+      "same_meaning": false,
+      "difference": "Different context for failure",
+      "raw_match": "{\"target\": \"customer.failed_login_count\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different context for failure\"}"
+    },
+    {
+      "source": "CTR_AGG.CTR_ID",
+      "target": "ctr_aggregate.ctr_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"ctr_aggregate.ctr_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "CTR_AGG.CUST_ID",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "CTR_AGG.BUS_DT",
+      "target": "ctr_aggregate.business_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"ctr_aggregate.business_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CTR_AGG.CASH_TOT_AMT",
+      "target": "ctr_aggregate.cash_total",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"ctr_aggregate.cash_total\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "ATM.ATM_ID",
+      "target": "atm.atm_id",
+      "same_meaning": false,
+      "difference": "Different numeric ranges",
+      "raw_match": "{\"target\": \"atm.atm_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numeric ranges\"}"
+    },
+    {
+      "source": "ATM.CASH_BAL",
+      "target": "atm.cash_balance",
+      "same_meaning": false,
+      "difference": "Different calculation",
+      "raw_match": "{\"target\": \"atm.cash_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different calculation\"}"
+    },
+    {
+      "source": "ATM.UPTIME_PCT",
+      "target": "atm.uptime_pct",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"atm.uptime_pct\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "ATM.TXN_CNT",
+      "target": "atm.txn_count",
+      "same_meaning": false,
+      "difference": "Different description",
+      "raw_match": "{\"target\": \"atm.txn_count\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different description\"}"
+    },
+    {
+      "source": "SESSION_LOG.SESS_ID",
+      "target": "app_session.session_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"app_session.session_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "SESSION_LOG.CUST_ID",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "SESSION_LOG.SESS_DUR_SEC",
+      "target": "app_session.session_duration_sec",
+      "same_meaning": false,
+      "difference": "Unit mismatch",
+      "raw_match": "{\"target\": \"app_session.session_duration_sec\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Unit mismatch\"}"
+    },
+    {
+      "source": "SESSION_LOG.DEVICE_ID",
+      "target": "app_session.device_id",
+      "same_meaning": false,
+      "difference": "Different format and source",
+      "raw_match": "{\"target\": \"app_session.device_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different format and source\"}"
+    }
+  ]
+}
