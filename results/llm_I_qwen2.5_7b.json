@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "scenario": "I",
+    "model": "qwen2.5:7b",
+    "columns": 19,
+    "risky": 10,
+    "clean": 9,
+    "seconds": 1196,
+    "traps_flagged_different": 10,
+    "traps_proposed": 10,
+    "clean_flagged_different": 2,
+    "clean_proposed": 8,
+    "llm_trust_all": {
+      "approved": 18,
+      "wrong": 10
+    },
+    "target_accuracy": 0.9473684210526315,
+    "llm_judged": {
+      "approved": 6,
+      "wrong": 0
+    },
+    "llm_judged_ids": {
+      "approved": 4,
+      "wrong": 0
+    }
+  },
+  "rows": [
+    {
+      "source": "AUTO_LN.LN_NO",
+      "target": "auto_loan.loan_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"auto_loan.loan_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "AUTO_LN.ORIG_DT",
+      "target": "auto_loan.origination_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"auto_loan.origination_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "AUTO_LN.TERM_MO",
+      "target": "auto_loan.term_months",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"auto_loan.term_months\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "AUTO_LN.VEH_VAL",
+      "target": "auto_loan.vehicle_value",
+      "same_meaning": false,
+      "difference": "Vehicle value vs. Retail sticker price including dealer add-ons",
+      "raw_match": "{\"target\": \"auto_loan.vehicle_value\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Vehicle value vs. Retail sticker price including dealer add-ons\"}"
+    },
+    {
+      "source": "AUTO_LN.REPO_IND",
+      "target": "auto_loan.is_repossessed",
+      "same_meaning": false,
+      "difference": "Description and sample values differ",
+      "raw_match": "{\"target\": \"auto_loan.is_repossessed\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Description and sample values differ\"}"
+    },
+    {
+      "source": "AUTO_LN.DLR_RSV_AMT",
+      "target": "auto_loan.dealer_reserve_fee",
+      "same_meaning": false,
+      "difference": "Calculation method differs",
+      "raw_match": "{\"target\": \"auto_loan.dealer_reserve_fee\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Calculation method differs\"}"
+    },
+    {
+      "source": "STU_LN.LN_NO",
+      "target": "student_loan.loan_id",
+      "same_meaning": false,
+      "difference": "Different prefixes",
+      "raw_match": "{\"target\": \"student_loan.loan_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different prefixes\"}"
+    },
+    {
+      "source": "STU_LN.BRWR_NM",
+      "target": "student_loan.borrower_name",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"student_loan.borrower_name\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "STU_LN.RPMT_START_DT",
+      "target": "student_loan.repayment_start_date",
+      "same_meaning": false,
+      "difference": "Computed from different fields",
+      "raw_match": "{\"target\": \"student_loan.repayment_start_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computed from different fields\"}"
+    },
+    {
+      "source": "STU_LN.DISB_AMT",
+      "target": "student_loan.disbursement_amount",
+      "same_meaning": false,
+      "difference": "Different loan amounts",
+      "raw_match": "{\"target\": \"student_loan.disbursement_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different loan amounts\"}"
+    },
+    {
+      "source": "STU_LN.COSGN_REL_IND",
+      "target": "student_loan.cosigner_release_flag",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"student_loan.cosigner_release_flag\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "LEASE.LEASE_NO",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": null}",
+      "raw_judge": ""
+    },
+    {
+      "source": "LEASE.START_DT",
+      "target": "equipment_lease.start_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"equipment_lease.start_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "LEASE.RESID_VAL",
+      "target": "equipment_lease.residual_value",
+      "same_meaning": false,
+      "difference": "Different residual value contexts",
+      "raw_match": "{\"target\": \"equipment_lease.residual_value\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different residual value contexts\"}"
+    },
+    {
+      "source": "LEASE.BUYOUT_AMT",
+      "target": "equipment_lease.buyout_price",
+      "same_meaning": false,
+      "difference": "Computation method differs",
+      "raw_match": "{\"target\": \"equipment_lease.buyout_price\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computation method differs\"}"
+    },
+    {
+      "source": "SYND_LN.DEAL_NO",
+      "target": "syndicated_loan.deal_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"syndicated_loan.deal_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SYND_LN.AGENT_BANK",
+      "target": "syndicated_loan.agent_bank",
+      "same_meaning": false,
+      "difference": "Different banks",
+      "raw_match": "{\"target\": \"syndicated_loan.agent_bank\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different banks\"}"
+    },
+    {
+      "source": "SYND_LN.CMT_AMT",
+      "target": "syndicated_loan.commitment_amount",
+      "same_meaning": false,
+      "difference": "Sum vs. Individual commitment",
+      "raw_match": "{\"target\": \"syndicated_loan.commitment_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sum vs. Individual commitment\"}"
+    },
+    {
+      "source": "SYND_LN.BRWR_ID",
+      "target": "syndicated_loan.borrower_id",
+      "same_meaning": false,
+      "difference": "Different entities",
+      "raw_match": "{\"target\": \"syndicated_loan.borrower_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different entities\"}"
+    }
+  ]
+}
