@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "scenario": "E",
+    "model": "qwen2.5:7b",
+    "columns": 28,
+    "risky": 12,
+    "clean": 14,
+    "seconds": 3397,
+    "traps_flagged_different": 10,
+    "traps_proposed": 12,
+    "clean_flagged_different": 11,
+    "clean_proposed": 13,
+    "llm_trust_all": {
+      "approved": 25,
+      "wrong": 14
+    },
+    "target_accuracy": 0.8571428571428571,
+    "llm_judged": {
+      "approved": 4,
+      "wrong": 2
+    },
+    "llm_judged_ids": {
+      "approved": 2,
+      "wrong": 1
+    }
+  },
+  "rows": [
+    {
+      "source": "CUST.CUST_NBR",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "CUST.CUST_NM",
+      "target": "customer.full_name",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"customer.full_name\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "CUST.BIRTH_DT",
+      "target": "customer.birth_date",
+      "same_meaning": false,
+      "difference": "Column descriptions and sample values do not match.",
+      "raw_match": "{\"target\": \"customer.birth_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Column descriptions and sample values do not match.\"}"
+    },
+    {
+      "source": "CUST.EMAIL_ADDR",
+      "target": "customer.email",
+      "same_meaning": false,
+      "difference": "Column names and sample values differ",
+      "raw_match": "{\"target\": \"customer.email\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Column names and sample values differ\"}"
+    },
+    {
+      "source": "CUST.ANNL_INCM",
+      "target": "customer.annual_income",
+      "same_meaning": false,
+      "difference": "Sample values differ",
+      "raw_match": "{\"target\": \"customer.annual_income\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values differ\"}"
+    },
+    {
+      "source": "ACCT.ACCT_NBR",
+      "target": "account.account_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "ACCT.CUST_NBR",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and types",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and types\"}"
+    },
+    {
+      "source": "ACCT.ACCT_TYP_CD",
+      "target": "account.account_type",
+      "same_meaning": false,
+      "difference": "Mapping required",
+      "raw_match": "{\"target\": \"account.account_type\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Mapping required\"}"
+    },
+    {
+      "source": "ACCT.OPEN_DT",
+      "target": "account.open_date",
+      "same_meaning": false,
+      "difference": "Different time periods",
+      "raw_match": "{\"target\": \"account.open_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different time periods\"}"
+    },
+    {
+      "source": "ACCT.ACCT_STAT_CD",
+      "target": "account.account_status",
+      "same_meaning": false,
+      "difference": "Different number of values and descriptions",
+      "raw_match": "{\"target\": \"account.account_status\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different number of values and descriptions\"}"
+    },
+    {
+      "source": "ACCT.CUR_BAL",
+      "target": "account.current_balance",
+      "same_meaning": false,
+      "difference": "Settled balance vs. Current balance",
+      "raw_match": "{\"target\": \"account.current_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Settled balance vs. Current balance\"}"
+    },
+    {
+      "source": "ACCT.PEND_HOLD_AMT",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": \"null\"}",
+      "raw_judge": ""
+    },
+    {
+      "source": "ACCT.BRANCH_CD",
+      "target": "account.branch_code",
+      "same_meaning": false,
+      "difference": "Different branch codes",
+      "raw_match": "{\"target\": \"account.branch_code\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different branch codes\"}"
+    },
+    {
+      "source": "ACCT.CR_LMT",
+      "target": "account.credit_limit",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"account.credit_limit\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "ACCT.AVAIL_CR",
+      "target": "account.available_credit",
+      "same_meaning": false,
+      "difference": "Computation logic differs",
+      "raw_match": "{\"target\": \"account.available_credit\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computation logic differs\"}"
+    },
+    {
+      "source": "ACCT.ACTIVE_IND",
+      "target": "account.is_active",
+      "same_meaning": false,
+      "difference": "Different criteria for determination",
+      "raw_match": "{\"target\": \"account.is_active\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different criteria for determination\"}"
+    },
+    {
+      "source": "LN.LN_ID",
+      "target": "loan.loan_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"loan.loan_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "LN.PRIM_OWNR_ID",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different numeric representations",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different numeric representations\"}"
+    },
+    {
+      "source": "LN.ORIG_DT",
+      "target": "loan.origination_date",
+      "same_meaning": false,
+      "difference": "Computation logic differs",
+      "raw_match": "{\"target\": \"loan.origination_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computation logic differs\"}"
+    },
+    {
+      "source": "LN.INT_RT",
+      "target": "loan.interest_rate",
+      "same_meaning": false,
+      "difference": "Units are different",
+      "raw_match": "{\"target\": \"loan.interest_rate\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Units are different\"}"
+    },
+    {
+      "source": "LN.PRIN_BAL",
+      "target": "loan.principal_balance",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"loan.principal_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "LN.DLQ_DAYS",
+      "target": "loan.days_past_due",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"loan.days_past_due\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "LN.MAT_DT",
+      "target": "loan.maturity_date",
+      "same_meaning": false,
+      "difference": "Description mismatch",
+      "raw_match": "{\"target\": \"loan.maturity_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Description mismatch\"}"
+    },
+    {
+      "source": "TXN.TXN_ID",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": null}",
+      "raw_judge": ""
+    },
+    {
+      "source": "TXN.ACCT_NBR",
+      "target": "account.account_id",
+      "same_meaning": false,
+      "difference": "Different format and range",
+      "raw_match": "{\"target\": \"account.account_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different format and range\"}"
+    },
+    {
+      "source": "TXN.TXN_AMT",
+      "target": "account_transaction.amount",
+      "same_meaning": false,
+      "difference": "Sign convention differs",
+      "raw_match": "{\"target\": \"account_transaction.amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sign convention differs\"}"
+    },
+    {
+      "source": "TXN.DR_CR_FLG",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": null}",
+      "raw_judge": ""
+    },
+    {
+      "source": "TXN.POST_DT",
+      "target": "account_transaction.post_date",
+      "same_meaning": false,
+      "difference": "Names differ in meaning",
+      "raw_match": "{\"target\": \"account_transaction.post_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Names differ in meaning\"}"
+    }
+  ]
+}
