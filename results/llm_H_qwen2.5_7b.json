@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "scenario": "H",
+    "model": "qwen2.5:7b",
+    "columns": 25,
+    "risky": 10,
+    "clean": 15,
+    "seconds": 3042,
+    "traps_flagged_different": 9,
+    "traps_proposed": 10,
+    "clean_flagged_different": 8,
+    "clean_proposed": 13,
+    "llm_trust_all": {
+      "approved": 23,
+      "wrong": 11
+    },
+    "target_accuracy": 0.88,
+    "llm_judged": {
+      "approved": 6,
+      "wrong": 1
+    },
+    "llm_judged_ids": {
+      "approved": 3,
+      "wrong": 1
+    }
+  },
+  "rows": [
+    {
+      "source": "CLNT.CLNT_ID",
+      "target": "client.client_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"client.client_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CLNT.CLNT_NM",
+      "target": "client.client_name",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"client.client_name\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "PORTF.PORTF_ID",
+      "target": "portfolio.portfolio_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"portfolio.portfolio_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "PORTF.CLNT_ID",
+      "target": "portfolio.client_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"portfolio.client_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "PORTF.AUM_AMT",
+      "target": "portfolio.aum",
+      "same_meaning": false,
+      "difference": "Different aggregation scope",
+      "raw_match": "{\"target\": \"portfolio.aum\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different aggregation scope\"}"
+    },
+    {
+      "source": "PORTF.COST_BASIS",
+      "target": "portfolio.cost_basis",
+      "same_meaning": false,
+      "difference": "Sample values differ",
+      "raw_match": "{\"target\": \"portfolio.cost_basis\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values differ\"}"
+    },
+    {
+      "source": "PORTF.SHR_QTY",
+      "target": "portfolio.share_qty",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"portfolio.share_qty\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "TRD.TRD_ID",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": \"null\"}",
+      "raw_judge": ""
+    },
+    {
+      "source": "TRD.PORTF_ID",
+      "target": "portfolio.portfolio_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"portfolio.portfolio_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "TRD.POSN_DT",
+      "target": "trade_position.position_date",
+      "same_meaning": false,
+      "difference": "Position date is different from Holding date: trade execution date",
+      "raw_match": "{\"target\": \"trade_position.position_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Position date is different from Holding date: trade execution date\"}"
+    },
+    {
+      "source": "TRD.QTY",
+      "target": "trade_position.quantity",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"trade_position.quantity\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "LC.LC_NO",
+      "target": "letter_of_credit.lc_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"letter_of_credit.lc_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "LC.ISSUE_DT",
+      "target": "letter_of_credit.issue_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"letter_of_credit.issue_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "LC.LC_BAL",
+      "target": "letter_of_credit.lc_balance",
+      "same_meaning": false,
+      "difference": "Computed value vs. Original face value",
+      "raw_match": "{\"target\": \"letter_of_credit.lc_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computed value vs. Original face value\"}"
+    },
+    {
+      "source": "LC.EXPRY_DT",
+      "target": "letter_of_credit.expiry_date",
+      "same_meaning": false,
+      "difference": "Describes different aspects of expiry dates",
+      "raw_match": "{\"target\": \"letter_of_credit.expiry_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Describes different aspects of expiry dates\"}"
+    },
+    {
+      "source": "FRD_CASE.CASE_NO",
+      "target": "fraud_case.case_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"fraud_case.case_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "FRD_CASE.CLNT_ID",
+      "target": "fraud_case.client_id",
+      "same_meaning": false,
+      "difference": "Different prefixes",
+      "raw_match": "{\"target\": \"fraud_case.client_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different prefixes\"}"
+    },
+    {
+      "source": "FRD_CASE.FRD_LOSS_AMT",
+      "target": "fraud_case.fraud_loss_amount",
+      "same_meaning": false,
+      "difference": "Different calculation",
+      "raw_match": "{\"target\": \"fraud_case.fraud_loss_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different calculation\"}"
+    },
+    {
+      "source": "FRD_CASE.CONF_FRD_IND",
+      "target": "fraud_case.is_confirmed_fraud",
+      "same_meaning": false,
+      "difference": "Description context differs",
+      "raw_match": "{\"target\": \"fraud_case.is_confirmed_fraud\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Description context differs\"}"
+    },
+    {
+      "source": "FRD_CASE.ALRT_TS",
+      "target": "fraud_case.alert_ts",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"fraud_case.alert_ts\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "GL_TXN.ENTRY_NO",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": null}",
+      "raw_judge": ""
+    },
+    {
+      "source": "GL_TXN.POST_DT",
+      "target": "gl_entry.post_date",
+      "same_meaning": false,
+      "difference": "Post date vs. Calendar day of nightly posting batch completion",
+      "raw_match": "{\"target\": \"gl_entry.post_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Post date vs. Calendar day of nightly posting batch completion\"}"
+    },
+    {
+      "source": "GL_TXN.AMT",
+      "target": "gl_entry.amount",
+      "same_meaning": false,
+      "difference": "Types and sample values differ.",
+      "raw_match": "{\"target\": \"gl_entry.amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Types and sample values differ.\"}"
+    },
+    {
+      "source": "SUSP.SUSP_ACCT_NO",
+      "target": "suspense_account.suspense_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"suspense_account.suspense_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SUSP.SUSP_BAL",
+      "target": "suspense_account.suspense_balance",
+      "same_meaning": false,
+      "difference": "Sign difference",
+      "raw_match": "{\"target\": \"suspense_account.suspense_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sign difference\"}"
+    }
+  ]
+}
