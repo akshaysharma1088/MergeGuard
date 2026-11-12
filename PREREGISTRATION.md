@@ -409,3 +409,26 @@ Result: computed-field traps FAIL 45/46 (miss: auto_loan.is_repossessed, 0.3% of
 loaded-only traps surfaced 7/20 (FAIL or REVIEW); clean columns FAIL 0/80. During development two false FAILs were fixed:
 the orphan check treating a key name shared by two tables as a foreign key, and a 1-record mismatch in an 80-record
 table (FAIL now also needs at least 3 records).
+
+## v0.0.9 review baselines: post-hoc analysis (not pre-registered)
+
+Run after external review comments, with `experiments/run_review_baselines.py` on scenarios E to L regenerated with
+their original seeds (303, 404, 571 to 575, 612) at default size. All eight scenarios are development data for the
+current matcher, so MergeGuard's own numbers here are optimistic (E, F and J improved since their held-out runs:
+2, 1 and 1 wrong approvals then, 0 now). COMA has no tuning. Results in `experiments/results_v0.0.9_review_baselines`.
+
+A. Abstention (203 columns). Wrong approvals / mappings auto-approved:
+MergeGuard 12 / 55; COMA trusting every proposal 91 / 196; COMA with MergeGuard's send-identifiers-to-review rule
+81 / 127; COMA with that rule, keeping only its top-scoring mappings at MergeGuard's coverage 24 / 55; COMA with that
+rule plus MergeGuard's value detectors on its pairs 32 / 78. Largest coverage at which COMA is as safe as MergeGuard:
+30 mappings against 55.
+Reading: most of the headline gap (91 against 12) comes from approving fewer mappings. At equal coverage the gap is
+2 to 1. 22% of what MergeGuard auto-approves is still wrong or hides a trap.
+
+B. Plain record diff on trial-load output (G to L, columns mapped to the correct target). FAIL above 1% mismatch.
+Recomputed-field traps (45): strict text diff 45, tolerant diff 44, MergeGuard verifier 44.
+Stored-only traps (19): strict 0, tolerant 0, verifier 5 (conformance checks).
+Clean exact columns (47): 0 false failures for all three.
+Verifier diagnosis names the labeled trap type on 29 of its 49 failed trap columns.
+Reading: on recomputed fields a plain diff detects as much as the verifier. Detection there comes from the trial-load
+evidence, not from the verifier's logic. The verifier adds the diagnosis and the stored-field conformance checks.

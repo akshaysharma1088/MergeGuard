@@ -1,0 +1,2250 @@
+{
+  "abstention": {
+    "E": {
+      "columns": 28,
+      "risky": 12,
+      "mergeguard": {
+        "accepted": 9,
+        "harmful": 0
+      },
+      "coma_trust_all": {
+        "accepted": 25,
+        "harmful": 14
+      },
+      "coma_id_rule": {
+        "accepted": 19,
+        "harmful": 10
+      },
+      "coma_matched_coverage": {
+        "accepted": 9,
+        "harmful": 2
+      },
+      "coma_plus_detectors": {
+        "accepted": 11,
+        "harmful": 2
+      },
+      "coma_coverage_at_mergeguard_safety": 0,
+      "coma_curve": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        6,
+        7,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "F": {
+      "columns": 29,
+      "risky": 13,
+      "mergeguard": {
+        "accepted": 6,
+        "harmful": 0
+      },
+      "coma_trust_all": {
+        "accepted": 28,
+        "harmful": 12
+      },
+      "coma_id_rule": {
+        "accepted": 19,
+        "harmful": 10
+      },
+      "coma_matched_coverage": {
+        "accepted": 6,
+        "harmful": 3
+      },
+      "coma_plus_detectors": {
+        "accepted": 10,
+        "harmful": 1
+      },
+      "coma_coverage_at_mergeguard_safety": 0,
+      "coma_curve": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "G": {
+      "columns": 24,
+      "risky": 11,
+      "mergeguard": {
+        "accepted": 7,
+        "harmful": 3
+      },
+      "coma_trust_all": {
+        "accepted": 23,
+        "harmful": 11
+      },
+      "coma_id_rule": {
+        "accepted": 14,
+        "harmful": 10
+      },
+      "coma_matched_coverage": {
+        "accepted": 7,
+        "harmful": 4
+      },
+      "coma_plus_detectors": {
+        "accepted": 10,
+        "harmful": 6
+      },
+      "coma_coverage_at_mergeguard_safety": 6,
+      "coma_curve": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "H": {
+      "columns": 25,
+      "risky": 10,
+      "mergeguard": {
+        "accepted": 7,
+        "harmful": 2
+      },
+      "coma_trust_all": {
+        "accepted": 24,
+        "harmful": 10
+      },
+      "coma_id_rule": {
+        "accepted": 15,
+        "harmful": 10
+      },
+      "coma_matched_coverage": {
+        "accepted": 7,
+        "harmful": 4
+      },
+      "coma_plus_detectors": {
+        "accepted": 9,
+        "harmful": 4
+      },
+      "coma_coverage_at_mergeguard_safety": 4,
+      "coma_curve": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        7,
+        8,
+        8,
+        9,
+        10
+      ]
+    },
+    "I": {
+      "columns": 19,
+      "risky": 10,
+      "mergeguard": {
+        "accepted": 5,
+        "harmful": 0
+      },
+      "coma_trust_all": {
+        "accepted": 19,
+        "harmful": 10
+      },
+      "coma_id_rule": {
+        "accepted": 14,
+        "harmful": 9
+      },
+      "coma_matched_coverage": {
+        "accepted": 5,
+        "harmful": 1
+      },
+      "coma_plus_detectors": {
+        "accepted": 8,
+        "harmful": 3
+      },
+      "coma_coverage_at_mergeguard_safety": 3,
+      "coma_curve": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "J": {
+      "columns": 18,
+      "risky": 10,
+      "mergeguard": {
+        "accepted": 2,
+        "harmful": 0
+      },
+      "coma_trust_all": {
+        "accepted": 18,
+        "harmful": 10
+      },
+      "coma_id_rule": {
+        "accepted": 11,
+        "harmful": 9
+      },
+      "coma_matched_coverage": {
+        "accepted": 2,
+        "harmful": 1
+      },
+      "coma_plus_detectors": {
+        "accepted": 5,
+        "harmful": 3
+      },
+      "coma_coverage_at_mergeguard_safety": 1,
+      "coma_curve": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "K": {
+      "columns": 23,
+      "risky": 10,
+      "mergeguard": {
+        "accepted": 4,
+        "harmful": 2
+      },
+      "coma_trust_all": {
+        "accepted": 22,
+        "harmful": 9
+      },
+      "coma_id_rule": {
+        "accepted": 11,
+        "harmful": 9
+      },
+      "coma_matched_coverage": {
+        "accepted": 4,
+        "harmful": 2
+      },
+      "coma_plus_detectors": {
+        "accepted": 8,
+        "harmful": 6
+      },
+      "coma_coverage_at_mergeguard_safety": 4,
+      "coma_curve": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "L": {
+      "columns": 37,
+      "risky": 15,
+      "mergeguard": {
+        "accepted": 15,
+        "harmful": 5
+      },
+      "coma_trust_all": {
+        "accepted": 37,
+        "harmful": 15
+      },
+      "coma_id_rule": {
+        "accepted": 24,
+        "harmful": 14
+      },
+      "coma_matched_coverage": {
+        "accepted": 15,
+        "harmful": 7
+      },
+      "coma_plus_detectors": {
+        "accepted": 17,
+        "harmful": 7
+      },
+      "coma_coverage_at_mergeguard_safety": 12,
+      "coma_curve": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  },
+  "record_diff": {
+    "G": {
+      "summary": {
+        "computed_traps": {
+          "n": 6,
+          "strict": 6,
+          "tolerant": 6,
+          "verifier": 6
+        },
+        "stored_traps": {
+          "n": 4,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 1
+        },
+        "clean_exact": {
+          "n": 8,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          6,
+          7
+        ],
+        "verifier_only": [
+          "PMT.PMT_TYP_CD"
+        ],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "CUSTOMER.CUST_NAME",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CUSTOMER.MKTG_OPT_OUT",
+          "group": "stored_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PMT.CUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PMT.PMT_TYP_CD",
+          "group": "stored_traps",
+          "truth": [
+            "code_set"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "code_set"
+          ],
+          "type_correct": true,
+          "diagnosis": "100% of loaded values are not in the target code set (ACH, WIRE)"
+        },
+        {
+          "source": "PMT.SETTLE_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 0.66975,
+          "tolerant_rate": 0.66975,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 2 days (median, range -1 to 5): a different business event"
+        },
+        {
+          "source": "PMT.CPTY_NM",
+          "group": "stored_traps",
+          "truth": [
+            "role"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PMT.CCY_CD",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PMT.AMT_USD",
+          "group": "computed_traps",
+          "truth": [
+            "currency"
+          ],
+          "strict_rate": 0.18858333333333333,
+          "tolerant_rate": 0.18858333333333333,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "definition"
+          ],
+          "type_correct": false,
+          "diagnosis": "Values differ in both directions: different method or basis"
+        },
+        {
+          "source": "MTG_LN.CUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "MTG_LN.PRIN_BAL",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.004,
+          "tolerant_rate": 0.004,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "MTG_LN.LTV_RTO",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.386,
+          "tolerant_rate": 0.384,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "MTG_LN.ESCROW_BAL",
+          "group": "computed_traps",
+          "truth": [
+            "sign"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "sign"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is the source with the sign flipped"
+        },
+        {
+          "source": "MTG_LN.HMDA_ACTN_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 29 days (median, range 15 to 45): a different business event"
+        },
+        {
+          "source": "MTG_LN.CECL_RSRV",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.383,
+          "tolerant_rate": 0.383,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "TRUST_ACCT.TAX_ID",
+          "group": "stored_traps",
+          "truth": [
+            "identity"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "TRUST_ACCT.OPEN_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "BENE.TRUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "BENE.BENE_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        }
+      ]
+    },
+    "H": {
+      "summary": {
+        "computed_traps": {
+          "n": 8,
+          "strict": 8,
+          "tolerant": 8,
+          "verifier": 8
+        },
+        "stored_traps": {
+          "n": 2,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_exact": {
+          "n": 8,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          8,
+          8
+        ],
+        "verifier_only": [],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "CLNT.CLNT_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PORTF.CLNT_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PORTF.AUM_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "PORTF.COST_BASIS",
+          "group": "stored_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "PORTF.SHR_QTY",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "TRD.PORTF_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "TRD.POSN_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 0.998875,
+          "tolerant_rate": 0.998875,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 1 days (median, range 1 to 5): a different business event"
+        },
+        {
+          "source": "TRD.QTY",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "LC.ISSUE_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0025,
+          "tolerant_rate": 0.0025,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "LC.LC_BAL",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "LC.EXPRY_DT",
+          "group": "stored_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "FRD_CASE.CLNT_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "FRD_CASE.FRD_LOSS_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "FRD_CASE.CONF_FRD_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.32166666666666666,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "32.2% of records flip (target marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "FRD_CASE.ALRT_TS",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 1 days (median, range -1 to 1): a different business event"
+        },
+        {
+          "source": "GL_TXN.POST_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 0.7478333333333333,
+          "tolerant_rate": 0.7478333333333333,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is earlier than target by 2 days (median, range -4 to 1): a different business event"
+        },
+        {
+          "source": "GL_TXN.AMT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0023333333333333335,
+          "tolerant_rate": 0.0023333333333333335,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "SUSP.SUSP_BAL",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        }
+      ]
+    },
+    "I": {
+      "summary": {
+        "computed_traps": {
+          "n": 6,
+          "strict": 6,
+          "tolerant": 5,
+          "verifier": 5
+        },
+        "stored_traps": {
+          "n": 4,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 1
+        },
+        "clean_exact": {
+          "n": 5,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          2,
+          6
+        ],
+        "verifier_only": [
+          "SYND_LN.CMT_AMT"
+        ],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "AUTO_LN.ORIG_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0025,
+          "tolerant_rate": 0.0025,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "AUTO_LN.TERM_MO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "AUTO_LN.VEH_VAL",
+          "group": "stored_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "AUTO_LN.REPO_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.002,
+          "strict_fail": true,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "AUTO_LN.DLR_RSV_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "STU_LN.BRWR_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "STU_LN.RPMT_START_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 183 days (median, range 182 to 184): a different business event"
+        },
+        {
+          "source": "STU_LN.DISB_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target = source x 2 (aggregation)"
+        },
+        {
+          "source": "STU_LN.COSGN_REL_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.14916666666666667,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "14.9% of records flip (target marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "LEASE.START_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.005,
+          "tolerant_rate": 0.005,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "LEASE.RESID_VAL",
+          "group": "stored_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "LEASE.BUYOUT_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "definition"
+          ],
+          "type_correct": false,
+          "diagnosis": "Values differ in both directions: different method or basis"
+        },
+        {
+          "source": "SYND_LN.AGENT_BANK",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "SYND_LN.CMT_AMT",
+          "group": "stored_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "85% of loaded values fall outside the target's range"
+        },
+        {
+          "source": "SYND_LN.BRWR_ID",
+          "group": "stored_traps",
+          "truth": [
+            "identity"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        }
+      ]
+    },
+    "J": {
+      "summary": {
+        "computed_traps": {
+          "n": 8,
+          "strict": 8,
+          "tolerant": 8,
+          "verifier": 8
+        },
+        "stored_traps": {
+          "n": 1,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_exact": {
+          "n": 4,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          5,
+          8
+        ],
+        "verifier_only": [],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "CUST.CUST_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CUST.PEP_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.032,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "3.2% of records flip (source marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "CUST.SAR_CNT",
+          "group": "computed_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 0.104,
+          "tolerant_rate": 0.104,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target counts are always larger: counted over a different scope"
+        },
+        {
+          "source": "CUST.FAIL_LOGIN_CNT",
+          "group": "computed_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 0.9785,
+          "tolerant_rate": 0.9785,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target counts are always smaller: counted over a different scope"
+        },
+        {
+          "source": "CTR_AGG.CUST_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CTR_AGG.BUS_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0035,
+          "tolerant_rate": 0.0035,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "CTR_AGG.CASH_TOT_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 0.2965,
+          "tolerant_rate": 0.2965,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "ATM.CASH_BAL",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "ATM.UPTIME_PCT",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.995,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target = source x 1.03"
+        },
+        {
+          "source": "ATM.TXN_CNT",
+          "group": "computed_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target counts are always smaller: counted over a different scope"
+        },
+        {
+          "source": "SESSION_LOG.CUST_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "SESSION_LOG.SESS_DUR_SEC",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.5962,
+          "tolerant_rate": 0.5962,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target counts are always smaller: counted over a different scope"
+        },
+        {
+          "source": "SESSION_LOG.DEVICE_ID",
+          "group": "stored_traps",
+          "truth": [
+            "identity"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        }
+      ]
+    },
+    "K": {
+      "summary": {
+        "computed_traps": {
+          "n": 7,
+          "strict": 7,
+          "tolerant": 7,
+          "verifier": 7
+        },
+        "stored_traps": {
+          "n": 3,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_exact": {
+          "n": 7,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          2,
+          7
+        ],
+        "verifier_only": [],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "CPTY.CPTY_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CPTY.EXPOSURE_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "CPTY.PD",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.285,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "definition"
+          ],
+          "type_correct": false,
+          "diagnosis": "Values differ in both directions: different method or basis"
+        },
+        {
+          "source": "SWAP.CPTY_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "SWAP.TRD_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.00375,
+          "tolerant_rate": 0.00375,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "SWAP.NTNL_AMT",
+          "group": "stored_traps",
+          "truth": [
+            "aggregation"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "BOND_POSN.CPTY_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "BOND_POSN.MKT_VAL",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target = source x 0.9857"
+        },
+        {
+          "source": "BOND_POSN.STL_STAT",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "definition"
+          ],
+          "type_correct": false,
+          "diagnosis": "Values differ with no consistent mapping: a different meaning"
+        },
+        {
+          "source": "MRGN.CPTY_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "MRGN.VM_BAL",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.475,
+          "tolerant_rate": 0.475,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "REPO.CPTY_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "REPO.REPO_AMT",
+          "group": "stored_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "REPO.MAT_DT",
+          "group": "stored_traps",
+          "truth": [
+            "null_semantics"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CR_LINE.CPTY_ID",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CR_LINE.CCF",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 0.3425,
+          "tolerant_rate": 0.342,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "CR_LINE.RWA_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "definition"
+          ],
+          "type_correct": false,
+          "diagnosis": "Values differ in both directions: different method or basis"
+        }
+      ]
+    },
+    "L": {
+      "summary": {
+        "computed_traps": {
+          "n": 10,
+          "strict": 10,
+          "tolerant": 10,
+          "verifier": 10
+        },
+        "stored_traps": {
+          "n": 5,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 3
+        },
+        "clean_exact": {
+          "n": 15,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "clean_transform": {
+          "n": 0,
+          "strict": 0,
+          "tolerant": 0,
+          "verifier": 0
+        },
+        "verifier_type_correct_of_failed": [
+          6,
+          13
+        ],
+        "verifier_only": [
+          "DDA_ACCT.OD_LMT",
+          "DDA_ACCT.MAIL_ADDR",
+          "LN_MSTR.AUTOPAY_AMT"
+        ],
+        "diff_only": []
+      },
+      "rows": [
+        {
+          "source": "CUST.CUST_NM",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CUST.BIRTH_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.001,
+          "tolerant_rate": 0.001,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CUST.DECEASED_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.0165,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "1.7% of records flip (source marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "CUST.CR_SCORE",
+          "group": "stored_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CUST.BKRPT_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.042,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "4.2% of records flip (source marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "DDA_ACCT.CUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "DDA_ACCT.OPEN_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.005,
+          "tolerant_rate": 0.005,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "DDA_ACCT.LEDGER_BAL",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.005833333333333334,
+          "tolerant_rate": 0.005833333333333334,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "DDA_ACCT.OD_LMT",
+          "group": "stored_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "20% of loaded values fall outside the target's range"
+        },
+        {
+          "source": "DDA_ACCT.MAIL_ADDR",
+          "group": "stored_traps",
+          "truth": [
+            "role"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "format"
+          ],
+          "type_correct": false,
+          "diagnosis": "Loaded values use a format the target never uses (target looks like 9999 AAAAAA AA)"
+        },
+        {
+          "source": "CHK_ITEM.ACCT_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "CHK_ITEM.CHK_AMT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0026666666666666666,
+          "tolerant_rate": 0.0026666666666666666,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "CHK_ITEM.CHK_NBR",
+          "group": "computed_traps",
+          "truth": [
+            "identity"
+          ],
+          "strict_rate": 0.3978333333333333,
+          "tolerant_rate": 0.3978333333333333,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "aggregation"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target counts are always smaller: counted over a different scope"
+        },
+        {
+          "source": "STOP_PMT.ACCT_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "STOP_PMT.REQ_DT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0025,
+          "tolerant_rate": 0.0025,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "STOP_PMT.EXPR_DT",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 0.2875,
+          "tolerant_rate": 0.2875,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 364 days (median, range 182 to 546): a different business event"
+        },
+        {
+          "source": "LN_MSTR.CUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "LN_MSTR.PRIN_BAL",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.003125,
+          "tolerant_rate": 0.003125,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "LN_MSTR.INT_RT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.000625,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "LN_MSTR.ACCR_INT",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target = source x 1.014"
+        },
+        {
+          "source": "LN_MSTR.MIN_PMT_DUE",
+          "group": "computed_traps",
+          "truth": [
+            "inclusion"
+          ],
+          "strict_rate": 0.149375,
+          "tolerant_rate": 0.149375,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": true,
+          "diagnosis": "Target is always smaller than source: one side includes or nets components"
+        },
+        {
+          "source": "LN_MSTR.PPMT_PNLTY_IND",
+          "group": "stored_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "LN_MSTR.NON_ACCR_IND",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 0.03125,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "population"
+          ],
+          "type_correct": true,
+          "diagnosis": "3.1% of records flip (target marks more records): a different rule decides the flag"
+        },
+        {
+          "source": "LN_MSTR.ESCR_CUSH_AMT",
+          "group": "computed_traps",
+          "truth": [
+            "methodology"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "inclusion"
+          ],
+          "type_correct": false,
+          "diagnosis": "Target is always larger than source: one side includes or nets components"
+        },
+        {
+          "source": "LN_MSTR.AUTOPAY_AMT",
+          "group": "stored_traps",
+          "truth": [
+            "null_semantics"
+          ],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "scale"
+          ],
+          "type_correct": false,
+          "diagnosis": "34% of loaded values fall outside the target's range"
+        },
+        {
+          "source": "SDB.BOX_SZ",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "SDB.BOX_STAT",
+          "group": "computed_traps",
+          "truth": [
+            "population"
+          ],
+          "strict_rate": 0.105,
+          "tolerant_rate": 0.105,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "code_set"
+          ],
+          "type_correct": false,
+          "diagnosis": "Consistent crosswalk found: AVAILABLE->AVAILABLE, DELINQ_ESCHEAT->RENTED, RENTED->RENTED"
+        },
+        {
+          "source": "WIRE_TXN.CUST_NO",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0,
+          "tolerant_rate": 0.0,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": ""
+        },
+        {
+          "source": "WIRE_TXN.WIRE_AMT",
+          "group": "clean_exact",
+          "truth": [],
+          "strict_rate": 0.0035,
+          "tolerant_rate": 0.0035,
+          "strict_fail": false,
+          "tolerant_fail": false,
+          "verifier_fail": false,
+          "verifier_flags": [],
+          "type_correct": false,
+          "diagnosis": "A few records differ"
+        },
+        {
+          "source": "WIRE_TXN.CUTOFF_TS",
+          "group": "computed_traps",
+          "truth": [
+            "temporal"
+          ],
+          "strict_rate": 1.0,
+          "tolerant_rate": 1.0,
+          "strict_fail": true,
+          "tolerant_fail": true,
+          "verifier_fail": true,
+          "verifier_flags": [
+            "temporal"
+          ],
+          "type_correct": true,
+          "diagnosis": "Source date is later than target by 1 days (median, range -1 to 1): a different business event"
+        }
+      ]
+    }
+  }
+}
