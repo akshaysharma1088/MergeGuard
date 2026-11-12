@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "scenario": "K",
+    "model": "qwen2.5:7b",
+    "columns": 23,
+    "risky": 10,
+    "clean": 13,
+    "seconds": 2915,
+    "traps_flagged_different": 9,
+    "traps_proposed": 10,
+    "clean_flagged_different": 8,
+    "clean_proposed": 11,
+    "llm_trust_all": {
+      "approved": 21,
+      "wrong": 14
+    },
+    "target_accuracy": 0.7391304347826086,
+    "llm_judged": {
+      "approved": 4,
+      "wrong": 1
+    },
+    "llm_judged_ids": {
+      "approved": 2,
+      "wrong": 1
+    }
+  },
+  "rows": [
+    {
+      "source": "CPTY.CPTY_ID",
+      "target": "counterparty.cpty_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"counterparty.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CPTY.CPTY_NM",
+      "target": "counterparty.cpty_name",
+      "same_meaning": false,
+      "difference": "Names differ between banks",
+      "raw_match": "{\"target\": \"counterparty.cpty_name\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Names differ between banks\"}"
+    },
+    {
+      "source": "CPTY.EXPOSURE_AMT",
+      "target": "counterparty.exposure_amount",
+      "same_meaning": false,
+      "difference": "Computation formula differs",
+      "raw_match": "{\"target\": \"counterparty.exposure_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computation formula differs\"}"
+    },
+    {
+      "source": "CPTY.PD",
+      "target": "counterparty.pd",
+      "same_meaning": false,
+      "difference": "Names and sample values differ.",
+      "raw_match": "{\"target\": \"counterparty.pd\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Names and sample values differ.\"}"
+    },
+    {
+      "source": "SWAP.SWAP_ID",
+      "target": "swap_trade.swap_id",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"swap_trade.swap_id\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SWAP.CPTY_ID",
+      "target": "counterparty.cpty_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"counterparty.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "SWAP.TRD_DT",
+      "target": "swap_trade.trade_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"swap_trade.trade_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "SWAP.NTNL_AMT",
+      "target": "swap_trade.notional_amount",
+      "same_meaning": false,
+      "difference": "Target includes pay leg plus receive leg",
+      "raw_match": "{\"target\": \"swap_trade.notional_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Target includes pay leg plus receive leg\"}"
+    },
+    {
+      "source": "BOND_POSN.POSN_ID",
+      "target": "bond_position.position_id",
+      "same_meaning": false,
+      "difference": "Different range and type",
+      "raw_match": "{\"target\": \"bond_position.position_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different range and type\"}"
+    },
+    {
+      "source": "BOND_POSN.CPTY_ID",
+      "target": "bond_position.cpty_id",
+      "same_meaning": false,
+      "difference": "Different starting digits",
+      "raw_match": "{\"target\": \"bond_position.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting digits\"}"
+    },
+    {
+      "source": "BOND_POSN.MKT_VAL",
+      "target": "bond_position.market_value",
+      "same_meaning": false,
+      "difference": "Target excludes accrued interest",
+      "raw_match": "{\"target\": \"bond_position.market_value\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Target excludes accrued interest\"}"
+    },
+    {
+      "source": "BOND_POSN.STL_STAT",
+      "target": "bond_position.settlement_status",
+      "same_meaning": false,
+      "difference": "Description and sample values differ",
+      "raw_match": "{\"target\": \"bond_position.settlement_status\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Description and sample values differ\"}"
+    },
+    {
+      "source": "MRGN.MRGN_ID",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": \"null\"}",
+      "raw_judge": ""
+    },
+    {
+      "source": "MRGN.CPTY_ID",
+      "target": "counterparty.cpty_id",
+      "same_meaning": false,
+      "difference": "Different ranges of values",
+      "raw_match": "{\"target\": \"counterparty.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges of values\"}"
+    },
+    {
+      "source": "MRGN.VM_BAL",
+      "target": "margin_account.variation_margin",
+      "same_meaning": false,
+      "difference": "Computed values are different",
+      "raw_match": "{\"target\": \"margin_account.variation_margin\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Computed values are different\"}"
+    },
+    {
+      "source": "REPO.REPO_ID",
+      "target": "repo_trade.repo_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"repo_trade.repo_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "REPO.CPTY_ID",
+      "target": "counterparty.cpty_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"counterparty.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "REPO.REPO_AMT",
+      "target": "repo_trade.repo_amount",
+      "same_meaning": false,
+      "difference": "Different description",
+      "raw_match": "{\"target\": \"repo_trade.repo_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different description\"}"
+    },
+    {
+      "source": "REPO.MAT_DT",
+      "target": "repo_trade.maturity_date",
+      "same_meaning": false,
+      "difference": "Maturity date vs. Next business day for rolling overnight repos",
+      "raw_match": "{\"target\": \"repo_trade.maturity_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Maturity date vs. Next business day for rolling overnight repos\"}"
+    },
+    {
+      "source": "CR_LINE.LINE_ID",
+      "target": null,
+      "same_meaning": null,
+      "difference": "",
+      "raw_match": "{\"target\": \"null\"}",
+      "raw_judge": ""
+    },
+    {
+      "source": "CR_LINE.CPTY_ID",
+      "target": "counterparty.cpty_id",
+      "same_meaning": false,
+      "difference": "Different ranges",
+      "raw_match": "{\"target\": \"counterparty.cpty_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges\"}"
+    },
+    {
+      "source": "CR_LINE.CCF",
+      "target": "credit_line.ccf",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"credit_line.ccf\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "CR_LINE.RWA_AMT",
+      "target": "credit_line.rwa_amount",
+      "same_meaning": false,
+      "difference": "Different risk weight sources",
+      "raw_match": "{\"target\": \"credit_line.rwa_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different risk weight sources\"}"
+    }
+  ]
+}
