@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "scenario": "G",
+    "model": "qwen2.5:7b",
+    "columns": 24,
+    "risky": 11,
+    "clean": 13,
+    "seconds": 2954,
+    "traps_flagged_different": 9,
+    "traps_proposed": 11,
+    "clean_flagged_different": 10,
+    "clean_proposed": 13,
+    "llm_trust_all": {
+      "approved": 24,
+      "wrong": 13
+    },
+    "target_accuracy": 0.9166666666666666,
+    "llm_judged": {
+      "approved": 5,
+      "wrong": 2
+    },
+    "llm_judged_ids": {
+      "approved": 5,
+      "wrong": 2
+    }
+  },
+  "rows": [
+    {
+      "source": "CUSTOMER.CUST_NO",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different range",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different range\"}"
+    },
+    {
+      "source": "CUSTOMER.CUST_NAME",
+      "target": "customer.full_name",
+      "same_meaning": false,
+      "difference": "Sample values do not match.",
+      "raw_match": "{\"target\": \"customer.full_name\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values do not match.\"}"
+    },
+    {
+      "source": "CUSTOMER.MKTG_OPT_OUT",
+      "target": "customer.marketing_opt_out",
+      "same_meaning": false,
+      "difference": "Data type mismatch",
+      "raw_match": "{\"target\": \"customer.marketing_opt_out\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Data type mismatch\"}"
+    },
+    {
+      "source": "PMT.PMT_ID",
+      "target": "payment.payment_id",
+      "same_meaning": false,
+      "difference": "Different range",
+      "raw_match": "{\"target\": \"payment.payment_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different range\"}"
+    },
+    {
+      "source": "PMT.CUST_NO",
+      "target": "customer.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and scales",
+      "raw_match": "{\"target\": \"customer.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and scales\"}"
+    },
+    {
+      "source": "PMT.PMT_TYP_CD",
+      "target": "payment.payment_type",
+      "same_meaning": false,
+      "difference": "Different payment type codes",
+      "raw_match": "{\"target\": \"payment.payment_type\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different payment type codes\"}"
+    },
+    {
+      "source": "PMT.SETTLE_DT",
+      "target": "payment.ach_settlement_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"payment.ach_settlement_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "PMT.CPTY_NM",
+      "target": "payment.counterparty_name",
+      "same_meaning": false,
+      "difference": "Names differ between the two columns.",
+      "raw_match": "{\"target\": \"payment.counterparty_name\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Names differ between the two columns.\"}"
+    },
+    {
+      "source": "PMT.CCY_CD",
+      "target": "payment.currency_code",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"payment.currency_code\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "PMT.AMT_USD",
+      "target": "payment.fx_amount",
+      "same_meaning": false,
+      "difference": "Currency conversion discrepancy",
+      "raw_match": "{\"target\": \"payment.fx_amount\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Currency conversion discrepancy\"}"
+    },
+    {
+      "source": "MTG_LN.LN_NO",
+      "target": "mortgage_loan.loan_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"mortgage_loan.loan_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "MTG_LN.CUST_NO",
+      "target": "mortgage_loan.customer_id",
+      "same_meaning": false,
+      "difference": "Different ranges and descriptions",
+      "raw_match": "{\"target\": \"mortgage_loan.customer_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different ranges and descriptions\"}"
+    },
+    {
+      "source": "MTG_LN.PRIN_BAL",
+      "target": "mortgage_loan.first_lien_balance",
+      "same_meaning": false,
+      "difference": "Different first lien principal balance",
+      "raw_match": "{\"target\": \"mortgage_loan.first_lien_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different first lien principal balance\"}"
+    },
+    {
+      "source": "MTG_LN.LTV_RTO",
+      "target": "mortgage_loan.ltv_ratio",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"mortgage_loan.ltv_ratio\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "MTG_LN.ESCROW_BAL",
+      "target": "mortgage_loan.escrow_balance",
+      "same_meaning": false,
+      "difference": "Sign convention differs",
+      "raw_match": "{\"target\": \"mortgage_loan.escrow_balance\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sign convention differs\"}"
+    },
+    {
+      "source": "MTG_LN.HMDA_ACTN_DT",
+      "target": "mortgage_loan.hmda_action_date",
+      "same_meaning": false,
+      "difference": "Different action details",
+      "raw_match": "{\"target\": \"mortgage_loan.hmda_action_date\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different action details\"}"
+    },
+    {
+      "source": "MTG_LN.CECL_RSRV",
+      "target": "mortgage_loan.cecl_reserve",
+      "same_meaning": false,
+      "difference": "Sample values differ.",
+      "raw_match": "{\"target\": \"mortgage_loan.cecl_reserve\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Sample values differ.\"}"
+    },
+    {
+      "source": "TRUST_ACCT.TRUST_NO",
+      "target": "trust_account.trust_id",
+      "same_meaning": false,
+      "difference": "Different starting values",
+      "raw_match": "{\"target\": \"trust_account.trust_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different starting values\"}"
+    },
+    {
+      "source": "TRUST_ACCT.TAX_ID",
+      "target": "trust_account.tax_id",
+      "same_meaning": false,
+      "difference": "Different format and values",
+      "raw_match": "{\"target\": \"trust_account.tax_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different format and values\"}"
+    },
+    {
+      "source": "TRUST_ACCT.OPEN_DT",
+      "target": "trust_account.open_date",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"trust_account.open_date\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "BENE.BENE_NO",
+      "target": "beneficiary.beneficiary_id",
+      "same_meaning": false,
+      "difference": "Different range and potential format discrepancy",
+      "raw_match": "{\"target\": \"beneficiary.beneficiary_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different range and potential format discrepancy\"}"
+    },
+    {
+      "source": "BENE.TRUST_NO",
+      "target": "trust_account.trust_id",
+      "same_meaning": false,
+      "difference": "Different prefixes",
+      "raw_match": "{\"target\": \"trust_account.trust_id\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different prefixes\"}"
+    },
+    {
+      "source": "BENE.BENE_NM",
+      "target": "beneficiary.beneficiary_name",
+      "same_meaning": true,
+      "difference": "",
+      "raw_match": "{\"target\": \"beneficiary.beneficiary_name\"}",
+      "raw_judge": "{\"same_meaning\": true, \"difference\": \"\"}"
+    },
+    {
+      "source": "BENE.BENE_SHR",
+      "target": "beneficiary.share_pct",
+      "same_meaning": false,
+      "difference": "Different data types and meanings",
+      "raw_match": "{\"target\": \"beneficiary.share_pct\"}",
+      "raw_judge": "{\"same_meaning\": false, \"difference\": \"Different data types and meanings\"}"
+    }
+  ]
+}
