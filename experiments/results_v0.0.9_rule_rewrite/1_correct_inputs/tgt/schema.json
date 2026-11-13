@@ -1,0 +1,23 @@
+{
+  "pay": {
+    "key": "emp_id",
+    "columns": {
+      "emp_id": {
+        "type": "BIGINT",
+        "description": ""
+      },
+      "gross_pay": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "tax": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "net_pay": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      }
+    }
+  }
+}

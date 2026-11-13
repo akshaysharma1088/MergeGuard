@@ -1,0 +1,111 @@
+{
+  "per_scenario": {
+    "G": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 16,
+      "wrong": 8,
+      "wrong_target": 0,
+      "wrong_failed": 6,
+      "wrong_flagged": 6,
+      "clean": 8,
+      "clean_failed": 0,
+      "silent": [
+        "PMT.CPTY_NM->payment.counterparty_name ['role']",
+        "TRUST_ACCT.TAX_ID->trust_account.tax_id ['identity']"
+      ],
+      "blocks": []
+    },
+    "H": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 15,
+      "wrong": 7,
+      "wrong_target": 0,
+      "wrong_failed": 5,
+      "wrong_flagged": 5,
+      "clean": 8,
+      "clean_failed": 0,
+      "silent": [
+        "LC.EXPRY_DT->letter_of_credit.expiry_date ['temporal']",
+        "PORTF.COST_BASIS->portfolio.cost_basis ['methodology']"
+      ],
+      "blocks": []
+    },
+    "I": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 12,
+      "wrong": 7,
+      "wrong_target": 0,
+      "wrong_failed": 3,
+      "wrong_flagged": 4,
+      "clean": 5,
+      "clean_failed": 0,
+      "silent": [
+        "AUTO_LN.VEH_VAL->auto_loan.vehicle_value ['methodology']",
+        "SYND_LN.BRWR_ID->syndicated_loan.borrower_id ['identity']",
+        "LEASE.RESID_VAL->equipment_lease.residual_value ['methodology']"
+      ],
+      "blocks": []
+    },
+    "J": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 9,
+      "wrong": 5,
+      "wrong_target": 0,
+      "wrong_failed": 4,
+      "wrong_flagged": 4,
+      "clean": 4,
+      "clean_failed": 0,
+      "silent": [
+        "SESSION_LOG.DEVICE_ID->app_session.device_id ['identity']"
+      ],
+      "blocks": []
+    },
+    "K": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 14,
+      "wrong": 7,
+      "wrong_target": 0,
+      "wrong_failed": 5,
+      "wrong_flagged": 5,
+      "clean": 7,
+      "clean_failed": 0,
+      "silent": [
+        "SWAP.NTNL_AMT->swap_trade.notional_amount ['aggregation']",
+        "REPO.REPO_AMT->repo_trade.repo_amount ['inclusion']"
+      ],
+      "blocks": []
+    },
+    "L": {
+      "status": "FAILED",
+      "gate_blocks": 0,
+      "loaded_columns": 26,
+      "wrong": 11,
+      "wrong_target": 0,
+      "wrong_failed": 8,
+      "wrong_flagged": 9,
+      "clean": 15,
+      "clean_failed": 0,
+      "silent": [
+        "CUST.CR_SCORE->customer.credit_score ['methodology']",
+        "DDA_ACCT.MAIL_ADDR->deposit_account.mailing_address ['role']"
+      ],
+      "blocks": []
+    }
+  },
+  "total": {
+    "gate_blocks": 0,
+    "loaded_columns": 92,
+    "wrong": 45,
+    "wrong_target": 0,
+    "wrong_failed": 31,
+    "wrong_flagged": 33,
+    "clean": 47,
+    "clean_failed": 0,
+    "runs_FAILED": 6
+  }
+}

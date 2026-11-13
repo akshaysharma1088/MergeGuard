@@ -1,0 +1,236 @@
+{
+  "seeds": {
+    "G": 571,
+    "H": 572,
+    "I": 573,
+    "J": 574,
+    "K": 575,
+    "L": 612
+  },
+  "per_scenario": {
+    "G": {
+      "mergeguard": {
+        "columns": 24,
+        "traps": 11,
+        "clean": 13,
+        "correct": 23,
+        "traps_flagged": 8,
+        "clean_flagged": 0,
+        "approved": 5,
+        "wrong": 1
+      },
+      "simple_coma": {
+        "columns": 24,
+        "traps": 11,
+        "clean": 13,
+        "correct": 23,
+        "traps_flagged": 10,
+        "clean_flagged": 0,
+        "approved": 4,
+        "wrong": 0
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 24,
+        "traps": 11,
+        "clean": 13,
+        "correct": 23,
+        "traps_flagged": 9,
+        "clean_flagged": 0,
+        "approved": 5,
+        "wrong": 0
+      }
+    },
+    "H": {
+      "mergeguard": {
+        "columns": 25,
+        "traps": 10,
+        "clean": 15,
+        "correct": 25,
+        "traps_flagged": 8,
+        "clean_flagged": 0,
+        "approved": 7,
+        "wrong": 2
+      },
+      "simple_coma": {
+        "columns": 25,
+        "traps": 10,
+        "clean": 15,
+        "correct": 24,
+        "traps_flagged": 9,
+        "clean_flagged": 0,
+        "approved": 6,
+        "wrong": 1
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 25,
+        "traps": 10,
+        "clean": 15,
+        "correct": 25,
+        "traps_flagged": 9,
+        "clean_flagged": 0,
+        "approved": 6,
+        "wrong": 1
+      }
+    },
+    "I": {
+      "mergeguard": {
+        "columns": 19,
+        "traps": 10,
+        "clean": 9,
+        "correct": 19,
+        "traps_flagged": 6,
+        "clean_flagged": 0,
+        "approved": 5,
+        "wrong": 0
+      },
+      "simple_coma": {
+        "columns": 19,
+        "traps": 10,
+        "clean": 9,
+        "correct": 19,
+        "traps_flagged": 7,
+        "clean_flagged": 0,
+        "approved": 7,
+        "wrong": 2
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 19,
+        "traps": 10,
+        "clean": 9,
+        "correct": 19,
+        "traps_flagged": 7,
+        "clean_flagged": 0,
+        "approved": 7,
+        "wrong": 2
+      }
+    },
+    "J": {
+      "mergeguard": {
+        "columns": 18,
+        "traps": 10,
+        "clean": 8,
+        "correct": 17,
+        "traps_flagged": 9,
+        "clean_flagged": 0,
+        "approved": 2,
+        "wrong": 0
+      },
+      "simple_coma": {
+        "columns": 18,
+        "traps": 10,
+        "clean": 8,
+        "correct": 18,
+        "traps_flagged": 9,
+        "clean_flagged": 0,
+        "approved": 2,
+        "wrong": 0
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 18,
+        "traps": 10,
+        "clean": 8,
+        "correct": 17,
+        "traps_flagged": 8,
+        "clean_flagged": 0,
+        "approved": 2,
+        "wrong": 0
+      }
+    },
+    "K": {
+      "mergeguard": {
+        "columns": 23,
+        "traps": 10,
+        "clean": 13,
+        "correct": 23,
+        "traps_flagged": 8,
+        "clean_flagged": 0,
+        "approved": 3,
+        "wrong": 1
+      },
+      "simple_coma": {
+        "columns": 23,
+        "traps": 10,
+        "clean": 13,
+        "correct": 22,
+        "traps_flagged": 7,
+        "clean_flagged": 0,
+        "approved": 4,
+        "wrong": 2
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 23,
+        "traps": 10,
+        "clean": 13,
+        "correct": 23,
+        "traps_flagged": 8,
+        "clean_flagged": 0,
+        "approved": 4,
+        "wrong": 2
+      }
+    },
+    "L": {
+      "mergeguard": {
+        "columns": 37,
+        "traps": 15,
+        "clean": 22,
+        "correct": 37,
+        "traps_flagged": 13,
+        "clean_flagged": 0,
+        "approved": 11,
+        "wrong": 1
+      },
+      "simple_coma": {
+        "columns": 37,
+        "traps": 15,
+        "clean": 22,
+        "correct": 37,
+        "traps_flagged": 14,
+        "clean_flagged": 0,
+        "approved": 11,
+        "wrong": 1
+      },
+      "simple_mergeguard_mapping": {
+        "columns": 37,
+        "traps": 15,
+        "clean": 22,
+        "correct": 37,
+        "traps_flagged": 14,
+        "clean_flagged": 0,
+        "approved": 11,
+        "wrong": 1
+      }
+    }
+  },
+  "total": {
+    "mergeguard": {
+      "columns": 146,
+      "traps": 66,
+      "clean": 80,
+      "correct": 144,
+      "traps_flagged": 52,
+      "clean_flagged": 0,
+      "approved": 33,
+      "wrong": 5
+    },
+    "simple_coma": {
+      "columns": 146,
+      "traps": 66,
+      "clean": 80,
+      "correct": 143,
+      "traps_flagged": 56,
+      "clean_flagged": 0,
+      "approved": 34,
+      "wrong": 6
+    },
+    "simple_mergeguard_mapping": {
+      "columns": 146,
+      "traps": 66,
+      "clean": 80,
+      "correct": 144,
+      "traps_flagged": 55,
+      "clean_flagged": 0,
+      "approved": 35,
+      "wrong": 6
+    }
+  }
+}

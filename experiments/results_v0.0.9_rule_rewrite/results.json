@@ -1,0 +1,67 @@
+[
+  {
+    "case": "1_correct_inputs",
+    "inputs": {
+      "PAYROLL.GROSS_PAY": "pay.gross_pay",
+      "PAYROLL.TAX_AMT": "pay.tax"
+    },
+    "truth": "same",
+    "outcome": "disagreement 0.0%; no flag",
+    "verdict": "correct (clean, not flagged)",
+    "proposed_guard": "would still trust the result"
+  },
+  {
+    "case": "2_wrong_input_column",
+    "inputs": {
+      "PAYROLL.GROSS_YTD": "pay.gross_pay",
+      "PAYROLL.TAX_AMT": "pay.tax"
+    },
+    "truth": "same",
+    "outcome": "disagreement 100.0%; FLAGGED ['inclusion']",
+    "verdict": "FALSE ALARM on a clean column",
+    "proposed_guard": "unverified: PAYROLL.GROSS_YTD ['unit']"
+  },
+  {
+    "case": "3_input_in_cents",
+    "inputs": {
+      "PAYROLL.GROSS_PAY": "pay.gross_pay",
+      "PAYROLL.TAX_CENTS": "pay.tax"
+    },
+    "truth": "same",
+    "outcome": "disagreement 100.0%; FLAGGED ['inclusion']",
+    "verdict": "FALSE ALARM on a clean column",
+    "proposed_guard": "unverified: PAYROLL.TAX_CENTS ['unit']"
+  },
+  {
+    "case": "4_missing_input",
+    "inputs": {
+      "PAYROLL.GROSS_PAY": "pay.gross_pay"
+    },
+    "truth": "same",
+    "outcome": "not runnable: missing pay.tax",
+    "verdict": "correct (reported as not runnable)",
+    "proposed_guard": "would still trust the result"
+  },
+  {
+    "case": "5_real_trap_correct_inputs",
+    "inputs": {
+      "PAYROLL.GROSS_PAY": "pay.gross_pay",
+      "PAYROLL.TAX_AMT": "pay.tax"
+    },
+    "truth": "trap",
+    "outcome": "disagreement 96.0%; FLAGGED ['inclusion']",
+    "verdict": "correct (trap flagged)",
+    "proposed_guard": "would still trust the result"
+  },
+  {
+    "case": "6_real_trap_masked_by_wrong_input",
+    "inputs": {
+      "PAYROLL.GROSS_AFTER_FEE": "pay.gross_pay",
+      "PAYROLL.TAX_AMT": "pay.tax"
+    },
+    "truth": "trap",
+    "outcome": "disagreement 0.0%; no flag",
+    "verdict": "MISSED trap",
+    "proposed_guard": "would still trust the result"
+  }
+]

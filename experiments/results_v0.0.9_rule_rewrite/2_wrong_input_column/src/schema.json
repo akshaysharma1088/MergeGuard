@@ -1,0 +1,39 @@
+{
+  "PAYROLL": {
+    "key": "EMP_NO",
+    "columns": {
+      "EMP_NO": {
+        "type": "BIGINT",
+        "description": ""
+      },
+      "GROSS_PAY": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "TAX_AMT": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "TAX_CENTS": {
+        "type": "BIGINT",
+        "description": ""
+      },
+      "UNION_FEE": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "GROSS_YTD": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "GROSS_AFTER_FEE": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      },
+      "NET_PAY": {
+        "type": "DECIMAL(18,4)",
+        "description": ""
+      }
+    }
+  }
+}

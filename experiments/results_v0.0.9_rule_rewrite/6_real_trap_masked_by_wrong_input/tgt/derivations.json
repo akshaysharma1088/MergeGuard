@@ -1,0 +1,3 @@
+{
+  "pay.net_pay": "SELECT p.emp_id, p.gross_pay - p.tax AS net_pay FROM pay p"
+}

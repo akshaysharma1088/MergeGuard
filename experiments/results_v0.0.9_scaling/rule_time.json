@@ -1,0 +1,17 @@
+[
+ {
+  "rows": 10000,
+  "rule_seconds": 0.01,
+  "ddr": 0.0
+ },
+ {
+  "rows": 100000,
+  "rule_seconds": 0.02,
+  "ddr": 0.0
+ },
+ {
+  "rows": 1000000,
+  "rule_seconds": 0.12,
+  "ddr": 0.0
+ }
+]

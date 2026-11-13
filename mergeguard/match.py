@@ -105,7 +105,7 @@ def _ks(x: np.ndarray, y: np.ndarray, cap: int = 5000) -> float:
     rng = np.random.default_rng(0)
     x = rng.choice(x, min(cap, len(x)), replace=False)
     y = rng.choice(y, min(cap, len(y)), replace=False)
-    return 1.0 - ks_2samp(x, y).statistic
+    return 1.0 - ks_2samp(x, y, method="asymp").statistic   # only the statistic is used; the exact p-value is slow
 
 
 def value_sim(a: Card, b: Card) -> tuple[float, dict]:

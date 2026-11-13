@@ -505,3 +505,94 @@ It also flags two thirds of clean columns, often for reasons that are not differ
 ranges", "sample values differ"), and the mappings it does pass are no safer than MergeGuard's. One small model,
 one prompt; a larger model may do better. Descriptions and derivation SQL in MergeBench were written by the builder
 and may state differences more plainly than real data dictionaries do.
+
+## v0.0.9 second review round: five post-hoc analyses (not pre-registered)
+
+All on development data (scenarios E to L regenerated with their seeds). None of these is a held-out result.
+
+### Simple pipeline baseline (`experiments/run_simple_pipeline.py`, scenarios G to L, 146 columns, 66 traps, 80 clean)
+
+Question: does a pipeline built from ordinary parts match MergeGuard once a trial load exists? The simple pipeline
+is COMA for the mapping, a tolerant same-record diff on the trial-load output, and standard conformance checks
+(domain, range, length).
+
+| Pipeline | Correct target | Traps flagged | Clean flagged | Approved | Wrong approvals |
+| --- | --- | --- | --- | --- | --- |
+| MergeGuard (matcher + verifier) | 144 | 52 of 66 | 0 of 80 | 33 | 5 |
+| COMA + tolerant diff + conformance | 143 | 56 of 66 | 0 of 80 | 34 | 6 |
+| Same checks on MergeGuard's mapping | 144 | 55 of 66 | 0 of 80 | 35 | 6 |
+
+Disclosure: the first run of the simple pipeline flagged 50 of 80 clean columns because range checks fired on
+identifier columns. Identifiers were then exempted from conformance, as MergeGuard does. That change was made after
+seeing results. Reading: with a trial load, the simple pipeline is as good as MergeGuard at finding traps on these
+scenarios. MergeGuard's detection is not better than same-record comparison plus routine checks.
+
+### Careless reviewer on the tool's own proposals (`experiments/run_careless_e2e.py`, G to L, seed 21)
+
+The reviewer accepts every proposed target, copies the suggested transform, answers "Same" to every stress
+question and signs all four columns. All 6 runs ended FAILED, so nothing would load. The gate blocked no rows.
+92 columns were in the plans: 45 wrong (all traps; none had a wrong target), 47 clean. Of the 45 wrong, 31 got a
+FAIL and 33 a FAIL or REVIEW; 12 passed every check. 0 of 47 clean columns failed. The 12 silent ones are mostly
+stored-only (identity, role, methodology) plus SWAP.NTNL_AMT (aggregation) and REPO.REPO_AMT (inclusion).
+Limit: the matcher maps these development scenarios almost perfectly, so a wrong-target approval is not exercised.
+
+### Rule rewriting with wrong input mappings (`experiments/run_rule_rewrite_checks.py`)
+
+One target rule, net_pay = gross_pay - tax, on a small payroll pair; input mappings fixed by hand.
+
+| Case | Outcome |
+| --- | --- |
+| Inputs mapped correctly, clean column | 0% disagreement, not flagged (correct) |
+| Wrong input column (year-to-date gross) | 100% disagreement, flagged: false alarm on a clean column |
+| Input in cents | 100% disagreement, flagged: false alarm on a clean column |
+| Input missing | reported as not runnable (correct) |
+| Real trap (source net pay also deducts a fee), inputs correct | 96% disagreement, flagged (correct) |
+| Real trap, gross mapped to a source column that already deducts the fee | 0% disagreement, not flagged: trap missed |
+
+Reading: the check is only as good as the input mappings. A wrong input gives a false alarm or hides a real trap.
+In cases 2 and 3 the wrong input pair was itself flagged by the detectors (unit), so a guard that marks the rule
+result "unverified" when an input pair is flagged would have caught both; it would not have caught case 6.
+The guard is not in the tool. An earlier run of this script was invalid (tables were not aligned first, so every
+pair carried a grain flag and the rule was skipped); it was fixed before these numbers.
+
+### Wrong approvals against coverage (`experiments/run_coverage_curves.py`, E to L, identifiers excluded)
+
+Proposals pooled across the eight scenarios and ranked by each method's own score. This pooled cut differs from the
+earlier per-scenario "COMA top 55".
+
+| Approved | COMA by score | MergeGuard by score only | MergeGuard, unflagged first |
+| --- | --- | --- | --- |
+| 10 | 2 | 0 | 0 |
+| 20 | 7 | 2 | 2 |
+| 30 | 14 | 6 | 6 |
+| 40 | 18 | 8 | 8 |
+| 55 | 24 | 14 | 12 |
+| 78 | 39 | 31 | 31 |
+| 100 | 57 | 53 | 53 |
+
+Operating points: MergeGuard auto-accept 55 / 12; language model with identifier rule 37 / 13; COMA with
+MergeGuard's detectors 78 / 32. Reading: MergeGuard's ranking is safer than COMA's at every coverage up to about 80,
+mostly because of its score and not its flags. It is still wrong on 12 of 55 (22%).
+
+### Run time and memory (`experiments/run_scaling.py`, 2 vCPU, 7 GB)
+
+Rows (scenario L, 37 source and 37 target columns, 7 table pairs):
+
+| Rows per source table | Profile | Match | Verify | Stage three | Total | Peak memory |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1,000 | 0.3 s | 3.2 s | 0.2 s | 0.4 s | 4.1 s | 221 MB |
+| 10,000 | 1.2 s | 5.5 s | 0.4 s | 1.4 s | 8.5 s | 249 MB |
+| 100,000 | 2.7 s | 5.7 s | 1.8 s | 8.6 s | 18.8 s | 443 MB |
+| 1,000,000 | 17.6 s | 5.0 s | 15.8 s | 86.2 s | 124.6 s | 2.4 GB |
+
+Columns (same scenario with every table copied k times, 2,000 rows): 74 columns 15.9 s matching, 148 columns
+67.2 s, 296 columns 262.8 s. Matching is quadratic in columns, about 3 ms per column pair, and does not grow with
+rows because profiles are sampled. Assignment took under 10 ms in every run. Stage three was blocked by the gate on
+the 148 and 296 column copies, so its time there is not reported. Scenario L's rules cannot be rewritten, so rule
+execution was timed on the payroll pair: 0.01 s, 0.02 s and 0.12 s at 10 thousand, 100 thousand and 1 million rows.
+Tables are loaded into pandas for profiling, so memory grows with rows; nothing here was run beyond 1 million rows.
+
+Code change made during this analysis: the value signal called SciPy's two-sample Kolmogorov-Smirnov test with its
+default exact p-value, which the matcher never used. It now asks for the statistic only (`method="asymp"`).
+Matcher output on scenarios E, G and L is identical before and after; matching time on scenario L fell from about
+50 s to about 4 s. Timings above are after this change.

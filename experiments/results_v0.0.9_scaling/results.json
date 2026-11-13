@@ -1,0 +1,121 @@
+[
+ {
+  "rows": 1000,
+  "copies": 1,
+  "source_columns": 37,
+  "target_columns": 37,
+  "seconds": {
+   "profile": 0.29,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 3.21,
+   "verify": 0.15,
+   "apply": 0.43
+  },
+  "total_s": 4.08,
+  "peak_mb": 221,
+  "apply_status": "FAILED"
+ },
+ {
+  "rows": 10000,
+  "copies": 1,
+  "source_columns": 37,
+  "target_columns": 37,
+  "seconds": {
+   "profile": 1.23,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 5.53,
+   "verify": 0.4,
+   "apply": 1.38
+  },
+  "total_s": 8.54,
+  "peak_mb": 249,
+  "apply_status": "FAILED"
+ },
+ {
+  "rows": 100000,
+  "copies": 1,
+  "source_columns": 37,
+  "target_columns": 37,
+  "seconds": {
+   "profile": 2.66,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 5.71,
+   "verify": 1.8,
+   "apply": 8.64
+  },
+  "total_s": 18.81,
+  "peak_mb": 443,
+  "apply_status": "FAILED"
+ },
+ {
+  "rows": 1000000,
+  "copies": 1,
+  "source_columns": 37,
+  "target_columns": 37,
+  "seconds": {
+   "profile": 17.58,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 5.04,
+   "verify": 15.78,
+   "apply": 86.19
+  },
+  "total_s": 124.58,
+  "peak_mb": 2415,
+  "apply_status": "FAILED"
+ },
+ {
+  "rows": 2000,
+  "copies": 2,
+  "source_columns": 74,
+  "target_columns": 74,
+  "seconds": {
+   "profile": 0.73,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 15.85,
+   "verify": 0.4,
+   "apply": 1.22
+  },
+  "total_s": 18.2,
+  "peak_mb": 234,
+  "apply_status": "FAILED"
+ },
+ {
+  "rows": 2000,
+  "copies": 4,
+  "source_columns": 148,
+  "target_columns": 148,
+  "seconds": {
+   "profile": 1.45,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 67.17,
+   "verify": 0.77,
+   "apply": 0.08
+  },
+  "total_s": 69.47,
+  "peak_mb": 245,
+  "apply_status": "BLOCKED"
+ },
+ {
+  "rows": 2000,
+  "copies": 8,
+  "source_columns": 296,
+  "target_columns": 296,
+  "seconds": {
+   "profile": 2.79,
+   "rule_rewrite": 0.0,
+   "assignment": 0.0,
+   "scoring": 262.77,
+   "verify": 2.09,
+   "apply": 0.15
+  },
+  "total_s": 267.81,
+  "peak_mb": 303,
+  "apply_status": "BLOCKED"
+ }
+]
