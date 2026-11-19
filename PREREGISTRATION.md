@@ -609,3 +609,55 @@ Code change made during this analysis: the value signal called SciPy's two-sampl
 default exact p-value, which the matcher never used. It now asks for the statistic only (`method="asymp"`).
 Matcher output on scenarios E, G and L is identical before and after; matching time on scenario L fell from about
 50 s to about 4 s. Timings above are after this change.
+
+## Scenario M: an independent practitioner's trap list (held-out, single run)
+
+A practitioner with experience across core banking, deposit, card, lending and mortgage servicing
+migrations, independent of this tool and its author, was given only the bare definition of a semantic
+trap (no taxonomy, no examples from this paper or MergeBench) and asked to write up examples from their
+own experience. Their name is withheld at their request. Their write-up, frozen at
+`experiments/trap_author/` with its SHA-256, is dated 2026-11-19 and states the examples were written
+from memory, not looked up. It gives twelve traps across five domains (`open_dt`/`acct_open_date`,
+`curr_bal`/`current_balance`, `days_past_due`/`dpd`, `cust_stat_cd`/`customer_status`,
+`last_trans_dt`/`last_activity_date`, `cr_limit_amt`/`credit_limit`, `int_rate`/`interest_rate`,
+`chg_off_amt`/`chargeoff_balance`, `branch_id`/`branch_code`, `last_pmt_amt`/`last_payment_amount`,
+`txn_timestamp`/`trans_dt_tm`, `dob`/`birth_date`).
+
+Before writing any code, the matcher, card and evaluator source were hashed (commit `60ff0aa`,
+match.py `9a1fc34a...`, cards.py `dbbc93ae...`, evaluate.py `23e79ec9...`) and the scenario's ground
+truth was hashed immediately after generation (`c1e2eecc...`), before running MergeGuard or any baseline. `mergeguard/bench/round5.py` (SPEC_M) encodes each of the twelve traps as literally as the
+write-up allows, 22 clean columns alongside them, across six table pairs (customer, deposit, card, loan,
+mortgage, wire). No target field has derivation SQL (the write-up describes stored behaviour, not a
+target-side recomputation), so like scenario R this tests stage one only. Single run, seed 713.
+
+| Method | Target accuracy | Traps surfaced | Auto-accepted | Harmful auto-accepts |
+| --- | --- | --- | --- | --- |
+| MergeGuard | 100% (34/34) | 3 of 12 | 14 | 5 |
+| COMA, every proposal trusted | 100% (34/34) | 0 of 12 | 34 | 12 |
+| Name only | 71% | 0 of 12 | 32 | 18 |
+
+Every source column mapped to its correct target, including all twelve traps, so this round does not
+test target-mapping accuracy under difficulty; it tests whether profiling notices something is wrong
+once the mapping is already right. MergeGuard caught 3 of 12: the null-placeholder DOB trap, and the two
+cases where the gap shows up as a shift in a numeric or date distribution (the days-past-due grace
+period, the activity-date lag). It missed the other 9, and the misses fall into two groups.
+
+First, a detection gap: all three inclusion traps (available balance netting holds, gross vs
+principal-only charge-off, PITI vs principal-and-interest) went undetected. The inclusion detector relies
+partly on derivation SQL (a `fee:` tag on the derived column's logic) that this profiling-only scenario
+does not have; without it, inclusion falls back to a distributional check that these three pairs were not
+different enough to trip. The code-set trap (`cust_stat_cd`/`customer_status`) was also missed for a
+structural reason: both sides use the same three-letter code domain, so the crosswalk detector, which
+looks for a value-set mismatch, sees full overlap and never looks at whether the two sides use those
+codes in different proportions, which is exactly how this trap hides.
+
+Second, a taxonomy gap stated plainly in the paper's taxonomy table and discussion section but worth confirming in practice:
+`identity` and `methodology` traps (the origination-vs-servicing branch, the nominal-vs-APY rate, the
+zeroed-vs-retained credit limit) are taxonomy types with no corresponding detector in the matcher at all;
+MergeGuard cannot flag them no matter how the data looks. All three were auto-accepted.
+
+Reading: on this practitioner's traps, auto-approved-and-wrong fell from 12 for trust-everything COMA to
+5 for MergeGuard, which is in the same range as the factor of about two seen on E to L (§7.5), not the
+much larger gap seen on the frozen scenarios the tool's own author wrote. An outside practitioner's traps
+are harder for MergeGuard than its own author's, which is the honest and expected direction for this
+check to come out.
