@@ -78,9 +78,18 @@ All data is synthetic.
 
 ## Status
 
-v0.0.1, research prototype. Implemented: MergeBench generator, evidence matcher, false-friend and conflict
-detection, DDR, Excel mapping report, evaluation. Next: upload and validation of the edited mapping,
-migration code generation, pipeverify verification, audit evidence bundle.
+v0.0.9, research prototype, evaluated under a pre-registered, frozen-version protocol (`PREREGISTRATION.md`).
+Implemented: MergeBench generator (12 scenarios, 12-type trap taxonomy), evidence-based matcher, false-friend
+and conflict detection, DDR, Excel mapping report and SME sign-off workbook, trial-load verification against
+a target system's own computation, real connectors (Snowflake, SQLAlchemy, Excel, CSV/Parquet), and the full
+gated migration pipeline (gate, DuckDB rehearsal, reconciliation against a mock conversion, Snowflake SQL
+emission with column-level lineage, and a SHA-256-fingerprinted audit record).
+
+Held out from held-out evaluation so far: the migration and connector stages (v0.0.8–v0.0.9) were built after
+the held-out runs and are checked only on development scenarios; the Snowflake connector is tested against a
+mocked driver, not a live account. Next: pipeverify integration as an additional verification layer, a packaged
+audit evidence bundle for third-party review, and traps written by an independent author rather than the tool's
+own builder.
 
 ## License
 
