@@ -1,0 +1,18 @@
+[
+ {
+  "scenario": "E",
+  "source": "ACCT.AVAIL_CR",
+  "target": "account.available_credit",
+  "doubtful_inputs": {
+   "ACCT.CUR_BAL": [
+    "inclusion"
+   ]
+  },
+  "flags_if_guard_applied_would_suppress": [
+   "inclusion"
+  ],
+  "currently_flagged": true,
+  "is_trap": true,
+  "ddr_rate": 1.0
+ }
+]

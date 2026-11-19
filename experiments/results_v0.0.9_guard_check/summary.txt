@@ -1,0 +1,4 @@
+
+cases where an input to the rule is itself flagged: 1
+of those, real traps currently caught that the guard would un-flag: 1
+of those, clean columns currently (wrongly) flagged that the guard would fix: 0

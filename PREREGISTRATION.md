@@ -552,8 +552,21 @@ One target rule, net_pay = gross_pay - tax, on a small payroll pair; input mappi
 Reading: the check is only as good as the input mappings. A wrong input gives a false alarm or hides a real trap.
 In cases 2 and 3 the wrong input pair was itself flagged by the detectors (unit), so a guard that marks the rule
 result "unverified" when an input pair is flagged would have caught both; it would not have caught case 6.
-The guard is not in the tool. An earlier run of this script was invalid (tables were not aligned first, so every
-pair carried a grain flag and the rule was skipped); it was fixed before these numbers.
+An earlier run of this script was invalid (tables were not aligned first, so every pair carried a grain flag and
+the rule was skipped); it was fixed before these numbers.
+
+We then tried implementing that guard (`experiments/run_guard_check.py`, post-hoc, negative result): a rewritten
+rule's output is marked unverified, and no flag is raised or cleared from it, whenever one of its own input
+columns is independently flagged (other than `cast`). Checked against scenarios E to L rather than the controlled
+pair, the guard would fire exactly once: on `ACCT.AVAIL_CR` in scenario E, whose rule is rewritten through
+`ACCT.CUR_BAL`, itself flagged `inclusion`. That one case is a real trap MergeGuard currently catches correctly
+(100% disagreement, `inclusion`, true positive) and the guard would silence it, with zero false alarms fixed in
+exchange. The reason is a category error: a flagged input does not mean the mapping is wrong, only that the input
+differs in meaning, which is common and often the correct, expected cause of the very disagreement being measured.
+The controlled payroll cases that motivated the guard used genuinely wrong correspondences (a different column, a
+unit mismatch); a correctly-mapped input that is itself a trap is a different situation the guard cannot
+distinguish from a wrong one. The guard was not added to the matcher. The underlying problem — a rule estimate is
+only as good as the input mappings it runs through, and the tool does not know when to doubt them — is unsolved.
 
 ### Wrong approvals against coverage (`experiments/run_coverage_curves.py`, E to L, identifiers excluded)
 
