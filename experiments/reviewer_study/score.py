@@ -55,6 +55,20 @@ if __name__ == "__main__":
         summarize([r for r in rows if not r["note_shown"]], "  without note")
         all_rows.extend(rows)
 
-    print("\nPooled across all files")
+    print("\nPooled across all files (includes 2 traps that never carry a note either way --")
+    print("this comparison is NOT matched on item identity, see below)")
     summarize([r for r in all_rows if r["note_shown"]], "  with note")
     summarize([r for r in all_rows if not r["note_shown"]], "  without note")
+
+    # Matched comparison: restrict to traps that are actually counterbalanced
+    # (shown with a note under one form, without under the other). Two traps
+    # in this study never carry a note under either form -- they're taxonomy
+    # types (methodology, population) MergeGuard's checks never flag -- so
+    # including them in the "without note" bucket compares unlike items.
+    # This is the number reported in the paper.
+    eligible = {r["src"] for r in all_rows if r["is_trap"] and r["note_shown"]}
+    matched = [r for r in all_rows if r["src"] in eligible]
+    print(f"\nMatched comparison: {len(eligible)} note-eligible traps, "
+          f"{len(matched)} judgments (this is the reported result)")
+    summarize([r for r in matched if r["note_shown"]], "  with note")
+    summarize([r for r in matched if not r["note_shown"]], "  without note")
