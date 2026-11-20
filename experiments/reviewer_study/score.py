@@ -69,6 +69,21 @@ if __name__ == "__main__":
     eligible = {r["src"] for r in all_rows if r["is_trap"] and r["note_shown"]}
     matched = [r for r in all_rows if r["src"] in eligible]
     print(f"\nMatched comparison: {len(eligible)} note-eligible traps, "
-          f"{len(matched)} judgments (this is the reported result)")
+          f"{len(matched)} judgments -- each trap seen by 2 respondents with")
+    print("a note and 2 without (this is the reported result)")
     summarize([r for r in matched if r["note_shown"]], "  with note")
     summarize([r for r in matched if not r["note_shown"]], "  without note")
+
+    # Per-respondent breakdown on the matched set, by file order given on the
+    # command line (needed to tell improved/tied/decreased apart -- the pooled
+    # totals alone can't show this).
+    print("\nPer-respondent (matched, eligible traps only):")
+    for path in sys.argv[1:]:
+        _, rows = score_file(path)
+        elig = [r for r in rows if r["src"] in eligible]
+        w = [r for r in elig if r["note_shown"]]
+        wo = [r for r in elig if not r["note_shown"]]
+        wc = sum(1 for r in w if r["decision"] != "Approve")
+        woc = sum(1 for r in wo if r["decision"] != "Approve")
+        tag = "improved" if wc > woc else ("tied" if wc == woc else "decreased")
+        print(f"  {path:30s} with={wc}/{len(w)} without={woc}/{len(wo)}  {tag}")

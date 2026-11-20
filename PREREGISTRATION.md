@@ -680,14 +680,16 @@ never generated one for them. Each pair was placed in a spreadsheet with its two
 stated definitions, and a decision field (Approve / Reject / Need more info) with a confidence rating.
 Six of the fourteen traps (the six MergeGuard flags most confidently) showed a one-line system note, its
 actual diagnosis text; the other eight traps and all ten clean pairs showed no note. Two forms
-counterbalanced which six traps got the note (Form 1: note on set Y; Form 2: note on set X) so across the
-two forms every noted trap item is judged once with a note and once without. Reviewers were told nothing
+counterbalanced which six traps got the note (Form 1: note on set Y; Form 2: note on set X), two
+respondents per form, so each of these twelve traps is judged by two respondents with the note shown and
+two without it, 48 judgments total. Reviewers were told nothing
 about the tool, the taxonomy, or what the notes meant; they judged each row as they would in a real
 sign-off, were told not to look anything up, and gave an optional one-line, fully anonymous background
 and total time. No names, emails, or employers were collected.
 
-The sheet was sent to four reviewers (two per form) and all four returned it; this is every response
-received, not a subset. Single pass, no second round.
+The sheet was sent to four reviewers (two per form), contacted directly by the author with no other
+recruitment channel, and all four returned it; this is every response received, not a subset. Single
+pass, no second round.
 
 | Respondent | Form | Background | Time | With note: caught | Harmful w/ note | Without note: caught | Harmful w/o note | False alarms on clean |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -695,14 +697,41 @@ received, not a subset. Single pass, no second round.
 | P2 | 1 | data analyst, 7 yrs, deposit + lending ops | 23 min | 6/6 | 0 | 7/8 | 1 | 0/10 |
 | P3 | 2 | (not given) | (not given) | 6/6 | 0 | 7/8 | 1 | 5/10 |
 | P4 | 2 | systems analyst, 4 yrs, core banking migrations | 28 min | 5/6 | 1 | 7/8 | 1 | 0/10 |
-| Pooled | | | | 23/24 | 1 | 28/32 | 4 | 5/40 |
+| Pooled (all 14 traps) | | | | 23/24 | 1 | 28/32 | 4 | 5/40 |
 
-With a note shown, 23 of 24 trap-judgments across all four reviewers caught the trap, versus 28 of 32
-without one, a difference that held in the same direction for every reviewer individually (each caught
-every trap they saw with a note except P4's one miss) rather than only in the pooled total. The one
-miss-with-note (`SDB.BOX_STAT`, P4) carried a note stating a crosswalk had been found consistent across
-the two sides' status codes; read as reassurance rather than a flag, it may have pointed the reviewer the
-wrong way, which is itself worth knowing: a note that states a fact rather than a verdict can backfire.
+The "pooled" row above counts all fourteen traps, but two of them (`CUST.CR_SCORE`,
+`LN_MSTR.PPMT_PNLTY_IND`) never carry a note under either form, so they can only ever land in the
+no-note column; including them makes the with/without comparison unmatched, since the no-note side then
+mixes genuinely note-eligible traps with two that are structurally different (the taxonomy types with no
+detector at all). The comparison that actually holds the items fixed and only varies the note is the twelve traps that are
+counterbalanced across the two forms, each judged by two respondents with a note and two without:
+
+**Restricted to the 12 note-eligible traps (48 judgments, 24 with note / 24 without):**
+with note: 23/24 caught, 1 harmful. Without note: 21/24 caught, 3 harmful.
+
+This is the number to use; the pooled 28/32 overstated the no-note miss rate by folding in two traps that
+were never going to get help from a note regardless of how many respondents we asked. The direction is
+the same, the gap is smaller and more defensible: 1 harmful approval in 24 judgments with a note, versus
+3 in 24 without.
+
+Per respondent, on these same 12 eligible traps only (6 judgments per respondent per condition):
+
+| Respondent | With note caught | Without note caught | |
+| --- | --- | --- | --- |
+| P1 | 6/6 | 6/6 | tied |
+| P2 | 6/6 | 5/6 | improved |
+| P3 | 6/6 | 5/6 | improved |
+| P4 | 5/6 | 5/6 | tied |
+
+No respondent did worse with the note than without it: two improved, two tied, none decreased. That is a
+weaker and more precise claim than "every reviewer showed the same direction," which would wrongly imply
+all four improved; two did and two were unchanged. The one miss-with-note (`SDB.BOX_STAT`, P4) carried a
+note stating a crosswalk had been found consistent across the two sides' status codes; read as
+reassurance rather than a flag, it may have pointed the reviewer the wrong way, which is itself worth
+knowing: a note that states a fact rather than a verdict can backfire.
+
+No clean pair ever carried a note under either form, so this study cannot say anything about whether a
+note would raise false alarms on clean columns; only the trap side of that trade-off was tested.
 
 One item recurred: `CHK_ITEM.CHK_NBR`, an `identity` trap, was approved outright with no note by two of
 the four reviewers (P3 and P4), the only trap missed by more than one person. `identity` is one of the
@@ -716,5 +745,6 @@ hedging style rather than anything about the items, since the same ten clean pai
 hesitation from P1, P2, and P4.
 
 n = 4 is far too small for a statistical claim, and this was not designed to produce one; no significance
-test is reported. What it supports is a direction, consistent across every reviewer who saw a note and
-missed nothing else material: the diagnosis changed what got approved, not just what got flagged.
+test is reported. What it supports is a direction, not an effect size: no reviewer was worse off with the
+note than without it, half improved, and the diagnosis changed what got approved on at least some items,
+not just what got flagged.
