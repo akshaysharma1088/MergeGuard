@@ -661,3 +661,60 @@ Reading: on this practitioner's traps, auto-approved-and-wrong fell from 12 for 
 much larger gap seen on the frozen scenarios the tool's own author wrote. An outside practitioner's traps
 are harder for MergeGuard than its own author's, which is the honest and expected direction for this
 check to come out.
+
+## Reviewer study: does the diagnosis note change what a human approves
+
+Everything above tests MergeGuard's own flagging. This round instead tests the thing the paper's
+"what MergeGuard is for" discussion claims matters: whether handing a reviewer MergeGuard's diagnosis,
+alongside a plain mapping they would otherwise sign off on unaided, changes what they approve.
+
+Twenty-four source-to-target column pairs were pulled from a real MergeGuard run on scenario L
+(synthetic banks "Lakeside Federal" acquired by "Oak Hollow Bank"). Twelve were picked as the obvious
+traps MergeGuard flags with a diagnosis, and twelve were picked by eye as the clean, correctly-mapped
+pairs. Checking against ground truth after the fact, two of those twelve "clean" picks turned out to be
+real traps (`CUST.CR_SCORE`, a methodology conflict, and `LN_MSTR.PPMT_PNLTY_IND`, a population conflict):
+MergeGuard's checks never flag either, with or without a note, because methodology and population are
+among the taxonomy types with no detector behind them. So the true composition is fourteen traps and ten
+clean pairs, not twelve and twelve; the two undercounted traps carry no note either way, since MergeGuard
+never generated one for them. Each pair was placed in a spreadsheet with its two column names, their
+stated definitions, and a decision field (Approve / Reject / Need more info) with a confidence rating.
+Six of the fourteen traps (the six MergeGuard flags most confidently) showed a one-line system note, its
+actual diagnosis text; the other eight traps and all ten clean pairs showed no note. Two forms
+counterbalanced which six traps got the note (Form 1: note on set Y; Form 2: note on set X) so across the
+two forms every noted trap item is judged once with a note and once without. Reviewers were told nothing
+about the tool, the taxonomy, or what the notes meant; they judged each row as they would in a real
+sign-off, were told not to look anything up, and gave an optional one-line, fully anonymous background
+and total time. No names, emails, or employers were collected.
+
+The sheet was sent to four reviewers (two per form) and all four returned it; this is every response
+received, not a subset. Single pass, no second round.
+
+| Respondent | Form | Background | Time | With note: caught | Harmful w/ note | Without note: caught | Harmful w/o note | False alarms on clean |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| P1 | 1 | lead data engineer, 10 yrs, banking and credit systems | 24 min | 6/6 | 0 | 7/8 | 1 | 0/10 |
+| P2 | 1 | data analyst, 7 yrs, deposit + lending ops | 23 min | 6/6 | 0 | 7/8 | 1 | 0/10 |
+| P3 | 2 | (not given) | (not given) | 6/6 | 0 | 7/8 | 1 | 5/10 |
+| P4 | 2 | systems analyst, 4 yrs, core banking migrations | 28 min | 5/6 | 1 | 7/8 | 1 | 0/10 |
+| Pooled | | | | 23/24 | 1 | 28/32 | 4 | 5/40 |
+
+With a note shown, 23 of 24 trap-judgments across all four reviewers caught the trap, versus 28 of 32
+without one, a difference that held in the same direction for every reviewer individually (each caught
+every trap they saw with a note except P4's one miss) rather than only in the pooled total. The one
+miss-with-note (`SDB.BOX_STAT`, P4) carried a note stating a crosswalk had been found consistent across
+the two sides' status codes; read as reassurance rather than a flag, it may have pointed the reviewer the
+wrong way, which is itself worth knowing: a note that states a fact rather than a verdict can backfire.
+
+One item recurred: `CHK_ITEM.CHK_NBR`, an `identity` trap, was approved outright with no note by two of
+the four reviewers (P3 and P4), the only trap missed by more than one person. `identity` is one of the
+four taxonomy types (identity, methodology, aggregation, role) with no corresponding automated detector
+in the matcher, so this is the same taxonomy gap confirmed at the tool level in scenarios E-L and M
+showing up at the human level too: exactly where MergeGuard cannot help, reviewers also tend to miss it.
+
+False alarms on clean pairs were not evenly spread: P3 marked five of the ten clean, no-note pairs "Need
+more info," far more cautious than the other three, who raised none. This looks like a reviewer-specific
+hedging style rather than anything about the items, since the same ten clean pairs drew zero
+hesitation from P1, P2, and P4.
+
+n = 4 is far too small for a statistical claim, and this was not designed to produce one; no significance
+test is reported. What it supports is a direction, consistent across every reviewer who saw a note and
+missed nothing else material: the diagnosis changed what got approved, not just what got flagged.

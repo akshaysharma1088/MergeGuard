@@ -1,0 +1,513 @@
+[
+ {
+  "source": "CUST.CUST_NO",
+  "target": "customer.customer_id",
+  "src_desc": "Customer number",
+  "tgt_desc": "Customer identifier",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "CUST.CUST_NM",
+  "target": "customer.full_name",
+  "src_desc": "Customer name",
+  "tgt_desc": "Customer name",
+  "src_type": "VARCHAR2(120)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "CUST.BIRTH_DT",
+  "target": "customer.birth_date",
+  "src_desc": "Birth date",
+  "tgt_desc": "Date of birth",
+  "src_type": "DATE",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.001
+ },
+ {
+  "source": "CUST.DECEASED_IND",
+  "target": "customer.is_deceased",
+  "src_desc": "Deceased indicator",
+  "tgt_desc": "Deceased: death certificate verified by legal operations",
+  "src_type": "CHAR(1)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "population"
+  ],
+  "status": "FAIL",
+  "diagnosis": "1.7% of records flip (source marks more records): a different rule decides the flag",
+  "mismatch_rate": 0.0165
+ },
+ {
+  "source": "CUST.CR_SCORE",
+  "target": "customer.credit_score",
+  "src_desc": "Credit score",
+  "tgt_desc": "FICO 8 at origination; never refreshed",
+  "src_type": "NUMBER(3)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "methodology"
+  ],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "CUST.BKRPT_IND",
+  "target": "customer.in_bankruptcy",
+  "src_desc": "Bankruptcy",
+  "tgt_desc": "Borrower currently under an active bankruptcy court stay",
+  "src_type": "CHAR(1)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "population"
+  ],
+  "status": "FAIL",
+  "diagnosis": "4.2% of records flip (source marks more records): a different rule decides the flag",
+  "mismatch_rate": 0.042
+ },
+ {
+  "source": "DDA_ACCT.ACCT_NO",
+  "target": "deposit_account.account_id",
+  "src_desc": "Account number",
+  "tgt_desc": "Deposit account identifier",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "DDA_ACCT.CUST_NO",
+  "target": "deposit_account.customer_id",
+  "src_desc": "Customer number",
+  "tgt_desc": "Primary tax-reporting owner",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "DDA_ACCT.OPEN_DT",
+  "target": "deposit_account.open_date",
+  "src_desc": "Open date",
+  "tgt_desc": "Open date",
+  "src_type": "DATE",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.005
+ },
+ {
+  "source": "DDA_ACCT.LEDGER_BAL",
+  "target": "deposit_account.ledger_balance",
+  "src_desc": "Ledger balance",
+  "tgt_desc": "Ledger balance",
+  "src_type": "NUMBER(14,2)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.0054
+ },
+ {
+  "source": "DDA_ACCT.OD_LMT",
+  "target": "deposit_account.overdraft_limit",
+  "src_desc": "Overdraft limit",
+  "tgt_desc": "Standalone checking overdraft cap",
+  "src_type": "NUMBER(10,2)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "inclusion"
+  ],
+  "status": "FAIL",
+  "diagnosis": "20% of loaded values fall outside the target's range",
+  "mismatch_rate": 0.2042
+ },
+ {
+  "source": "DDA_ACCT.MAIL_ADDR",
+  "target": "deposit_account.mailing_address",
+  "src_desc": "Mailing address",
+  "tgt_desc": "Mailing address of the primary tax-reporting owner",
+  "src_type": "VARCHAR2(120)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "role"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Loaded values use a format the target never uses (target looks like 9999 AAAAAA AA)",
+  "mismatch_rate": 0.2854
+ },
+ {
+  "source": "CHK_ITEM.ITEM_ID",
+  "target": "check_item.item_id",
+  "src_desc": "Item id",
+  "tgt_desc": "Check item identifier",
+  "src_type": "NUMBER(12)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "CHK_ITEM.ACCT_NO",
+  "target": "check_item.account_id",
+  "src_desc": "Account number",
+  "tgt_desc": "Account",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "CHK_ITEM.CHK_AMT",
+  "target": "check_item.check_amount",
+  "src_desc": "Check amount",
+  "tgt_desc": "Check amount",
+  "src_type": "NUMBER(12,2)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.0027
+ },
+ {
+  "source": "CHK_ITEM.CHK_NBR",
+  "target": "check_item.check_number",
+  "src_desc": "Check number",
+  "tgt_desc": "Serial number printed on the paper check",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "identity"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Target counts are always smaller: counted over a different scope",
+  "mismatch_rate": 0.3978
+ },
+ {
+  "source": "STOP_PMT.STOP_ID",
+  "target": "stop_payment.stop_id",
+  "src_desc": "Stop id",
+  "tgt_desc": "Stop payment identifier",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "STOP_PMT.ACCT_NO",
+  "target": "stop_payment.account_id",
+  "src_desc": "Account number",
+  "tgt_desc": "Account",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "STOP_PMT.REQ_DT",
+  "target": "stop_payment.request_date",
+  "src_desc": "Request date",
+  "tgt_desc": "Customer request date",
+  "src_type": "DATE",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.0025
+ },
+ {
+  "source": "STOP_PMT.EXPR_DT",
+  "target": "stop_payment.expiry_date",
+  "src_desc": "Expiry date",
+  "tgt_desc": "Six months after the request",
+  "src_type": "DATE",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "temporal"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Source date is later than target by 364 days (median, range 182 to 546): a different business event",
+  "mismatch_rate": 0.2875
+ },
+ {
+  "source": "LN_MSTR.LN_NO",
+  "target": "loan.loan_id",
+  "src_desc": "Loan number",
+  "tgt_desc": "Loan identifier",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "LN_MSTR.CUST_NO",
+  "target": "loan.customer_id",
+  "src_desc": "Customer number",
+  "tgt_desc": "Borrower",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "LN_MSTR.PRIN_BAL",
+  "target": "loan.principal_balance",
+  "src_desc": "Principal balance",
+  "tgt_desc": "Principal balance",
+  "src_type": "NUMBER(14,2)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.0031
+ },
+ {
+  "source": "LN_MSTR.INT_RT",
+  "target": "loan.interest_rate",
+  "src_desc": "Interest rate",
+  "tgt_desc": "Note rate",
+  "src_type": "NUMBER(6,4)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "LN_MSTR.ACCR_INT",
+  "target": "loan.accrued_interest",
+  "src_desc": "Accrued interest",
+  "tgt_desc": "Interest accrued this period, actual/360",
+  "src_type": "NUMBER(12,2)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "methodology"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Target = source x 1.014",
+  "mismatch_rate": 1.0
+ },
+ {
+  "source": "LN_MSTR.MIN_PMT_DUE",
+  "target": "loan.minimum_payment_due",
+  "src_desc": "Minimum payment due",
+  "tgt_desc": "Current billed installment",
+  "src_type": "NUMBER(12,2)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "inclusion"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Target is always smaller than source: one side includes or nets components",
+  "mismatch_rate": 0.1494
+ },
+ {
+  "source": "LN_MSTR.PPMT_PNLTY_IND",
+  "target": "loan.prepayment_penalty_flag",
+  "src_desc": "Prepayment penalty",
+  "tgt_desc": "Note includes a prepayment penalty clause",
+  "src_type": "CHAR(1)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "population"
+  ],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "LN_MSTR.NON_ACCR_IND",
+  "target": "loan.is_non_accrual",
+  "src_desc": "Non-accrual",
+  "tgt_desc": "Non-accrual: 90 or more days past due",
+  "src_type": "CHAR(1)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "population"
+  ],
+  "status": "FAIL",
+  "diagnosis": "3.1% of records flip (target marks more records): a different rule decides the flag",
+  "mismatch_rate": 0.0312
+ },
+ {
+  "source": "LN_MSTR.ESCR_CUSH_AMT",
+  "target": "loan.escrow_cushion",
+  "src_desc": "Escrow cushion",
+  "tgt_desc": "RESPA maximum cushion: two months of escrow disbursements",
+  "src_type": "NUMBER(10,2)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "methodology"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Target is always larger than source: one side includes or nets components",
+  "mismatch_rate": 0.9975
+ },
+ {
+  "source": "LN_MSTR.AUTOPAY_AMT",
+  "target": "loan.autopay_amount",
+  "src_desc": "Autopay amount",
+  "tgt_desc": "Autopay amount set by the borrower",
+  "src_type": "NUMBER(10,2)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "null_semantics"
+  ],
+  "status": "FAIL",
+  "diagnosis": "34% of loaded values fall outside the target's range",
+  "mismatch_rate": 0.3369
+ },
+ {
+  "source": "SDB.BOX_NO",
+  "target": "safe_deposit_box.box_id",
+  "src_desc": "Box number",
+  "tgt_desc": "Box identifier",
+  "src_type": "NUMBER(8)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "SDB.BOX_SZ",
+  "target": "safe_deposit_box.box_size",
+  "src_desc": "Size",
+  "tgt_desc": "Box size",
+  "src_type": "CHAR(1)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "SDB.BOX_STAT",
+  "target": "safe_deposit_box.box_status",
+  "src_desc": "Box status",
+  "tgt_desc": "RENTED while the keys are out",
+  "src_type": "VARCHAR2(20)",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "population"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Consistent crosswalk found: AVAILABLE->AVAILABLE, DELINQ_ESCHEAT->RENTED, RENTED->RENTED",
+  "mismatch_rate": 0.105
+ },
+ {
+  "source": "WIRE_TXN.WIRE_ID",
+  "target": "wire_transfer.wire_id",
+  "src_desc": "Wire id",
+  "tgt_desc": "Wire identifier",
+  "src_type": "NUMBER(12)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "WIRE_TXN.CUST_NO",
+  "target": "wire_transfer.customer_id",
+  "src_desc": "Customer number",
+  "tgt_desc": "Customer",
+  "src_type": "NUMBER(10)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "PASS",
+  "diagnosis": "",
+  "mismatch_rate": 0.0
+ },
+ {
+  "source": "WIRE_TXN.WIRE_AMT",
+  "target": "wire_transfer.wire_amount",
+  "src_desc": "Wire amount",
+  "tgt_desc": "Wire amount",
+  "src_type": "NUMBER(14,2)",
+  "samples": [],
+  "is_trap": false,
+  "conflicts": [],
+  "status": "REVIEW",
+  "diagnosis": "A few records differ",
+  "mismatch_rate": 0.0032
+ },
+ {
+  "source": "WIRE_TXN.CUTOFF_TS",
+  "target": "wire_transfer.cutoff_ts",
+  "src_desc": "Cutoff timestamp",
+  "tgt_desc": "When the customer submitted the wire in the treasury portal",
+  "src_type": "TIMESTAMP",
+  "samples": [],
+  "is_trap": true,
+  "conflicts": [
+   "temporal"
+  ],
+  "status": "FAIL",
+  "diagnosis": "Source date is later than target by 1 days (median, range -1 to 1): a different business event",
+  "mismatch_rate": 0.0872
+ }
+]
